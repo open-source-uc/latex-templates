@@ -1,2 +1,5 @@
-# latex-template-industrial-assistantships
-Latex template for industrial courses assistantships
+# Latex template assistantships
+
+Basic latex template for assistantships
+
+Made by Cris Valdes
