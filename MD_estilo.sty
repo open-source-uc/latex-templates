@@ -1,0 +1,62 @@
+%STYLE DEFINE BY CRISTIAN RIVEROS
+
+\usepackage{fullpage}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
+\usepackage{color} 
+\usepackage{graphicx}
+\usepackage{textpos}
+
+\newcommand{\nombreinsert}{}
+\newcommand{\nombre}[1]{\renewcommand{\nombreinsert}{#1}}
+
+\newcommand{\numtareainsert}{}
+\newcommand{\numtarea}[1]{\renewcommand{\numtareainsert}{#1}}
+
+\newcommand{\siglainsert}{}
+\newcommand{\sigla}[1]{\renewcommand{\siglainsert}{#1}}
+
+\newcommand{\cursoinsert}{}
+\newcommand{\curso}[1]{\renewcommand{\cursoinsert}{#1}}
+
+\newcommand{\semestreinsert}{}
+\newcommand{\semestre}[1]{\renewcommand{\semestreinsert}{#1}}
+
+\newcommand{\anoinsert}{}
+\newcommand{\ano}[1]{\renewcommand{\anoinsert}{#1}}
+
+\newenvironment{pregunta}[1]
+{	
+	\pagebreak
+	\setcounter{page}{1}
+	
+	\begin{textblock}{15}(-1.5,-1)
+		{\Large NOMBRE: \;\; \nombreinsert} 
+	\end{textblock}
+	
+	\begin{textblock}{15}(9,-1)
+		{\Large PUNTAJE:} 
+	\end{textblock}
+	
+	\includegraphics[width=2cm]{uc.png}
+	\vspace*{-1.9cm}
+	
+	\hspace*{2.1cm}
+	\begin{tabular}{l}
+		\sc Pontificia Universidad Católica de Chile \\
+		\sc Escuela de Ingeniería \\
+		\sc Departamento de Ciencia de la Computación
+		%\vspace{15\baselineskip}\mbox{}
+		%\vspace{-3mm}\mbox{}
+	\end{tabular}
+	\bigskip
+	
+	\vspace*{5mm}
+	\begin{center}
+		{\large \siglainsert \ \  --- \ \cursoinsert \ \ --- \  \semestreinsert' \anoinsert} \\
+		\vspace{3mm}
+		{\LARGE \bf Tarea \numtareainsert \ -- Respuesta Pregunta #1} \\
+		\vspace{2mm}
+	\end{center}
+}{}
