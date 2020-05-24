@@ -6,18 +6,22 @@
 \newcommand{\codigoDelCurso}{MAT1610}                 % EDITAR - Código del Curso (ej. MAT1203)
 \newcommand{\elCurso}{Cálculo I}                      % EDITAR - Título del Curso (ej. Cálculo I)
 \newcommand{\fecha}{Mayo 2020}                        % EDITAR - Fecha del Documento (ej. Mayo 2020)
-\newcommand{\tipoDocumento}{estudiatón}               % EDITAR, tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
-\newcommand{\nombreDocumento}{Estudiatón I1}          % EDITAR, tipo del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
-\newcommand{\libroAC}{Cerrado}                        % EDITAR - Tipo de Examen (Cerrado o Abierto)
-\newcommand{\conCalculadoras}{No}                     % EDITAR - ¿Se permiten calculadoras? (Si o no)
+\newcommand{\nombreDocumento}{I1}          % EDITAR, nombre del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
+\newcommand{\tipoDocumento}{interrogación}               % EDITAR, tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
+\newcommand{\descripcionPortada}{Esta guía fue hecha con {\emoji \symbol{"2764"}} por novatos para novatos, para la estudiatón de cálculo el 13 de mayo de 2020, específicamente en preparación a la I2. Incluso si no pudiste estar en la estudiatón, esperamos que esta guía te sea útil para practicar y prepararte.\\[\baselineskip]}
+
 \newcommand{\hojaDeFormulas}{Si}                      % EDITAR - ¿Incluir hoja de fórmulas? (Si o no)
 \newcommand{\tieneSecciones}{No}                      % EDITAR - ¿El documento tiene secciones? (Si o no)
-                                                      %        If Yes: Use \sectionStart to start new sections
-                                                      %        If No: Comment all \sectionStart lines
-\newcommand{\respuestaPorSeparado}{Si}                % EDITAR - Se responde las preguntas en un libro separado? (Si o no)
-\newcommand{\preguntasPorResponder}{3}                % EDITAR - Número de preguntas a responder del total, (ej. Todas o 3)
+                                                      %        Si: Usa \sectionStart{} para empezar secciones.
+                                                      %        No: Comenta todos los \sectionStart{}
 \newcommand{\conRespuestas}{Si}                       % EDITAR - Incluir soluciones (Si o no)
-\newcommand{\soportaEmojis}{Si}                       % EDITAR - ¿El documento soporta emojis? (Si o no, requiere LuaLaTeX-dev)
+\newcommand{\soportaEmojis}{Si}                       % EDITAR - ¿El documento soporta emojis? (Si o no, requiere lualatex-dev)
+
+% Para evaluaciones (solo aplican si es que \tipoDocumento es control o interrogación)
+\newcommand{\libroAC}{Cerrado}                        % EDITAR - Tipo de Examen (Cerrado o Abierto)
+\newcommand{\preguntasPorResponder}{Todas}                % EDITAR - Número de preguntas a responder del total, (ej. Todas o 3)
+\newcommand{\conCalculadoras}{No}                     % EDITAR - ¿Se permiten calculadoras? (Si o no)
+\newcommand{\respuestaPorSeparado}{Si}                % EDITAR - Se responde las preguntas en un documento separado? (Si o no)
 
 % -----------------------------------------------------
 % INICIO DEL DOCUMENTO
@@ -28,10 +32,7 @@
 \begin{questions}                                     % Inicio de las preguntas
     % -----------------------------------------------------
     % Iniciar preguntas
-    % -----------------------------------------------------
-    % EDITAR - Estructura del Documento - Secciones y preguntas
-    % -----------------------------------------------------
-    % EDITAR - Copiar para añadir secciones o preguntas
+    % EDITAR - Copiar para añadir secciones o preguntas, una pregunta por archivo.
     % -----------------------------------------------------
     \traerPregunta{preguntas/alternativas.tex}{15}    % EDITAR - Archivo de la pregunta y su puntaje
     \traerPregunta{preguntas/doce.tex}{20}
