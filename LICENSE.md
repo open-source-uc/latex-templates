@@ -5,3 +5,5 @@ Esta obra está licenciada bajo la Licencia Creative Commons Atribución 4.0 Int
 
 # Attribution/Atribución
 This work is a direct derivative, or fork, of the ["SoE LaTeX exam template"](https://www.overleaf.com/latex/templates/soe-latex-exam-template/wsqrdkbrcvsr) provided publicly by the School of Engineering of The University of Edinburgh under the Creative Commons CC BY 4.0 license.
+
+Este trabajo es un fork o derivado directo del ["SoE LaTeX exam template"](https://www.overleaf.com/latex/templates/soe-latex-exam-template/wsqrdkbrcvsr) (Plantilla de exámenes SoE en LaTeX) provisto públicamente por la Escuela de Ingeniería de la Universidad de Edinburgh, bajo la licencia Creative Commons CC BY 4.0.
