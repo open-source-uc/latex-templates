@@ -3,8 +3,17 @@ name: CI
 on:
   push:
     branches: [master]
+    paths:
+      - "*.tex"
+      - "*.aux"
+      - .latexmkrc
+
   pull_request:
     branches: [master]
+    paths:
+      - "*.tex"
+      - "*.aux"
+      - .latexmkrc
 
 jobs:
   lint:
