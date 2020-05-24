@@ -54,8 +54,7 @@ Para compilar el documento, es importante usar LuaTeX (no PDFLaTeX o XeTeX), den
 
 ## Cosas por Hacer
 
-- Traducir Comandos
-- Hacer que la puntación sean desactivables
+- Hacer que la puntuación sea desactivable
 - Configurar texto para calculadora, fórmulas y libro abierto
 - Añadir soporte para subunidades académicas específicas
 - Hacer que el logo sea configurable
