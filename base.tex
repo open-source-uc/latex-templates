@@ -1,4 +1,4 @@
-
+% !TeX root = ./documento.tex
 % -------------------------------------------------------------
 % Paquetes
 % -------------------------------------------------------------
@@ -34,14 +34,20 @@
 \usepackage{mfirstuc}                                 % Agrega comandos para mayúsculas
 \usepackage[no-math]{fontspec}                        % Manejo tipográfico manual
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
-
+\usepackage{dirtytalk}                                % Citas
 % -----------------------------------------------------
 % Definiciones del Documento
 % -----------------------------------------------------
+
 \pointsinrightmargin{}                                % Puntos en el margen derecho
-\pointformat{\bfseries(\themarginpoints)}  % PUNTOS, agregar condicional!
-% Puntos en negrita y formato de paréntesis
-\pointformat{}
+\ifthenelse{
+    \equal{\mostrarPuntos}{Si} \OR{} \equal{\mostrarPuntos}{Sí} \OR{} \equal{\mostrarPuntos}{Verdadero} \OR{} \equal{\mostrarPuntos}{si} \OR{} \equal{\mostrarPuntos}{sí} \OR{} \equal{\mostrarPuntos}{verdadero} \OR{} \equal{\mostrarPuntos}{SÍ} \OR{} \equal{\mostrarPuntos}{SI}
+}{
+    \pointformat{\bfseries(\themarginpoints)}
+}{
+    \pointformat{}
+}
+
 \renewcommand{\partlabel}{\bfseries{(\thepartno)}}     % Números de parte negrita
 \renewcommand{\subpartlabel}{\bfseries{\thesubpart{}}} % Números de parte negrita
 \pagestyle{headandfoot}                                % Header y Footer de la solución

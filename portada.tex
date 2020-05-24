@@ -12,48 +12,50 @@
 
         \descripcionPortada{}
 
-        \ifthenelse{
-            \equal{\hojaDeFormulas}{Yes} \OR{} \equal{\hojaDeFormulas}{Y} \OR{} \equal{\hojaDeFormulas}{yes} \OR{} \equal{\hojaDeFormulas}{y} \OR{} \equal{\hojaDeFormulas}{YES} \OR{} \equal{\hojaDeFormulas}{Si} \OR{} \equal{\hojaDeFormulas}{Sí} \OR{} \equal{\hojaDeFormulas}{Verdadero} \OR{} \equal{\hojaDeFormulas}{si} \OR{} \equal{\hojaDeFormulas}{sí} \OR{} \equal{\hojaDeFormulas}{verdadero} \OR{} \equal{\hojaDeFormulas}{SÍ} \OR{} \equal{\hojaDeFormulas}{SI} \OR{} \equal{\hojaDeFormulas}{VERDADERO}
-        }
-        {Este documento \textbf{incluye una hoja de fórmulas} hacia el final. Puedes usarlo como referencia.\\[\baselineskip]} % if
-
         \ifthenelse{\equal{\familiaDocumento}{evaluación}}{
+
+            \textbf{Código de Honor:} \say{Como miembro de la comunidad de la Pontificia Universidad Católica de Chile, me comprometo a respetar los principios y normativas que la rigen. Asimismo, me comprometo a actuar con rectitud y honestidad en las relaciones con los demás integrantes de la comunidad y en la realización de todo trabajo, particularmente en aquellas actividades vinculadas a la docencia, al aprendizaje y la creación, difusión y transferencia del conocimiento.}\\[\baselineskip]
+
             \ifthenelse{
                 \equal{\preguntasPorResponder}{Todas} \OR
                 \equal{\preguntasPorResponder}{todas}
             }
-            {Para esta evaluación \textbf{debes intentar responder todas las preguntas.} \\[\baselineskip]} % if
-            {Para esta evaluación, debes responder \textbf{solo} \NUMBERstringnum{\total{numeroDePreguntas}} preguntas. \\[\baselineskip]} % else
+            {Para esta evaluación \textbf{debes intentar responder todas las preguntas.}} % if
+            {Para esta evaluación, debes responder \textbf{solo} \NUMBERstringnum{\total{numeroDePreguntas}} preguntas.]} % else
             \ifthenelse{
-                \equal{\conCalculadoras}{Si} \OR \equal{\conCalculadoras}{Sí} \OR{} \equal{\conCalculadoras}{Verdadero} \OR{} \equal{\conCalculadoras}{si} \OR{} \equal{\conCalculadoras}{sí} \OR{} \equal{\conCalculadoras}{verdadero} \OR{} \equal{\conCalculadoras}{SÍ} \OR{} \equal{\conCalculadoras}{SI} \OR{} \equal{\conCalculadoras}{VERDADERO}
+                \equal{\conCalculadoras}{Si} \OR \equal{\conCalculadoras}{Sí} \OR{} \equal{\conCalculadoras}{Verdadero} \OR{} \equal{\conCalculadoras}{si} \OR{} \equal{\conCalculadoras}{sí} \OR{} \equal{\conCalculadoras}{verdadero} \OR{} \equal{\conCalculadoras}{SÍ} \OR{} \equal{\conCalculadoras}{SI} \OR{} \equal{\conCalculadoras}{VERDADERO} %
             }{
-                El uso de calculadoras científicas autorizadas está \textbf{permitido} en esta evaluación.\\[\baselineskip]
+                El uso de calculadoras científicas autorizadas está \textbf{permitido}.
             } % if
             {
-                El uso de calculadoras de cualquier tipo está \textbf{prohibido} durante esta evaluación.\\[\baselineskip]
+                El uso de calculadoras de cualquier tipo está \textbf{prohibido}.
             } % else
             \ifthenelse{
                 \equal{\libroAC}{Si} \OR \equal{\libroAC}{Sí} \OR{} \equal{\libroAC}{Verdadero} \OR{} \equal{\libroAC}{si} \OR{} \equal{\libroAC}{sí} \OR{} \equal{\libroAC}{verdadero} \OR{} \equal{\libroAC}{SÍ} \OR{} \equal{\libroAC}{SI} \OR{} \equal{\libroAC}{VERDADERO}
             }{
-                Esta es una evaluación a \textbf{libro abierto}, por lo que puedes utilizar apuntes o libros acorde con el código de honor. El plagio se encuentra prohibido.\\[\baselineskip]
+                Esta es una evaluación a \textbf{libro abierto}, por lo que puedes utilizar apuntes o libros acorde con el código de honor. El plagio se encuentra prohibido.
             }
             {
-                Esta es una evaluación a \textbf{libro cerrado}, por lo que tienes \textbf{prohibido} el uso de cualquier clase de apuntes, libros o hojas de referencia, al menos que una sea incluida con el documento.\\[\baselineskip]
+                Tienes \textbf{prohibido} el uso de cualquier clase de apuntes, libros o hojas de referencia, al menos que una sea incluida con el documento.
             }
             \ifthenelse{
                 \equal{\respuestaPorSeparado}{Si} \OR \equal{\respuestaPorSeparado}{Sí} \OR{} \equal{\respuestaPorSeparado}{Verdadero} \OR{} \equal{\respuestaPorSeparado}{si} \OR{} \equal{\respuestaPorSeparado}{sí} \OR{} \equal{\respuestaPorSeparado}{verdadero} \OR{} \equal{\respuestaPorSeparado}{SÍ} \OR{} \equal{\respuestaPorSeparado}{SI} \OR{} \equal{\respuestaPorSeparado}{VERDADERO}
             }
             {
-                Para responder esta evaluación, \textbf{debes escribir tus respuestas por separado}, en una hoja o documento que se te debería entregar. No es aceptable entregar las respuestas en esta hoja.\\[\baselineskip]
+                Para responder, \textbf{debes escribir tus respuestas por separado}, en una hoja o documento que se te debería entregar. No es aceptable entregar las respuestas en esta hoja.\\[\baselineskip]
             }
             {
-                Para responder esta evaluación, \textbf{debes escribir tus respuestas en este documento}. No es aceptable entregar las respuestas por separado, salvo que sea explícitamente solicitado.\\[\baselineskip]
+                Para responder, \textbf{debes escribir tus respuestas en este documento}. No es aceptable entregar las respuestas por separado, salvo que sea explícitamente solicitado.\\[\baselineskip]
             }
         }{}
+        \ifthenelse{
+            \equal{\hojaDeFormulas}{Yes} \OR{} \equal{\hojaDeFormulas}{Y} \OR{} \equal{\hojaDeFormulas}{yes} \OR{} \equal{\hojaDeFormulas}{y} \OR{} \equal{\hojaDeFormulas}{YES} \OR{} \equal{\hojaDeFormulas}{Si} \OR{} \equal{\hojaDeFormulas}{Sí} \OR{} \equal{\hojaDeFormulas}{Verdadero} \OR{} \equal{\hojaDeFormulas}{si} \OR{} \equal{\hojaDeFormulas}{sí} \OR{} \equal{\hojaDeFormulas}{verdadero} \OR{} \equal{\hojaDeFormulas}{SÍ} \OR{} \equal{\hojaDeFormulas}{SI} \OR{} \equal{\hojaDeFormulas}{VERDADERO}
+        }
+        {Este documento \textbf{incluye una hoja de fórmulas} hacia el final. Puedes usarla como referencia.\\} % if
 
         \vfill
         % Advertencia de respuestas
-        \ifthenelse{\equal{\conRespuestas}{Si} \OR{} \equal{\conRespuestas}{Sí} \OR{} \equal{\conRespuestas}{si} \OR{} \equal{\conRespuestas}{sí} \OR{} \equal{\conRespuestas}{SÍ} \OR{} \equal{\conRespuestas}{SI}}{\textcolor{myRed}{\LARGE \textbf{Advertencia:} Esta copia incluye respuestas.} \\}{}
+        \ifthenelse{\equal{\conRespuestas}{Si} \OR{} \equal{\conRespuestas}{Sí} \OR{} \equal{\conRespuestas}{si} \OR{} \equal{\conRespuestas}{sí} \OR{} \equal{\conRespuestas}{SÍ} \OR{} \equal{\conRespuestas}{SI}}{\textcolor{myRed}{\LARGE \textbf{Advertencia:} Esta copia incluye respuestas.}}{}
         \vfill
 
         \textcolor{MidnightBlue}{\textbf{\large Instrucciones Adicionales}}\\
@@ -62,7 +64,7 @@
 
         \textbf{Si tienen alguna duda, primero intenten llevarlo al grupo en el que están.} Si nadie puede resolver su duda, pueden solicitar ayuda desde Zoom para que vaya un tutor a ayudar. Si todos en tu grupo terminan la guía, o están muy pegados con una pregunta de desarrollo, pueden pedir la pauta de esta guía.
 
-        \vspace{3mm} \textcolor{MidnightBlue}{\small Delegados Generacionales 2020 Ing. UC}
+        \vspace{8mm} \textcolor{MidnightBlue}{\small \unidadAcademica,  Pontificia Universidad Católica de Chile}
         %
     \end{flushleft}
 \end{coverpages}

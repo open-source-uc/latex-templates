@@ -3,38 +3,42 @@
 % -----------------------------------------------------
 % EDITAR - Información del Curso y Prueba
 % -----------------------------------------------------
-\newcommand{\codigoDelCurso}{MAT1610}                 % EDITAR - Código del Curso (ej. MAT1203)
-\newcommand{\elCurso}{Cálculo I}                      % EDITAR - Título del Curso (ej. Cálculo I)
-\newcommand{\fecha}{Mayo 2020}                        % EDITAR - Fecha del Documento (ej. Mayo 2020)
-\newcommand{\nombreDocumento}{I1}          % EDITAR, nombre del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
-\newcommand{\tipoDocumento}{interrogación}               % EDITAR, tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
-\newcommand{\descripcionPortada}{Esta guía fue hecha con {\emoji \symbol{"2764"}} por novatos para novatos, para la estudiatón de cálculo el 13 de mayo de 2020, específicamente en preparación a la I2. Incluso si no pudiste estar en la estudiatón, esperamos que esta guía te sea útil para practicar y prepararte.\\[\baselineskip]}
+\newcommand{\unidadAcademica}{Facultad de Matemáticas} % EDITAR - Unidad Académica (ej. Facultad de Matemáticas)
+\newcommand{\codigoDelCurso}{MAT1610}                  % EDITAR - Código del Curso (ej. MAT1203)
+\newcommand{\elCurso}{Cálculo I}                       % EDITAR - Título del Curso (ej. Cálculo I)
+\newcommand{\fecha}{Mayo 2020}                         % EDITAR - Fecha del Documento (ej. Mayo 2020)
+\newcommand{\nombreDocumento}{I1}                      % EDITAR -  nombre del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
+\newcommand{\tipoDocumento}{interrogación}             % EDITAR - tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
+\newcommand{\descripcionPortada}{                      % EDITAR - Descripción que aparece como primer párrafo de la portada.
+        Esta guía fue hecha con {\emoji \symbol{"2764"}} por novatos para novatos, para la estudiatón de cálculo el 13 de mayo de 2020, específicamente en preparación a la I2. Incluso si no pudiste estar en la estudiatón, esperamos que esta guía te sea útil para practicar y prepararte.\\[\baselineskip]
+    }
 
-\newcommand{\hojaDeFormulas}{Si}                      % EDITAR - ¿Incluir hoja de fórmulas? (Si o no)
-\newcommand{\tieneSecciones}{No}                      % EDITAR - ¿El documento tiene secciones? (Si o no)
-                                                      %        Si: Usa \sectionStart{} para empezar secciones.
-                                                      %        No: Comenta todos los \sectionStart{}
-\newcommand{\conRespuestas}{Si}                       % EDITAR - Incluir soluciones (Si o no)
-\newcommand{\soportaEmojis}{Si}                       % EDITAR - ¿El documento soporta emojis? (Si o no, requiere lualatex-dev)
+\newcommand{\hojaDeFormulas}{Si}                       % EDITAR - ¿Incluir hoja de fórmulas? (Si o no)
+\newcommand{\tieneSecciones}{No}                       % EDITAR - ¿El documento tiene secciones? (Si o no)
+                                                       %        Si: Usa \sectionStart{} para empezar secciones.
+                                                       %        No: Comenta todos los \sectionStart{}
+\newcommand{\conRespuestas}{No}                        % EDITAR - Incluir soluciones (Si o no)
+\newcommand{\soportaEmojis}{Si}                        % EDITAR - ¿El documento soporta emojis? (Si o no, requiere lualatex-dev)
 
 % Para evaluaciones (solo aplican si es que \tipoDocumento es control o interrogación)
-\newcommand{\libroAC}{Cerrado}                        % EDITAR - Tipo de Examen (Cerrado o Abierto)
-\newcommand{\preguntasPorResponder}{Todas}                % EDITAR - Número de preguntas a responder del total, (ej. Todas o 3)
-\newcommand{\conCalculadoras}{No}                     % EDITAR - ¿Se permiten calculadoras? (Si o no)
-\newcommand{\respuestaPorSeparado}{Si}                % EDITAR - Se responde las preguntas en un documento separado? (Si o no)
+\newcommand{\mostrarPuntos}{Si}                        % EDITAR - Mostrar puntos de cada pregunta. (Si o no)
+\newcommand{\libroAC}{Cerrado}                         % EDITAR - Tipo de Examen (Cerrado o Abierto)
+\newcommand{\preguntasPorResponder}{Todas}             % EDITAR - Número de preguntas a responder del total, (ej. Todas o 3)
+\newcommand{\conCalculadoras}{No}                      % EDITAR - ¿Se permiten calculadoras? (Si o no)
+\newcommand{\respuestaPorSeparado}{Si}                 % EDITAR - Se responde las preguntas en un documento separado? (Si o no)
 
 % -----------------------------------------------------
 % INICIO DEL DOCUMENTO
 % -----------------------------------------------------
-\input{base}                                          % Definiciones de estilo y estructura
-\begin{document}                                      % Inicio del contenido
-\input{portada.tex}                                   % Portada del Documento
-\begin{questions}                                     % Inicio de las preguntas
+\input{base}                                           % Definiciones de estilo y estructura
+\begin{document}                                       % Inicio del contenido
+\input{portada.tex}                                    % Portada del Documento
+\begin{questions}                                      % Inicio de las preguntas
     % -----------------------------------------------------
     % Iniciar preguntas
     % EDITAR - Copiar para añadir secciones o preguntas, una pregunta por archivo.
     % -----------------------------------------------------
-    \traerPregunta{preguntas/alternativas.tex}{15}    % EDITAR - Archivo de la pregunta y su puntaje
+    \traerPregunta{preguntas/alternativas.tex}{15}     % EDITAR - Archivo de la pregunta y su puntaje
     \traerPregunta{preguntas/doce.tex}{20}
     \traerPregunta{preguntas/trece.tex}{20}
     \traerPregunta{preguntas/catorce.tex}{20}
@@ -42,10 +46,10 @@
     % Terminar preguntas
     % -----------------------------------------------------
 
-\end{questions}                                       % Finalizar secciones y preguntas
-\vfill \medskip\hfill\textbf{FIN DE LA GUÍA}          % Finalizar documento principal
+\end{questions}                                        % Finalizar secciones y preguntas
+\vfill \medskip\hfill\textbf{FIN DE LA GUÍA}           % Finalizar documento principal
 
-\traerHojaDeFormulas{formulas.tex}                    % EDITAR - Hoja de fórmulas, comentar línea si no hay una.
+\traerHojaDeFormulas{formulas.tex}                     % EDITAR - Hoja de fórmulas, comentar línea si no hay una.
 
 % -----------------------------------------------------
 % Finalizar documento
