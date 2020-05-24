@@ -1,6 +1,7 @@
 # Plantilla Dinámica UC
 
-![CI](https://github.com/agucova/plantilla-uc/workflows/CI/badge.svg)
+> “Enunciados con emojis.”
+> — Œ CAi
 
 La idea de este proyecto es proveer **una plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de trabajo dentro de la UC.**
 
@@ -49,8 +50,9 @@ En los archivos base, podrás configurar características del documento según t
 - Si se puede utilizar calculadora
 - Si se incluye una hoja de fórmulas
 - Si la prueba es con libro abierto
+- Soporte de emojis ✨
 
-Para compilar el documento, es importante usar LuaTeX (no PDFLaTeX o XeTeX), dentro de lo posible en su versión de desarrollo (luatex-dev).
+Para compilar el documento, es importante usar LuaTeX (no PDFLaTeX o XeTeX), dentro de lo posible en su versión de desarrollo (`lualatex-dev`, que soporta emojis).
 
 ## Cosas por Hacer
 
