@@ -2,6 +2,9 @@
 
 ![CI](https://github.com/agucova/plantilla-uc/workflows/CI/badge.svg)
 
+> “Enunciados con emojis.”
+> — Œ CAi
+
 La idea de este proyecto es proveer **una plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de trabajo dentro de la UC.**
 
 Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente en [LICENSE.md](LICENSE.md).
