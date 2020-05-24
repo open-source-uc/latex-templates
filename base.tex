@@ -17,17 +17,20 @@
 \usepackage{graphicx}                                 % Para incluir imágenes
 \usepackage{booktabs}                                 % Tablas profesionales
 \usepackage[spanish]{babel}                           % Definición del lenguaje
-\usepackage[a4paper,                                  % Tamaño del papel
-    top = 25mm,                               % Margen superior
-    bottom = 25mm,                            % Margen inferior
-    left = 25mm,                              % Margen izquierdo
-    right = 25mm]{geometry}                   % Margen derecho
+
+% Deshabilitado: Tamaño A4
+% \usepackage[a4paper,                          % Tamaño del papel
+%     top = 25mm,                               % Margen superior
+%     bottom = 25mm,                            % Margen inferior
+%     left = 25mm,                              % Margen izquierdo
+%     right = 25mm]{geometry}                   % Margen derecho
+
 \usepackage[dvipsnames]{xcolor}                       % Colores avanzados
 \usepackage{soul}                                     % Resaltar texto y otras cosas
 \usepackage{caption}                                  % Descripciones en objetos flotantes
-\usepackage{textcomp}                                 % Símbolo de euro (obsoletar?)
+%\usepackage{textcomp}                                 % Símbolo de euro (obsoletar?)
 \usepackage{ifthen}                                   % Condicionales if/then
-\usepackage{fmtcount}                                 % Convertir enteros a palabras (obsoletar?)
+\usepackage{fmtcount}                                 % Convertir enteros a palabras
 \usepackage[per-mode = symbol]{siunitx}	              % Unidades del S.I.U
 \usepackage[version=4]{mhchem}                        % Símbolos químicos
 \usepackage{totcount}                                 % Mostrar contador de puntaje al princpio
@@ -35,20 +38,27 @@
 \usepackage{multicol}                                 % Entorno de multiples columnas (FS)
 \usepackage{lipsum}                                   % Texto Lorem Ipsum (obsoletar?)
 
-\usepackage{fontspec}
-\newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]
+\usepackage[no-math]{fontspec}
+\newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz] % "Enunciados con emojis" - Œ CAi
+\setsansfont{cmunb}[        % CM Bright para Texto
+    Extension=.otf,
+    UprightFont=*mr, % normal
+    ItalicFont=*mo, % itálica
+    BoldFont=*sr, % seminegrita
+    BoldItalicFont=*so, % seminegrita itálica
+]
 
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 
 % -----------------------------------------------------
 % Definiciones del Documento
 % -----------------------------------------------------
-\pointsinrightmargin                                  % Puntos en el margen derecho
+\pointsinrightmargin{}                                  % Puntos en el margen derecho
 \pointformat{\bfseries(\themarginpoints)}  % PUNTOS, agregar condicional!
 % Puntos en negrita y formato de paréntesis
 \pointformat{}
 \renewcommand{\partlabel}{\bfseries{(\thepartno)}}    % Números de parte negrita
-\renewcommand{\subpartlabel}{\bfseries{\thesubpart)}} % Números de parte negrita
+\renewcommand{\subpartlabel}{\bfseries{\thesubpart{}}} % Números de parte negrita
 \pagestyle{headandfoot}                               % Header y Footer de la solución
 \header{}{}{}                                         % Header
 \footer{}{}{\theCourseCode{}                          % Footer
@@ -57,7 +67,7 @@
 \graphicspath{{imagenes/}}                              % Directorio con las imágenes
 \definecolor{myRed}{RGB}{184,0,1}                     % Nuevo gris
 \definecolor{myGrey}{RGB}{211,211,211}                % Nuevo rojo
-\checkedchar{\large $\CIRCLE$}
+\checkedchar{\large \(\CIRCLE\)}
 \setlength{\fboxrule}{0pt}
 
 % -----------------------------------------------------
@@ -76,7 +86,9 @@
 % -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones
 % -----------------------------------------------------
-\ifthenelse{\equal{\hasSections}{Yes} \OR \equal{\hasSections}{Y} \OR \equal{\hasSections}{yes} \OR \equal{\hasSections}{y} \OR \equal{\hasSections}{YES}}
+\ifthenelse{
+    \equal{\hasSections}{Yes} \OR{} \equal{\hasSections}{Y} \OR{} \equal{\hasSections}{yes} \OR{} \equal{\hasSections}{y} \OR{} \equal{\hasSections}{YES}
+}
 % Si es que tiene secciones
 {\newcommand{\sectionStart}{                           % Initiate new sections
         \setcounter{question}{0}                          % (Re)initiate questions counter
@@ -99,7 +111,7 @@
 }
 
 \newcommand{\callQuestion}[2]{                        % Nueva pregunta
-    \cleardoublepage \input{#1}                       % Iniciar pregunta en nueva página
+    \cleardoublepage{} \input{#1}                       % Iniciar pregunta en nueva página
     \addtocounter{pointsCounter}{#2}                  % Incrementar puntos
     \addtocounter{numberOfQuestions}{1}               % Incrementar preguntas
     \stepcounter{figure}                              % Incrementar figuras
@@ -108,7 +120,8 @@
 
 % Define la hoja de fórmulas
 \newcommand{\callFormulaSheet}[1]{
-    \ifthenelse{\equal{\formulaSheet}{Yes} \OR \equal{\formulaSheet}{Y} \OR \equal{\formulaSheet}{yes} \OR \equal{\formulaSheet}{y} \OR \equal{\formulaSheet}{YES}}{\cleardoublepage \input{#1}}{}
+    \ifthenelse{
+        \equal{\formulaSheet}{Yes} \OR{} \equal{\formulaSheet}{Y} \OR{} \equal{\formulaSheet}{yes} \OR{} \equal{\formulaSheet}{y} \OR{} \equal{\formulaSheet}{YES}}{\cleardoublepage{} \input{#1}}{}
 }
 
 \newcommand{\headingFormulaSheet}{
@@ -139,8 +152,8 @@
 
 % Formato del título de la pregunta - solo las numeradas y no en partes
 \pointname{}                                          % No title for marks
-\pointsdroppedatright                                 % Puntaje por pregunta
-\framedsolutions                                      % Marco para soluciones
+\pointsdroppedatright{}                               % Puntaje por pregunta
+\framedsolutions{}                                      % Marco para soluciones
 \addto\captionsenglish{                               % Formato de etiquetas de figura
     %    \renewcommand\figurename{Figure \thequestion .}}
     \renewcommand\figurename{Figura}}
