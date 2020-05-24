@@ -3,32 +3,27 @@
 % Paquetes
 % -------------------------------------------------------------
 \usepackage{microtype}
-\usepackage{commath}
-% Configura el espacio tipográfico por razones estéticas
+\usepackage{commath}                                  % Configura el espacio tipográfico por razones estéticas
 \usepackage{cmbright}                                 % Tipografía (Computer Modern Bright)
 \usepackage[colorlinks = true,
-    allcolors = black]{hyperref}              % Hiper-referencias en el PDF
-\usepackage{subfigure}    % Entorno de multiples figuras
-\usepackage{amsmath}   % Matemáticas estándar
-\DeclareMathOperator{\arcsec}{arcsec}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\arccsc}{arccsc}
+    allcolors = black]{hyperref}                      % Hiper-referencias en el PDF
+\usepackage{subfigure}                                % Entorno de multiples figuras
+\usepackage{amsmath}                                  % Matemáticas estándar
 \usepackage{amssymb}                                  % Símbolos matemáticos estándar
 \usepackage{graphicx}                                 % Para incluir imágenes
 \usepackage{booktabs}                                 % Tablas profesionales
-\usepackage[spanish]{babel}                           % Definición del lenguaje
+\usepackage[spanish, es-noshorthands]{babel}          % Definición del lenguaje
 
 % Deshabilitado: Tamaño A4
-% \usepackage[a4paper,                          % Tamaño del papel
-%     top = 25mm,                               % Margen superior
-%     bottom = 25mm,                            % Margen inferior
-%     left = 25mm,                              % Margen izquierdo
-%     right = 25mm]{geometry}                   % Margen derecho
+% \usepackage[a4paper,                                % Tamaño del papel
+%     top = 25mm,                                     % Margen superior
+%     bottom = 25mm,                                  % Margen inferior
+%     left = 25mm,                                    % Margen izquierdo
+%     right = 25mm]{geometry}                         % Margen derecho
 
 \usepackage[dvipsnames]{xcolor}                       % Colores avanzados
 \usepackage{soul}                                     % Resaltar texto y otras cosas
 \usepackage{caption}                                  % Descripciones en objetos flotantes
-%\usepackage{textcomp}                                 % Símbolo de euro (obsoletar?)
 \usepackage{ifthen}                                   % Condicionales if/then
 \usepackage{fmtcount}                                 % Convertir enteros a palabras
 \usepackage[per-mode = symbol]{siunitx}	              % Unidades del S.I.U
@@ -37,36 +32,27 @@
 \usepackage{xstring}                                  % Para manipular strings
 \usepackage{multicol}                                 % Entorno de multiples columnas (FS)
 \usepackage{lipsum}                                   % Texto Lorem Ipsum (obsoletar?)
-
-\usepackage[no-math]{fontspec}
-\newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz] % "Enunciados con emojis" - Œ CAi
-\setsansfont{cmunb}[        % CM Bright para Texto
-    Extension=.otf,
-    UprightFont=*mr, % normal
-    ItalicFont=*mo, % itálica
-    BoldFont=*sr, % seminegrita
-    BoldItalicFont=*so, % seminegrita itálica
-]
-
+\usepackage{mfirstuc}                                 % Agrega comandos para mayúsculas
+\usepackage[no-math]{fontspec}                        % Manejo tipográfico manual
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 
 % -----------------------------------------------------
 % Definiciones del Documento
 % -----------------------------------------------------
-\pointsinrightmargin{}                                  % Puntos en el margen derecho
+\pointsinrightmargin{}                                % Puntos en el margen derecho
 \pointformat{\bfseries(\themarginpoints)}  % PUNTOS, agregar condicional!
 % Puntos en negrita y formato de paréntesis
 \pointformat{}
-\renewcommand{\partlabel}{\bfseries{(\thepartno)}}    % Números de parte negrita
+\renewcommand{\partlabel}{\bfseries{(\thepartno)}}     % Números de parte negrita
 \renewcommand{\subpartlabel}{\bfseries{\thesubpart{}}} % Números de parte negrita
-\pagestyle{headandfoot}                               % Header y Footer de la solución
-\header{}{}{}                                         % Header
-\footer{}{}{\theCourseCode{}                          % Footer
-    \theCourse{} --- \theExamDate{}
+\pagestyle{headandfoot}                                % Header y Footer de la solución
+\header{}{}{}                                          % Header
+\footer{}{}{\codigoDelCurso{}                          % Footer
+    \elCurso{} --- \fecha{}
     (Estudiatón)}
-\graphicspath{{imagenes/}}                              % Directorio con las imágenes
-\definecolor{myRed}{RGB}{184,0,1}                     % Nuevo gris
-\definecolor{myGrey}{RGB}{211,211,211}                % Nuevo rojo
+\graphicspath{{imagenes/}}                             % Directorio con las imágenes
+\definecolor{myRed}{RGB}{184,0,1}                      % Nuevo gris
+\definecolor{myGrey}{RGB}{211,211,211}                 % Nuevo rojo
 \checkedchar{\large \(\CIRCLE\)}
 \setlength{\fboxrule}{0pt}
 
@@ -79,27 +65,30 @@
 % -----------------------------------------------------
 % Nuevos Comandos
 % -----------------------------------------------------
-\newtotcounter{pointsCounter}                         % Contador del número de puntos por parte
-\newtotcounter{numberOfSections}                      % Contador de número de secciones
-\newtotcounter{numberOfQuestions}                     % Contador de número de preguntas
+\newtotcounter{contadorDePuntos}                      % Contador del número de puntos por parte
+\newtotcounter{numeroDeSecciones}                     % Contador de número de secciones
+\newtotcounter{numeroDePreguntas}                     % Contador de número de preguntas
+\DeclareMathOperator{\arcsec}{arcsec}                 % Funciones Trigonométricas Inversas
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
 
 % -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones
 % -----------------------------------------------------
 \ifthenelse{
-    \equal{\hasSections}{Yes} \OR{} \equal{\hasSections}{Y} \OR{} \equal{\hasSections}{yes} \OR{} \equal{\hasSections}{y} \OR{} \equal{\hasSections}{YES}
+    \equal{\tieneSecciones}{Si} \OR{} \equal{\tieneSecciones}{Sí} \OR{} \equal{\tieneSecciones}{si} \OR{} \equal{\tieneSecciones}{sí} \OR{} \equal{\tieneSecciones}{SÍ} \OR{} \equal{\tieneSecciones}{SI}
 }
 % Si es que tiene secciones
-{\newcommand{\sectionStart}{                           % Initiate new sections
+{\newcommand{\sectionStart}{                              % Initiate new sections
         \setcounter{question}{0}                          % (Re)initiate questions counter
         \setcounter{figure}{0}                            % Initiate figure counter
         \setcounter{table}{0}                             % Initiate table counter
         \qformat{\ifthenelse{\equal{\thequestion}{1}}
-            {\fbox{\parbox{16cm}{\textbf{\large SECCIÓN \Alph{numberOfSections} \hfill\vrule depth 0.5em width 0pt \\
-                            Question \Alph{numberOfSections}\thequestion}} \hfill\vrule depth 1.5em width 0pt}}
-            {\fbox{\parbox{16cm}{\large \textbf{Pregunta \Alph{numberOfSections}\thequestion}} \hfill\vrule depth 0.8em width 0pt}}
+            {\fbox{\parbox{16cm}{\textbf{\large SECCIÓN \Alph{numeroDeSecciones} \hfill\vrule depth 0.5em width 0pt \\
+                            Question \Alph{numeroDeSecciones}\thequestion}} \hfill\vrule depth 1.5em width 0pt}}
+            {\fbox{\parbox{16cm}{\large \textbf{Pregunta \Alph{numeroDeSecciones}\thequestion}} \hfill\vrule depth 0.8em width 0pt}}
         }
-        \stepcounter{numberOfSections}                    % Incrementar contador
+        \stepcounter{numeroDeSecciones}               % Incrementar contador
     }}
 % Si no hay secciones
 {   \setcounter{question}{0}                          % Reinicializar contador de preguntas
@@ -109,21 +98,23 @@
         {\fbox{\parbox{16cm}{\large \textbf{Pregunta \thequestion}} \hfill\vrule depth 0.8em width 0pt}}
     }
 }
-
-\newcommand{\callQuestion}[2]{                        % Nueva pregunta
-    \cleardoublepage{} \input{#1}                       % Iniciar pregunta en nueva página
-    \addtocounter{pointsCounter}{#2}                  % Incrementar puntos
-    \addtocounter{numberOfQuestions}{1}               % Incrementar preguntas
+% Invocador misterioso de preguntas
+\newcommand{\traerPregunta}[2]{                       % Nueva pregunta
+    \cleardoublepage \input{#1}                       % Iniciar pregunta en nueva página
+    \addtocounter{contadorDePuntos}{#2}               % Incrementar puntos
+    \addtocounter{numeroDePreguntas}{1}               % Incrementar preguntas
     \stepcounter{figure}                              % Incrementar figuras
     \stepcounter{table}                               % Incrementar tablas
 }
 
 % Define la hoja de fórmulas
-\newcommand{\callFormulaSheet}[1]{
+\newcommand{\traerHojaDeFormulas}[1]{
     \ifthenelse{
-        \equal{\formulaSheet}{Yes} \OR{} \equal{\formulaSheet}{Y} \OR{} \equal{\formulaSheet}{yes} \OR{} \equal{\formulaSheet}{y} \OR{} \equal{\formulaSheet}{YES}}{\cleardoublepage{} \input{#1}}{}
+        \equal{\hojaDeFormulas}{Yes} \OR{} \equal{\hojaDeFormulas}{Y} \OR{} \equal{\hojaDeFormulas}{yes} \OR{} \equal{\hojaDeFormulas}{y} \OR{} \equal{\hojaDeFormulas}{YES} \OR{} \equal{\hojaDeFormulas}{Si} \OR{} \equal{\hojaDeFormulas}{Sí} \OR{} \equal{\hojaDeFormulas}{Verdadero} \OR{} \equal{\hojaDeFormulas}{si} \OR{} \equal{\hojaDeFormulas}{sí} \OR{} \equal{\hojaDeFormulas}{verdadero} \OR{} \equal{\hojaDeFormulas}{SÍ} \OR{} \equal{\hojaDeFormulas}{SI} \OR{} \equal{\hojaDeFormulas}{VERDADERO}
+    }
+    {\cleardoublepage \input{#1}}{}
 }
-
+% Cabecera de la hoja de fórmulas
 \newcommand{\headingFormulaSheet}{
     \pagestyle{empty}
     \setlength{\textwidth}{180mm}
@@ -139,8 +130,8 @@
     \twocolumn
     \fcolorbox{white}{myGrey}{\begin{minipage}{20em}
             \centering \vspace{4mm} {\Large \textbf{Hoja de Fórmulas}} \\
-            \theCourse\ (\theCourseCode) \\
-            {\small \theExamDate{} (\theDiet)} \vspace{3mm}
+            \elCurso\ (\codigoDelCurso) \\
+            {\small \fecha{} (\tipoDocumento)} \vspace{3mm}
         \end{minipage}}
 }
 
@@ -153,7 +144,7 @@
 % Formato del título de la pregunta - solo las numeradas y no en partes
 \pointname{}                                          % No title for marks
 \pointsdroppedatright{}                               % Puntaje por pregunta
-\framedsolutions{}                                      % Marco para soluciones
+\framedsolutions{}                                    % Marco para soluciones
 \addto\captionsenglish{                               % Formato de etiquetas de figura
     %    \renewcommand\figurename{Figure \thequestion .}}
     \renewcommand\figurename{Figura}}
@@ -161,8 +152,28 @@
     %    \renewcommand\tablename{Table \thequestion .}}
     \renewcommand\tablename{Tabla}}
 \makeatletter
-\def\fnum@figure{\figurename~\Alph{numberOfSections}\thefigure}
-\def\fnum@table{\tablename~\Alph{numberOfSections}\thetable}
+\def\fnum@figure{\figurename~\Alph{numeroDeSecciones}\thefigure}
+\def\fnum@table{\tablename~\Alph{numeroDeSecciones}\thetable}
 \makeatother
 \renewcommand{\solutiontitle}{
     \noindent\textbf{Solución:}\par\noindent}  % Renombrar soluciones
+
+% -----------------------------------------------------
+% Lógica Interna
+% -----------------------------------------------------
+
+% Establece la familia del documento (evaluación o guía)
+\ifthenelse{
+    \equal{\tipoDocumento}{interrogacion} \OR
+    \equal{\tipoDocumento}{interrogación} \OR
+    \equal{\tipoDocumento}{Interrogacion} \OR
+    \equal{\tipoDocumento}{Interrogación} \OR
+    \equal{\tipoDocumento}{control} \OR
+    \equal{\tipoDocumento}{Control}}
+{\newcommand{\familiaDocumento}{evaluación}} % if
+{\newcommand{\familiaDocumento}{guía}} % else
+
+% Maneja el soporte de emojis
+\ifthenelse{\equal{\soportaEmojis}{Si} \OR \equal{\soportaEmojis}{si}}{
+    \newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]}  %  if "Enunciados con emojis" - Œ CAi
+{} % else

@@ -3,26 +3,28 @@
 % -----------------------------------------------------
 % EDITAR - Información del Curso y Prueba
 % -----------------------------------------------------
-\newcommand{\theCourseCode}{MAT1610}                % EDITAR - Código del Curso (ej. MAT1203)
-\newcommand{\theCourse}{Cálculo I}                 % EDITAR - Título del Curso (ej. Cálculo I)
-\newcommand{\theExamDate}{Mayo 2020}                 % EDITAR - Fecha del Documento (ej. Mayo 2020)
-\newcommand{\theDiet}{Main}                           % EDITAR - DEPRECAR Exam diet (Main OR Resit),
-\newcommand{\examOC}{Closed}                          % EDITAR - Tipo de Examen (Cerrado o Abierto)
-\newcommand{\useCalculators}{No}                     % EDITAR - ¿Se permiten calculadoras? (Yes OR No)
-\newcommand{\formulaSheet}{Yes}                       % EDITAR - ¿Incluir hoja de fórmulas? (Yes OR No)
-\newcommand{\hasSections}{No}                        % EDITAR - ¿El documento tiene secciones? (Yes OR No)
+\newcommand{\codigoDelCurso}{MAT1610}                 % EDITAR - Código del Curso (ej. MAT1203)
+\newcommand{\elCurso}{Cálculo I}                      % EDITAR - Título del Curso (ej. Cálculo I)
+\newcommand{\fecha}{Mayo 2020}                        % EDITAR - Fecha del Documento (ej. Mayo 2020)
+\newcommand{\tipoDocumento}{estudiatón}               % EDITAR, tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
+\newcommand{\nombreDocumento}{Estudiatón I1}          % EDITAR, tipo del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
+\newcommand{\libroAC}{Cerrado}                        % EDITAR - Tipo de Examen (Cerrado o Abierto)
+\newcommand{\conCalculadoras}{No}                     % EDITAR - ¿Se permiten calculadoras? (Si o no)
+\newcommand{\hojaDeFormulas}{Si}                      % EDITAR - ¿Incluir hoja de fórmulas? (Si o no)
+\newcommand{\tieneSecciones}{No}                      % EDITAR - ¿El documento tiene secciones? (Si o no)
                                                       %        If Yes: Use \sectionStart to start new sections
                                                       %        If No: Comment all \sectionStart lines
-\newcommand{\separateBooks}{Yes}                      % EDITAR - Se responde las preguntas en un libro separado? (Yes OR No)
-\newcommand{\numberQuestions}{All}                    % EDITAR - Número de preguntas a responder. (e.g. All OR 3)
-\newcommand{\withSolutions}{Yes}                       % EDITAR - Incluir soluciones (Yes OR No)
+\newcommand{\respuestaPorSeparado}{Si}                % EDITAR - Se responde las preguntas en un libro separado? (Si o no)
+\newcommand{\preguntasPorResponder}{3}                % EDITAR - Número de preguntas a responder del total, (ej. Todas o 3)
+\newcommand{\conRespuestas}{Si}                       % EDITAR - Incluir soluciones (Si o no)
+\newcommand{\soportaEmojis}{Si}                       % EDITAR - ¿El documento soporta emojis? (Si o no, requiere LuaLaTeX-dev)
 
 % -----------------------------------------------------
 % INICIO DEL DOCUMENTO
 % -----------------------------------------------------
-\input{base}                                   % Definiciones de estilo y estructura
+\input{base}                                          % Definiciones de estilo y estructura
 \begin{document}                                      % Inicio del contenido
-\input{portada.tex}                              % Portada del Documento
+\input{portada.tex}                                   % Portada del Documento
 \begin{questions}                                     % Inicio de las preguntas
     % -----------------------------------------------------
     % Iniciar preguntas
@@ -31,18 +33,18 @@
     % -----------------------------------------------------
     % EDITAR - Copiar para añadir secciones o preguntas
     % -----------------------------------------------------
-    \callQuestion{preguntas/alternativas.tex}{15} % EDITAR - Archivo de la pregunta y su puntaje
-    \callQuestion{preguntas/doce.tex}{20}
-    \callQuestion{preguntas/trece.tex}{20}
-    \callQuestion{preguntas/catorce.tex}{20}
+    \traerPregunta{preguntas/alternativas.tex}{15}    % EDITAR - Archivo de la pregunta y su puntaje
+    \traerPregunta{preguntas/doce.tex}{20}
+    \traerPregunta{preguntas/trece.tex}{20}
+    \traerPregunta{preguntas/catorce.tex}{20}
     % -----------------------------------------------------
     % Terminar preguntas
     % -----------------------------------------------------
 
 \end{questions}                                       % Finalizar secciones y preguntas
-\vfill \medskip\hfill\textbf{FIN DE LA GUÍA}             % Finalizar documento principal
+\vfill \medskip\hfill\textbf{FIN DE LA GUÍA}          % Finalizar documento principal
 
-\callFormulaSheet{formulas.tex}                   % EDITAR - Hoja de fórmulas, comentar línea si no hay una.
+\traerHojaDeFormulas{formulas.tex}                    % EDITAR - Hoja de fórmulas, comentar línea si no hay una.
 
 % -----------------------------------------------------
 % Finalizar documento

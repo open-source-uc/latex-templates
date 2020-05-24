@@ -30,7 +30,7 @@
 
 (STEP 3) Create the structure of the exam on the main file by (i) adding
     sections with the command \sectionStart and (ii) adding questions
-    with the command \callQuestion{<fn>}{<points>}, where <fn> is the 
+    with the command \traerPregunta{<fn>}{<points>}, where <fn> is the
     name of the file with the question and <points> is the total
     number of points in the question.
 
@@ -39,21 +39,21 @@
     for multiple-choice questions
 
 (NOTES) (1) Use different file names for different questions.
-        (2) Use "[...] figure~\Alph{numberOfSections}\ref{fig:label} [...]"
+        (2) Use "[...] figure~\Alph{numeroDeSecciones}\ref{fig:label} [...]"
             to cite figures.
 
 % ---------------------------------------------------------------------
 % UPDATES - Log of version updates
 % ---------------------------------------------------------------------
 === Version (v1.1, Feb 2020) ===
-(1.1-3) Option for exams with and without sections. New command \hasSections
+(1.1-3) Option for exams with and without sections. New command \tieneSecciones
     command [Yes/No] and \sectionStart (comment if no sections)
 (1.1-2) Cover page has footnote with version and date for easy tracking
 (1.1-1) Cover page with coloured titles
 
 === Version (v1.0, Sep 2019) ===
 (1.0-5) Multiple-choice questions can now be included (beta).
-(1.0-4) Checks if the total number of points coincides with the sum of 
+(1.0-4) Checks if the total number of points coincides with the sum of
     marks on each part. Adds a warning on the cover page if it doesn't.
 (1.0-3) A formula sheet is now part of the template (if required).
 (1.0-2) Use of chemical symbols and equations.
@@ -61,12 +61,12 @@
     on figures and tables.
 
 === Version (v0.1, Jan 2019) ===
-(0.1-4) Toggle (with/without) marking guidelines and gives a warning on the 
+(0.1-4) Toggle (with/without) marking guidelines and gives a warning on the
     cover sheet if it includes marking guidelines.
 (0.1-3) Exam structure with Sections and Questions.
-(0.1-2) Adds cover sheet (to be replaced by ETO later) with course and 
+(0.1-2) Adds cover sheet (to be replaced by ETO later) with course and
     exam information to be checked by course organisers and the ETO.
 (0.1-1) User options include: course code and title, exam date and
-    diet, open or closed exam, use of calculators, indication if 
+    diet, open or closed exam, use of calculators, indication if
     formula sheet attached, number of questions to answer and separate
     books or not.

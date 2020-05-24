@@ -8,17 +8,34 @@
         \includegraphics[height=45mm]{puc_comunitario.png}
         \includegraphics[height=45mm]{delegados2020.png} \\ \vspace{10mm}
 
-        \textcolor{MidnightBlue}{\textbf{\Large \theCourseCode{} \theCourse{} --- \theExamDate{} (Estudiatón I2)}} \\[\baselineskip]
+        \textcolor{MidnightBlue}{\textbf{\Large \codigoDelCurso{}: \elCurso{} --- \fecha{} (\nombreDocumento)}} \\[\baselineskip]
         \vspace{10mm}
+
         Esta guía fue hecha con {\emoji \symbol{"2764"}} por novatos para novatos, para la estudiatón de cálculo el 13 de mayo de 2020, específicamente en preparación a la I2. Incluso si no pudiste estar en la estudiatón, esperamos que esta guía te sea útil para practicar y prepararte.\\[\baselineskip]
 
-        Esta guía tiene 14 preguntas, 11 de alternativas y 3 de desarrollo. Estimamos el tiempo completo en 1h y 40m, sin contar el desafío (último ejercicio).\\[\baselineskip]
+        \ifthenelse{
+            \equal{\hojaDeFormulas}{Yes} \OR{} \equal{\hojaDeFormulas}{Y} \OR{} \equal{\hojaDeFormulas}{yes} \OR{} \equal{\hojaDeFormulas}{y} \OR{} \equal{\hojaDeFormulas}{YES} \OR{ }\equal{\hojaDeFormulas}{Si} \OR{} \equal{\hojaDeFormulas}{Sí} \OR{} \equal{\hojaDeFormulas}{Verdadero} \OR{} \equal{\hojaDeFormulas}{si} \OR{} \equal{\hojaDeFormulas}{sí} \OR{} \equal{\hojaDeFormulas}{verdadero} \OR{} \equal{\hojaDeFormulas}{SÍ} \OR{} \equal{\hojaDeFormulas}{SI} \OR{} \equal{\hojaDeFormulas}{VERDADERO}
+        }
+        {Puedes encontrar una hoja de fórmulas en las últimas hojas.} % if
 
-        Puedes encontrar una hoja de fórmulas en la penúltima página de este documento, aunque te \textbf{recomendamos enfáticamente no usarla} al menos que te encuentres pegado en un ejercicio.
+        \ifthenelse{\equal{\familiaDocumento}{evaluación}}{
+            \ifthenelse{
+                \equal{\preguntasPorResponder}{Todas} \OR
+                \equal{\preguntasPorResponder}{todas}
+            }
+            {Deberías contestar todas las preguntas. \\} % if
+            {Para esta evaluación, debes responder \textbf{solo} \NUMBERstringnum{\total{numeroDePreguntas}} preguntas. \\} % else
+        }{}
+
+
+        \vspace{25mm}
+
+        % Advertencia de respuestas
+        \ifthenelse{\equal{\conRespuestas}{Si} \OR{} \equal{\conRespuestas}{Sí} \OR{} \equal{\conRespuestas}{si} \OR{} \equal{\conRespuestas}{sí} \OR{} \equal{\conRespuestas}{SÍ} \OR{} \equal{\conRespuestas}{SI}}{\textcolor{myRed}{\LARGE \textbf{~Advertencia:} Esta copia incluye respuestas~} \\}{}
 
         \vfill
-        %
-        \textcolor{MidnightBlue}{\textbf{\large Notas para Participantes}}\\
+
+        \textcolor{MidnightBlue}{\textbf{\large Notas}}\\
 
         Todos en el Zoom van a ser divididos en grupos de \textbf{5 a 8 personas} al iniciar la estudiatón.\\ Una vez que seas asignado a un grupo, \textbf{tendrás que presentarte antes de empezar} y después podrán comenzar a hacer en orden cada pregunta.\\[\baselineskip]
 
@@ -29,6 +46,9 @@
     \end{flushleft}
 \end{coverpages}
 \newpage
-%
+
+% Impresión automática de respuestas, NO REMOVER %
 \ifthenelse{
-    \equal{\withSolutions}{Yes} \OR{} \equal{\withSolutions}{Y} \OR{} \equal{\withSolutions}{yes} \OR{} \equal{\withSolutions}{y} \OR{} \equal{\withSolutions}{YES}}{\printanswers}{}
+    \equal{\conRespuestas}{Yes} \OR{} \equal{\conRespuestas}{Y} \OR{} \equal{\conRespuestas}{yes} \OR{} \equal{\conRespuestas}{y} \OR{} \equal{\conRespuestas}{YES} \OR{} \equal{\conRespuestas}{Si} \OR{} \equal{\conRespuestas}{Sí} \OR{} \equal{\conRespuestas}{Verdadero} \OR{} \equal{\conRespuestas}{si} \OR{} \equal{\conRespuestas}{sí} \OR{} \equal{\conRespuestas}{verdadero} \OR{} \equal{\conRespuestas}{SÍ} \OR{} \equal{\conRespuestas}{SI} \OR{} \equal{\conRespuestas}{VERDADERO}
+}
+{\printanswers}{}
