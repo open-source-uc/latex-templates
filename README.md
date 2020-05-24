@@ -8,10 +8,10 @@ Esta plantilla es una derivación directa de la plantilla existente y públicame
 La plantilla se encuentra escrita en LaTeX, y fue adaptado para su uso en LuaTeX en su versión de desarrollo (necesario para el soporte de emojis a través de Harfbuzz).
 
 Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
-
-![Portada](ejemplos/portada.png "Portada de Ejemplo")
-
-![Pregunta](ejemplos/alternativa.png "Pregunta de Alternativas de Ejemplo")
+<p align="center">
+<img src="ejemplos/portada.png" title="Portada de ejemplo" alt="Portada" width="600px" />
+<img src="ejemplos/alternativa.png" title="Pregunta de alternativas de ejemplo" alt="Pregunta" width="600px" />
+</p>
 
 ## Uso
 
