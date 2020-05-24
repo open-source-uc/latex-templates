@@ -1,6 +1,7 @@
 #CUSTOM:
 .DS_Store
 __latexindent_temp.tex
+*.synctex*
 
 # Created by https://www.gitignore.io/api/lua,latex,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=lua,latex,visualstudiocode
