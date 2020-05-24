@@ -1,7 +1,5 @@
 # Plantilla Dinámica UC
 
-![CI](https://github.com/agucova/plantilla-uc/workflows/CI/badge.svg)
-
 > “Enunciados con emojis.”
 > — Œ CAi
 
