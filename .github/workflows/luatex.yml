@@ -1,4 +1,4 @@
-name: CI
+name: Lint y Compilación
 
 on:
   push:
@@ -32,6 +32,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # Caché
+      - name: Cache
+        uses: actions/cache@v1.2.0
+        with:
+          # A directory to store and save the cache
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/
+          # An explicit key for restoring and saving the cache
+          key: compilacion-${{ hashFiles('/home/runner/work/plantilla-uc/plantilla-uc/.latexmkrc') }}
       # Compilar
       - name: Compilador de LuaTeX
         uses: agucova/latex-action@master
@@ -43,11 +51,11 @@ jobs:
       - name: Subir log del compilador
         uses: actions/upload-artifact@v2
         with:
-          name: document.log
-          path: /home/runner/work/plantilla-uc/plantilla-uc/documento.log
+          name: documento.log
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/documento.log
 
       - name: Subir PDF resultante
         uses: actions/upload-artifact@v2
         with:
           name: documento.pdf
-          path: /home/runner/work/plantilla-uc/plantilla-uc/documento.pdf
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/documento.pdf
