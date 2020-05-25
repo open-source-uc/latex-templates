@@ -32,12 +32,16 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 ├── imagenes/
 │   ├── delegados2020.png
 │   └── puc_comunitario.png
-├── preguntas/
+├── preguntas/ // preguntas de ejemplo
 │   ├── alternativas.tex
-│   ├── catorce.tex // preguntas de ejemplo
+│   ├── catorce.tex
 │   ├── doce.tex
 │   └── trece.tex
-└── latexmkrc // config. de lualatex para Overleaf
+├── out/
+│   └── documento.pdf // PDF de ejemplo
+├── chktexrc // config. de chktex
+└── .latexmkrc // config. de latexmk
+
 </pre>
 
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
