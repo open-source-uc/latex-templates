@@ -35,18 +35,10 @@
 \usepackage[no-math]{fontspec}                        % Manejo tipográfico manual
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 \usepackage{dirtytalk}                                % Citas
+\usepackage{etoolbox}                                 % if/else modernos
 % -----------------------------------------------------
 % Definiciones del Documento
 % -----------------------------------------------------
-
-\pointsinrightmargin{}                                % Puntos en el margen derecho
-\ifthenelse{
-    \equal{\mostrarPuntos}{Si} \OR{} \equal{\mostrarPuntos}{Sí} \OR{} \equal{\mostrarPuntos}{Verdadero} \OR{} \equal{\mostrarPuntos}{si} \OR{} \equal{\mostrarPuntos}{sí} \OR{} \equal{\mostrarPuntos}{verdadero} \OR{} \equal{\mostrarPuntos}{SÍ} \OR{} \equal{\mostrarPuntos}{SI}
-}{
-    \pointformat{\bfseries(\themarginpoints)}
-}{
-    \pointformat{}
-}
 
 \renewcommand{\partlabel}{\bfseries{(\thepartno)}}     % Números de parte negrita
 \renewcommand{\subpartlabel}{\bfseries{\thesubpart{}}} % Números de parte negrita
@@ -78,16 +70,104 @@
 \DeclareMathOperator{\arccsc}{arccsc}
 
 % -----------------------------------------------------
+% Lógica Interna
+% -----------------------------------------------------
+
+% Thanks Phelype Oleinik for his awesome answer on StackExchange suggesting this. https://tex.stackexchange.com/users/134574/phelype-oleinik
+\newrobustcmd\sanitizadorSiNo[1]{%
+    \MakeLowercase{\gdef\noexpand\internalCondition{#1}}%
+    \ifboolexpr{%
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{yes}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{yas}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{si}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{sí}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{s\IeC{\'\i}}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{s\IeC{\'i}}} % For SÍ
+    }}
+
+\newrobustcmd\sanitizadorPorResponder[1]{%
+    \MakeLowercase{\gdef\noexpand\internalCondition{#1}}%
+    \ifboolexpr{%
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{todas}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{todo}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{toda}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{all}}
+    }}
+\newrobustcmd\sanitizadorLibroAC[1]{%
+    \MakeLowercase{\gdef\noexpand\internalCondition{#1}}%
+    \ifboolexpr{%
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{abierto}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{apuntes}}
+    }}
+\newrobustcmd\sanitizadorEsEvaluacion[1]{%
+    \MakeLowercase{\gdef\noexpand\internalCondition{#1}}%
+    \ifboolexpr{%
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{interrogación}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{interrogacion}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{control}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{evaluación}}
+        or
+        test {\expandafter\ifstrequal\expandafter{\internalCondition}{evaluacion}}
+    }}
+
+\newrobustcmd\siHojaDeFormulas{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\hojaDeFormulas}}%
+\newrobustcmd\siTieneSecciones{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\tieneSecciones}}%
+\newrobustcmd\siConRespuestas{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\conRespuestas}}%
+\newrobustcmd\siSoportaEmojis{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\soportaEmojis}}%
+\newrobustcmd\siMostrarPuntos{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\mostrarPuntos}}%
+\newrobustcmd\siConCalculadoras{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\conCalculadoras}}%
+\newrobustcmd\siRespuestaPorSeparado{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\respuestaPorSeparado}}%
+\newrobustcmd\siResponderTodo{%
+    \expandafter\sanitizadorPorResponder
+    \expandafter{\preguntasPorResponder}}%
+\newrobustcmd\siEsEvaluacion{%
+    \expandafter\sanitizadorEsEvaluacion
+    \expandafter{\tipoDocumento}}%
+\newrobustcmd\siEsLibroAbierto{%
+    \expandafter\sanitizadorLibroAC
+    \expandafter{\libroAC}}%
+\ExplSyntaxOff
+
+\siEsEvaluacion{\newcommand{\familiaDocumento}{evaluación}}{\newcommand{\familiaDocumento}{guía}}
+% Maneja el soporte de emojis
+\siSoportaEmojis{
+    \newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]}  %  if "Enunciados con emojis" - Œ CAi
+{} % else
+
+% -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones
 % -----------------------------------------------------
-\ifthenelse{
-    \equal{\tieneSecciones}{Si} \OR{} \equal{\tieneSecciones}{Sí} \OR{} \equal{\tieneSecciones}{si} \OR{} \equal{\tieneSecciones}{sí} \OR{} \equal{\tieneSecciones}{SÍ} \OR{} \equal{\tieneSecciones}{SI}
-}
-% Si es que tiene secciones
-{\newcommand{\sectionStart}{                              % Initiate new sections
-        \setcounter{question}{0}                          % (Re)initiate questions counter
-        \setcounter{figure}{0}                            % Initiate figure counter
-        \setcounter{table}{0}                             % Initiate table counter
+\siTieneSecciones
+{\newcommand{\sectionStart}{                              % Iniciar sección
+        \setcounter{question}{0}                          % Reiniciar contador preguntas
+        \setcounter{figure}{0}                            % Iniciar contador de figuras
+        \setcounter{table}{0}                             % Iniciar contador de tablas
         \qformat{\ifthenelse{\equal{\thequestion}{1}}
             {\fbox{\parbox{16cm}{\textbf{\large SECCIÓN \Alph{numeroDeSecciones} \hfill\vrule depth 0.5em width 0pt \\
                             Question \Alph{numeroDeSecciones}\thequestion}} \hfill\vrule depth 1.5em width 0pt}}
@@ -146,6 +226,9 @@
 
 %\qformat{\textbf{\large Question \thequestion} \hfill\vrule depth 1.5em width 0pt}
 
+\pointsinrightmargin{}                                % Puntos en el margen derecho
+\siMostrarPuntos{\pointformat{\bfseries(\themarginpoints)}}{\pointformat{}}
+
 % Formato del título de la pregunta - solo las numeradas y no en partes
 \pointname{}                                          % No title for marks
 \pointsdroppedatright{}                               % Puntaje por pregunta
@@ -162,23 +245,3 @@
 \makeatother
 \renewcommand{\solutiontitle}{
     \noindent\textbf{Solución:}\par\noindent}  % Renombrar soluciones
-
-% -----------------------------------------------------
-% Lógica Interna
-% -----------------------------------------------------
-
-% Establece la familia del documento (evaluación o guía)
-\ifthenelse{
-    \equal{\tipoDocumento}{interrogacion} \OR
-    \equal{\tipoDocumento}{interrogación} \OR
-    \equal{\tipoDocumento}{Interrogacion} \OR
-    \equal{\tipoDocumento}{Interrogación} \OR
-    \equal{\tipoDocumento}{control} \OR
-    \equal{\tipoDocumento}{Control}}
-{\newcommand{\familiaDocumento}{evaluación}} % if
-{\newcommand{\familiaDocumento}{guía}} % else
-
-% Maneja el soporte de emojis
-\ifthenelse{\equal{\soportaEmojis}{Si} \OR \equal{\soportaEmojis}{si}}{
-    \newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]}  %  if "Enunciados con emojis" - Œ CAi
-{} % else
