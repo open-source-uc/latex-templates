@@ -43,7 +43,11 @@ jobs:
       - name: Subir log del compilador
         uses: actions/upload-artifact@v2
         with:
-          # Artifact name
           name: document.log
-          # A file, directory or wildcard pattern that describes what to upload
           path: /home/runner/work/plantilla-uc/plantilla-uc/documento.log
+
+      - name: Subir PDF resultante
+        uses: actions/upload-artifact@v2
+        with:
+          name: documento.pdf
+          path: /home/runner/work/plantilla-uc/plantilla-uc/documento.pdf

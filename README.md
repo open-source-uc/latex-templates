@@ -7,7 +7,7 @@ La idea de este proyecto es proveer **una plantilla atractiva, moderna y dinámi
 
 Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente en [LICENSE.md](LICENSE.md).
 
-La plantilla se encuentra escrita en LaTeX, y fue adaptado para su uso en LuaTeX en su versión de desarrollo (necesario para el soporte de emojis a través de Harfbuzz).
+La plantilla otorga diversas opciones que permiten formar un documento listo en minutos, con alta flexibilidad y código mantenible.
 
 Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
 <p align="center">
@@ -42,6 +42,8 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
 
+- Soporte de emojis ✨
+- Unidad Académica
 - Código del Curso y Título
 - Fecha del Documento
 - Presencia de respuestas (genera rúbricas automáticamente)
@@ -49,9 +51,18 @@ En los archivos base, podrás configurar características del documento según t
 - Si se puede utilizar calculadora
 - Si se incluye una hoja de fórmulas
 - Si la prueba es con libro abierto
-- Soporte de emojis ✨
+- Si requiere puntaje por pregunta
+- ...
 
-Para compilar el documento, es importante usar LuaTeX (no PDFLaTeX o XeTeX), dentro de lo posible en su versión de desarrollo (`lualatex-dev`, que soporta emojis).
+Para compilar el documento, es importante usar LuaLaTeX (no PDFLaTeX o XeTeX). El soporte de emojis requiere usar el `lualatex-dev` disponible en TeXLive 2020 (es necesario LuaHBTeX).
+
+Todos los ajustes del entorno se encuentran configurados en `.latexmkrc`, por lo que compilar solo requiere:
+
+```bash
+$ latexmk
+```
+
+Este repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
 
 ## Cosas por Hacer
 
