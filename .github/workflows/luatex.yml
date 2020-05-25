@@ -14,6 +14,7 @@ on:
     paths:
       - "*.tex"
       - "preguntas/*.tex"
+      - ".github/workflows/luatex.yml"
       - .latexmkrc
 
 jobs:
@@ -33,7 +34,7 @@ jobs:
 
       # Compilar
       - name: Compilador de LuaTeX
-        uses: dante-ev/latex-action@v0.2.0
+        uses: agucova/latex-action@master
         with:
           # Archivo a Compilar
           root_file: documento.tex
