@@ -6,6 +6,7 @@ on:
     paths:
       - "*.tex"
       - "preguntas/*.tex"
+      - ".github/workflows/luatex.yml"
       - .latexmkrc
 
   pull_request:
@@ -36,6 +37,7 @@ jobs:
         with:
           # Archivo a Compilar
           root_file: documento.tex
+          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
 
       - name: Subir log del compilador
         uses: actions/upload-artifact@v2
