@@ -7,7 +7,6 @@ La idea de este proyecto es proveer **una plantilla atractiva, moderna y dinámi
 
 Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente en [LICENSE.md](LICENSE.md).
 
-
 La plantilla se encuentra escrita en LaTeX, y fue adaptado para su uso en LuaTeX en su versión de desarrollo (necesario para el soporte de emojis a través de Harfbuzz).
 
 Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
@@ -56,10 +55,7 @@ Para compilar el documento, es importante usar LuaTeX (no PDFLaTeX o XeTeX), den
 
 ## Cosas por Hacer
 
-- Hacer que la puntuación sea desactivable
 - Configurar texto para calculadora, fórmulas y libro abierto
-- Añadir soporte para subunidades académicas específicas
 - Hacer que el logo sea configurable
-- Corregir hbox
 - Mejorar preguntas prototípicas
 - Guía de uso detallada
