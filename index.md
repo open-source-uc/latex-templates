@@ -19,18 +19,10 @@ Una plantilla **atractiva, moderna y dinámica** para evaluaciones y guías de l
 > “Enunciados con emojis.”
 > — Œ CAi
 
-![Usa LuaLaTeX](https://img.shields.io/badge/usa-LuaLaTeX-blueviolet?style=flat-square&logo=latex)
-![Licencia](https://img.shields.io/badge/licencia-cc--by--4.0-success?style=flat-square&logo=creative-commons)
-![Última versión](https://img.shields.io/github/v/release/agucova/plantilla-uc?include_prereleases&label=versión&style=flat-square)
-![Estado de Build y Lint](https://img.shields.io/github/workflow/status/agucova/plantilla-uc/Lint%20y%20Compilaci%C3%B3n?label=revisi%C3%B3n&style=flat-square)
-
-La idea de este proyecto es proveer **una plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de la UC.**
-
 Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente en [LICENSE.md](LICENSE.md).
 
 La plantilla otorga diversas opciones que permiten formar un documento listo en minutos, con alta flexibilidad y código mantenible.
 
-Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
 <p align="center">
 <img src="ejemplos/portada.png" title="Portada de ejemplo" alt="Portada" width="600px" />
 <img src="ejemplos/alternativa.png" title="Pregunta de alternativas de ejemplo" alt="Pregunta" width="600px" />
@@ -63,6 +55,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 ├── chktexrc // config. de chktex
 └── .latexmkrc // config. de latexmk
 ```
+
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
 
 - Soporte de emojis ✨
@@ -85,7 +78,20 @@ Todos los ajustes del entorno se encuentran configurados en `.latexmkrc`, por lo
 $ latexmk
 ```
 
-Este repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
+El repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
+
+## Sobre el proyecto
+
+![Usa LuaLaTeX](https://img.shields.io/badge/usa-LuaLaTeX-blueviolet?style=flat-square&logo=latex)
+![Licencia](https://img.shields.io/badge/licencia-cc--by--4.0-success?style=flat-square&logo=creative-commons)
+![Última versión](https://img.shields.io/github/v/release/agucova/plantilla-uc?include_prereleases&label=versión&style=flat-square)
+![Estado de Build y Lint](https://img.shields.io/github/workflow/status/agucova/plantilla-uc/Lint%20y%20Compilaci%C3%B3n?label=revisi%C3%B3n&style=flat-square)
+
+Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente (CC BY 4.0) en [LICENSE.md](LICENSE.md).
+
+El trabajo de adaptación, traducción y extensión de la plantilla existente es de [Agustín Covarrubias](//agucova.me), estudiante de ingeniería.
+
+Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
 
 ## Cosas por Hacer
 
