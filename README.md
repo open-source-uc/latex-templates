@@ -1,5 +1,7 @@
 # Plantilla Dinámica UC
 
+![Lint y Compilación](https://github.com/agucova/plantilla-uc/workflows/Lint%20y%20Compilaci%C3%B3n/badge.svg)
+
 > “Enunciados con emojis.”
 > — Œ CAi
 
@@ -68,7 +70,8 @@ Este repositorio está configurado para compilar y correr `chktex` en cada actua
 
 ## Cosas por Hacer
 
+- Aprobar versión reducida del código de honor
 - Configurar texto para calculadora, fórmulas y libro abierto
 - Hacer que el logo sea configurable
-- Mejorar preguntas prototípicas
+- Mejorar preguntas de ejemplo
 - Guía de uso detallada
