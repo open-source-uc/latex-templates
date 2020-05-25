@@ -17,9 +17,8 @@ Una plantilla **atractiva, moderna y dinámica** para evaluaciones y guías de l
 ---
 
 > “Enunciados con emojis.”
-{: .fs-6 }
 > — Œ CAi
-{: .fs-6 }
+{: .fs-5 }
 
 Esta plantilla es una derivación directa de la plantilla existente y públicamente liberada de la Escuela de Ingeniería de la Universidad de Edinburgh. Puedes ver mas información de la licencia pertinente en [LICENSE.md](LICENSE.md).
 

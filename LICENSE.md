@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Licencia
-nav_order: 1
+nav_order: 2
 description: "Una plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de trabajo dentro de la UC."
 permalink: /licencia
 ---
