@@ -19,7 +19,7 @@ Este proyecto no tiene ninguna afiliación de carácter oficial con la Universid
 
 Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y `formulas.tex` (opcional), al igual que los archivos de preguntas, que se encuentran ubicados en `preguntas/`.
 
-<pre>
+```js
 ├── LICENSE.md // licencia
 ├── README.md // este documento
 ├── README_original.txt // guía original (en inglés)
@@ -41,9 +41,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 │   └── documento.pdf // PDF de ejemplo
 ├── chktexrc // config. de chktex
 └── .latexmkrc // config. de latexmk
-
-</pre>
-
+```
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
 
 - Soporte de emojis ✨
