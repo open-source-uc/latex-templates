@@ -1,6 +1,12 @@
 # Plantilla Dinámica UC
 
-[![Lint y Compilación](https://github.com/agucova/plantilla-uc/workflows/Lint%20y%20Compilaci%C3%B3n/badge.svg)](https://github.com/agucova/plantilla-uc/actions?query=workflow%3A%22Lint+y+Compilaci%C3%B3n%22)
+![Usa LuaLaTeX](https://img.shields.io/badge/usa-LuaLaTeX-blueviolet?style=flat-square&logo=latex)
+![Licencia](https://img.shields.io/badge/licencia-cc--by--4.0-success?style=flat-square&logo=creative-commons)
+![Última versión](https://img.shields.io/github/v/release/agucova/plantilla-uc?include_prereleases&label=versión&style=flat-square)
+![Estado de Build y Lint](https://img.shields.io/github/workflow/status/agucova/plantilla-uc/Lint%20y%20Compilaci%C3%B3n?label=revisi%C3%B3n&style=flat-square)
+
+
+
 > “Enunciados con emojis.”
 > — Œ CAi
 
