@@ -1,7 +1,6 @@
 # Plantilla Dinámica UC
 
-![Lint y Compilación](https://github.com/agucova/plantilla-uc/workflows/Lint%20y%20Compilaci%C3%B3n/badge.svg)
-
+[![Lint y Compilación](https://github.com/agucova/plantilla-uc/workflows/Lint%20y%20Compilaci%C3%B3n/badge.svg)](https://github.com/agucova/plantilla-uc/actions?query=workflow%3A%22Lint+y+Compilaci%C3%B3n%22)
 > “Enunciados con emojis.”
 > — Œ CAi
 
