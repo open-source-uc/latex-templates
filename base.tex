@@ -36,6 +36,7 @@
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 \usepackage{dirtytalk}                                % Citas
 \usepackage{etoolbox}                                 % if/else modernos
+
 % -----------------------------------------------------
 % Definiciones del Documento
 % -----------------------------------------------------
@@ -62,6 +63,7 @@
 % -----------------------------------------------------
 % Nuevos Comandos
 % -----------------------------------------------------
+
 \newtotcounter{contadorDePuntos}                      % Contador del número de puntos por parte
 \newtotcounter{numeroDeSecciones}                     % Contador de número de secciones
 \newtotcounter{numeroDePreguntas}                     % Contador de número de preguntas
@@ -163,6 +165,7 @@
 % -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones
 % -----------------------------------------------------
+
 \siTieneSecciones
 {\newcommand{\sectionStart}{                              % Iniciar sección
         \setcounter{question}{0}                          % Reiniciar contador preguntas
@@ -245,3 +248,11 @@
 \makeatother
 \renewcommand{\solutiontitle}{
     \noindent\textbf{Solución:}\par\noindent}  % Renombrar soluciones
+
+% -----------------------------------------------------
+% ¿Silenciar advertencias? Obvio!
+% -----------------------------------------------------
+
+% Desactiva errores de overfull y underfull.
+\hfuzz=\maxdimen
+\hbadness=10000
