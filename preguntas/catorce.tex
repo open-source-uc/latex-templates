@@ -1,20 +1,13 @@
-% -----------------------------------------------------
-% QUESTION
-% -----------------------------------------------------
-\question 
-\textbf{Desafío:} Dado $a\geq{0}$, calcule el siguiente límite:
-$$\lim_{x \to 0} \frac{a^x-a^{\sin{x}}}{x^3}$$
-Pista (1): Recuerda sacar las constantes del límite (opcional).\\
-Pista (2): Si vas a la mitad del ejercicio y no te preguntas “cómo es posible”, hazlo de nuevo.\\
-Pista (3): La dificultad del ejercicio es solamente lo largo, si vas determinado es relativamente fácil!
-% -----------------------------------------------------
-\droppoints
+\pregunta[20]
+\textbf{Código:} Analice el funcionamiento de la siguiente función en Python 3:
+\begin{minted}[linenos, breaklines]{python}
+    def fib(n):
+        a, b = 0, 1
+        while a < n:
+            print(a, end=' ')
+            a, b = b, a + b
+        print()
 
-\begin{solution}
-\begin{center}
-\includegraphics[width=0.7\linewidth]{des1.jpg}
-\end{center}
-\begin{center}
-\includegraphics[width=\linewidth]{des2.jpg}
-\end{center}
-\end{solution}
+    fib(1000)
+    \end{minted}
+\mostrarpuntaje{}

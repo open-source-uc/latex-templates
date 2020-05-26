@@ -19,6 +19,8 @@
                                                        %        No: Comenta todos los \sectionStart{}
 \newcommand{\conRespuestas}{No}                        % EDITAR - Incluir soluciones (Si o no)
 \newcommand{\soportaEmojis}{Si}                        % EDITAR - ¿El documento soporta emojis? (Si o no, requiere lualatex-dev)
+\newcommand{\soportaCodigo}{Si}                        % EDITAR - ¿El documento soporta bloques de código? (Si o no, requiere minted, pygments de Python)
+
 
 % Para evaluaciones (solo aplican si es que \tipoDocumento es control o interrogación)
 \newcommand{\mostrarPuntos}{Si}                        % EDITAR - Mostrar puntos de cada pregunta. (Si o no)
@@ -38,7 +40,7 @@
     % Iniciar preguntas
     % EDITAR - Copiar para añadir secciones o preguntas, una pregunta por archivo.
     % -----------------------------------------------------
-    \traerPregunta{preguntas/alternativas.tex}{15}     % EDITAR - Archivo de la pregunta y su puntaje
+    \traerPregunta{preguntas/alternativas.tex}{35}     % EDITAR - Archivo de la pregunta y su puntaje
     \traerPregunta{preguntas/doce.tex}{20}
     \traerPregunta{preguntas/trece.tex}{20}
     \traerPregunta{preguntas/catorce.tex}{20}

@@ -36,6 +36,7 @@
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 \usepackage{dirtytalk}                                % Citas
 \usepackage{etoolbox}                                 % if/else modernos
+\usepackage[outputdir=out]{minted}                                   % Soporte para código
 
 % -----------------------------------------------------
 % Definiciones del Documento
@@ -136,6 +137,9 @@
 \newrobustcmd\siSoportaEmojis{%
     \expandafter\sanitizadorSiNo
     \expandafter{\soportaEmojis}}%
+\newrobustcmd\siSoportaCodigo{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\soportaCodigo}}%
 \newrobustcmd\siMostrarPuntos{%
     \expandafter\sanitizadorSiNo
     \expandafter{\mostrarPuntos}}%
@@ -156,11 +160,28 @@
     \expandafter{\libroAC}}%
 \ExplSyntaxOff
 
+% Define comandos y entornos en español
+\newcommand{\pregunta}{\question}
+\newcommand{\mostrarpuntaje}{\droppoints}
+\newenvironment{solucion}{\begin{solution}}{\end{solution}}
+\newenvironment{alternativas}{\begin{checkboxes}}{\end{checkboxes}}
+\newcommand{\alternativa}{\choice}
+\newcommand{\alternativaCorrecta}{\CorrectChoice}
+
+
+
+% Maneja familia del documento
 \siEsEvaluacion{\newcommand{\familiaDocumento}{evaluación}}{\newcommand{\familiaDocumento}{guía}}
+
 % Maneja el soporte de emojis
 \siSoportaEmojis{
     \newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]}  %  if "Enunciados con emojis" - Œ CAi
-{} % else
+{}
+
+% Maneja el soporte de bloques de código con minted
+\siSoportaCodigo{
+    \usepackage{minted}}
+{}
 
 % -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones
@@ -178,6 +199,7 @@
         }
         \stepcounter{numeroDeSecciones}               % Incrementar contador
     }}
+
 % Si no hay secciones
 {   \setcounter{question}{0}                          % Reinicializar contador de preguntas
     \setcounter{figure}{0}                            % Iniciar contador de figuras
@@ -186,6 +208,7 @@
         {\fbox{\parbox{16cm}{\large \textbf{Pregunta \thequestion}} \hfill\vrule depth 0.8em width 0pt}}
     }
 }
+
 % Invocador misterioso de preguntas
 \newcommand{\traerPregunta}[2]{                       % Nueva pregunta
     \cleardoublepage \input{#1}                       % Iniciar pregunta en nueva página
@@ -202,6 +225,7 @@
     }
     {\cleardoublepage \input{#1}}{}
 }
+
 % Cabecera de la hoja de fórmulas
 \newcommand{\headingFormulaSheet}{
     \pagestyle{empty}

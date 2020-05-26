@@ -52,6 +52,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
 
 - Soporte de emojis ✨
+- Soporte de bloques de código (con formato) ⌨️
 - Unidad Académica
 - Código del Curso y Título
 - Fecha del Documento

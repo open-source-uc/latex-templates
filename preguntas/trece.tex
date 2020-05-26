@@ -1,18 +1,20 @@
 % -----------------------------------------------------
 % QUESTION
 % -----------------------------------------------------
-\question 
-Mediante el teorema del valor medio (TVM), demuestre que si $x > 0$, entonces $\arctan(x) < x$.
+\question[20]
+\textbf{Desafío:} Dado $a\geq{0}$, calcule el siguiente límite:
+$$\lim_{x \to 0} \frac{a^x-a^{\sin{x}}}{x^3}$$
+Pista (1): Recuerda sacar las constantes del límite (opcional).\\
+Pista (2): Si vas a la mitad del ejercicio y no te preguntas “cómo es posible”, hazlo de nuevo.\\
+Pista (3): La dificultad del ejercicio es solamente lo largo, si vas determinado es relativamente fácil!
+% -----------------------------------------------------
+\mostrarpuntaje
+
 \begin{solution}
-Debemos comenzar definiendo el rango de valores de $x$ vamos a trabajar. Sabemos que $\arctan$ es una función continua en todo los R, al igual que $x$. Sin embargo, tenemos la condición de $x > 0$, por lo que nuestro rango de valores se acota a $(0, x)$, donde x puede tomar cualquier valor. \\
-
-Se define una función auxiliar llamada $h(x)$ la cual será igual a el valor mas grande de la desigualdad, menos el valor mas chico de la desigualdad. Dado eso, sabemos que $h(x)$ siempre será positivo. \\
-
-Luego, establecemos la condición del TVM, $\frac{f(b) - f(a)}{b - a } = f'(c)$. Reemplazando con nuestra función sabemos que $b = x$ y $a = 0$ (por el intervalo dado).
-
-Ahora reemplazamos, $\frac{h(x) - h(0)}{x-0} = h'(c)$. (Evaluando 0 en $h(x)$ nos queda $0 - \arctan(0) = 0$). Despejando $h(x)$ de lo anterior:
-$$h(x) = h'(c) \cdot x$$
-Notamos que $x > 0$. Por lo que necesitamos saber si $h'(c) > 0$.
-Derivando $h(x)$ para encontrar su signo, y evaluando en $c$ tenemos: 
-$$h'(c) = 1 - \frac{1}{1 + c^2}$$Por hipótesis del teorema del valor medio, $0 < c < x$, por lo que nuestra fracción será $>0$ y $<1$, dando como resultado que $h'(c) > 0$.  Ahora que sabemos que $x>0$, $h'(c) > 0$ y $h(x) > 0$, reemplazamos en la expresión $h(x) = h'(c) \cdot x > 0$, quedando: $$(x - \arctan(x) = (1 - \frac{1}{1 + c^2})\cdot x > 0$$Y ahora por transitividad de la desigualdad $x - \arctan x > 0$ y despejando $x$, $x > \arctan x$.
+    \begin{center}
+        \includegraphics[width=0.7\linewidth]{des1.jpg}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=\linewidth]{des2.jpg}
+    \end{center}
 \end{solution}
