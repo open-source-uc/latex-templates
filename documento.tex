@@ -1,7 +1,7 @@
 \documentclass[addpoints,fleqn,11pt]{exam}
 
 % -----------------------------------------------------
-% EDITAR - Información del Curso y Prueba
+% EDITAR - Información del Curso, Unidad Académica y Documento
 % -----------------------------------------------------
 \newcommand{\unidadAcademica}{Facultad de Matemáticas} % EDITAR - Unidad Académica/Organización (ej. Facultad de Matemáticas)
 \newcommand{\logoUnidadAcademica}{delegados2020.png}   % EDITAR - Logo Unidad Académica/Organización (ej. delegados2020.png)
@@ -10,18 +10,19 @@
 \newcommand{\fecha}{Mayo 2020}                         % EDITAR - Fecha del Documento (ej. Mayo 2020)
 \newcommand{\nombreDocumento}{I1}                      % EDITAR -  nombre del documento. (Libre, ej. Interrogación 1 o Guía de Estudio)
 \newcommand{\tipoDocumento}{interrogación}             % EDITAR - tipo del documento. (Puede ser interrogación, control, estudiatón o guía)
+
 \newcommand{\descripcionPortada}{%                     % EDITAR - Descripción que aparece como primer párrafo de la portada.
         Esta guía fue hecha con {\emoji \symbol{"2764"}} por novatos para novatos, para la estudiatón de cálculo el 13 de mayo de 2020, específicamente en preparación a la I2. Incluso si no pudiste estar en la estudiatón, esperamos que esta guía te sea útil para practicar y prepararte.\\[\baselineskip]
     }
-\newcommand{\instruccionesPortada}
+\newcommand{\instruccionesPortada}                     % EDITAR - Instrucciones que aparecen al final de la portada.
 {%
     \textbf{Si tienes alguna duda, primero intenta llevarlo al grupo en el que estás.} Si nadie puede resolver su duda, puedes solicitar ayuda desde Zoom para que vaya un tutor a ayudar. Si todos en tu grupo terminan la guía, o están muy pegados con una pregunta de desarrollo, puedes pedir la pauta de esta guía.
 }
 
 \newcommand{\hojaDeFormulas}{Si}                       % EDITAR - ¿Incluir hoja de fórmulas? (Si o no)
 \newcommand{\tieneSecciones}{No}                       % EDITAR - ¿El documento tiene secciones? (Si o no)
-                                                       %        Si: Usa \sectionStart{} para empezar secciones.
-                                                       %        No: Comenta todos los \sectionStart{}
+                                                       %        Si: Usa \iniciarSeccion{} para empezar secciones.
+                                                       %        No: Comenta todos los \iniciarSeccion{}
 \newcommand{\conRespuestas}{No}                        % EDITAR - Incluir soluciones (Si o no)
 \newcommand{\soportaEmojis}{Si}                        % EDITAR - ¿El documento soporta emojis? (Si o no, requiere lualatex-dev)
 \newcommand{\soportaCodigo}{Si}                        % EDITAR - ¿El documento soporta bloques de código? (Si o no, requiere minted, pygments de Python)
@@ -56,7 +57,7 @@
 \end{questions}                                        % Finalizar secciones y preguntas
 \vfill \medskip\hfill\textbf{FIN DE LA GUÍA}           % Finalizar documento principal
 
-\traerHojaDeFormulas{formulas.tex}                     % EDITAR - Hoja de fórmulas, comentar línea si no hay una.
+\traerHojaDeFormulas{formulas.tex}                     % NO EDITAR. Se deshabilita automáticamente.
 
 % -----------------------------------------------------
 % Finalizar documento

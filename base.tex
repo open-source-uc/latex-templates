@@ -76,6 +76,7 @@
 % -----------------------------------------------------
 
 % Thanks Phelype Oleinik for his awesome answer on StackExchange suggesting this. https://tex.stackexchange.com/users/134574/phelype-oleinik
+
 \newrobustcmd\sanitizadorSiNo[1]{%
     \MakeLowercase{\gdef\noexpand\internalCondition{#1}}%
     \ifboolexpr{%
@@ -197,7 +198,8 @@
             {\fbox{\parbox{16cm}{\large \textbf{Pregunta \Alph{numeroDeSecciones}\thequestion}} \hfill\vrule depth 0.8em width 0pt}}
         }
         \stepcounter{numeroDeSecciones}               % Incrementar contador
-    }}
+    }%
+    \newcommand{\iniciarSeccion}{\sectionStart}}
 
 % Si no hay secciones
 {   \setcounter{question}{0}                          % Reinicializar contador de preguntas
