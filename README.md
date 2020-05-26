@@ -76,5 +76,7 @@ Este repositorio está configurado para compilar y correr `chktex` en cada actua
 
 ## Cosas por Hacer
 
+- Mejorar colores
+- Considerar cambio de tipografía
 - Aprobar versión reducida del código de honor
 - Guía de uso detallada
