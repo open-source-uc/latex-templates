@@ -52,7 +52,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 En los archivos base, podrás configurar características del documento según tus necesidades, como:
 
 - Soporte de emojis ✨
-- Soporte de bloques de código (con formato) ⌨️
+- Soporte de bloques de código (con `formato`) ⌨️
 - Unidad Académica
 - Código del Curso y Título
 - Fecha del Documento
@@ -64,7 +64,7 @@ En los archivos base, podrás configurar características del documento según t
 - Si requiere puntaje por pregunta
 - ...
 
-Para compilar el documento, es importante usar LuaLaTeX (no PDFLaTeX o XeTeX). El soporte de emojis requiere usar el `lualatex-dev` disponible en TeXLive 2020 (es necesario LuaHBTeX).
+Para compilar el documento, es importante usar LuaLaTeX (no PDFLaTeX o XeTeX). El soporte de emojis requiere usar el `lualatex-dev` disponible en TeXLive 2020 y el soporte de código requiere tener instalado la librería Pygments de Python (ambos opcionales).
 
 Todos los ajustes del entorno se encuentran configurados en `.latexmkrc`, por lo que compilar solo requiere:
 
@@ -77,7 +77,4 @@ Este repositorio está configurado para compilar y correr `chktex` en cada actua
 ## Cosas por Hacer
 
 - Aprobar versión reducida del código de honor
-- Configurar texto para calculadora, fórmulas y libro abierto
-- Hacer que el logo sea configurable
-- Mejorar preguntas de ejemplo
 - Guía de uso detallada
