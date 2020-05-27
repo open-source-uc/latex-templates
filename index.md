@@ -80,7 +80,9 @@ Todos los ajustes del entorno se encuentran configurados en `.latexmkrc`, por lo
 $ latexmk
 ```
 
-El repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
+Para compilar el documento usando Overleaf, solo debes ir al menú de ajustes, cambiar el compilador a `LuaLaTeX` y después cambiar la opción de `usaOverleaf`  en `documento.tex` para que la plantilla se adapte.
+
+Este repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
 
 ## Sobre el proyecto
 

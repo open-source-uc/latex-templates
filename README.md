@@ -49,7 +49,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `documento.tex` y
 ├── chktexrc // config. de chktex
 └── .latexmkrc // config. de latexmk
 ```
-En los archivos base, podrás configurar características del documento según tus necesidades, como:
+En el archivo principal, `documento.tex` podrás configurar características del documento según tus necesidades, como:
 
 - Soporte de emojis ✨
 - Soporte de bloques de código (con `formato`) ⌨️
@@ -71,6 +71,8 @@ Todos los ajustes del entorno se encuentran configurados en `.latexmkrc`, por lo
 ```bash
 $ latexmk
 ```
+
+Para compilar el documento usando Overleaf, solo debes ir al menú de ajustes, cambiar el compilador a `LuaLaTeX` y después cambiar la opción de `usaOverleaf`  en `documento.tex` para que la plantilla se adapte.
 
 Este repositorio está configurado para compilar y correr `chktex` en cada actualización del documento.
 
