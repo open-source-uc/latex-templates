@@ -35,7 +35,6 @@
 \usepackage[no-math]{fontspec}                        % Manejo tipográfico manual
 \usepackage{wasysym}                                  % Símbolos para preguntas de alternativas
 \usepackage{etoolbox}                                 % if/else modernos
-\usepackage[outputdir=out]{minted}                    % Soporte para código
 
 % -----------------------------------------------------
 % Definiciones del Documento
@@ -140,6 +139,9 @@
 \newrobustcmd\siSoportaCodigo{%
     \expandafter\sanitizadorSiNo
     \expandafter{\soportaCodigo}}%
+\newrobustcmd\siUsaOverleaf{%
+    \expandafter\sanitizadorSiNo
+    \expandafter{\usaOverleaf}}%
 \newrobustcmd\siMostrarPuntos{%
     \expandafter\sanitizadorSiNo
     \expandafter{\mostrarPuntos}}%
@@ -178,10 +180,14 @@
     \newfontfamily{\emoji}{emoji.ttf}[Renderer=Harfbuzz]}  %  if "Enunciados con emojis" - Œ CAi
 {}
 
-% Maneja el soporte de bloques de código con minted
-\siSoportaCodigo{
-    \usepackage{minted}}
-{}
+% Maneja el soporte de bloques de código con minted, condicionado a un bug de Overleaf
+\siUsaOverleaf{%
+    \siSoportaCodigo{%
+        \usepackage[cachedir=out]{minted}}{}%
+}{%
+    \siSoportaCodigo{%
+        \usepackage[outputdir=out,cachedir=out]{minted}}%
+{}}%
 
 % -----------------------------------------------------
 % Estructura del Documento - Preguntas y secciones

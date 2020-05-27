@@ -317,6 +317,9 @@ luac.out
 *.x86_64
 *.hex
 
+# Minted
+*.pygstyle
+*.pygtex
 
 ### VisualStudioCode ###
 .vscode/*
