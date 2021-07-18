@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=#><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="banner"></a>
+  <a href=#><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="200px" alt="banner"></a>
 </h1>
 
 <h4 align="center"> Descripción del proyecto en una linea </h4>
