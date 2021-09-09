@@ -1,3 +1,9 @@
 [submodule "templates/latex-template-msc"]
 	path = templates/latex-template-msc
 	url = git@github.com:open-source-uc/latex-template-msc.git
+[submodule "templates/latex-template"]
+	path = templates/latex-template
+	url = git@github.com:open-source-uc/latex-template.git
+[submodule "templates/ing2001"]
+	path = templates/ing2001
+	url = git@github.com:open-source-uc/ing2001.git
