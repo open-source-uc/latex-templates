@@ -1,0 +1,61 @@
+name: Lint y Compilación
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "*.tex"
+      - "preguntas/*.tex"
+      - ".github/workflows/luatex.yml"
+      - .latexmkrc
+
+  pull_request:
+    branches: [master]
+    paths:
+      - "*.tex"
+      - "preguntas/*.tex"
+      - ".github/workflows/luatex.yml"
+      - .latexmkrc
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Linter de LaTeX
+        uses: j2kun/chktex-action@v1.0.2
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Caché
+      - name: Cache
+        uses: actions/cache@v1.2.0
+        with:
+          # A directory to store and save the cache
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/
+          # An explicit key for restoring and saving the cache
+          key: compilacion-${{ hashFiles('/home/runner/work/plantilla-uc/plantilla-uc/.latexmkrc') }}
+      # Compilar
+      - name: Compilador de LuaTeX
+        uses: agucova/latex-action@master
+        with:
+          # Archivo a Compilar
+          root_file: documento.tex
+          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+
+      - name: Subir log del compilador
+        uses: actions/upload-artifact@v2
+        with:
+          name: documento.log
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/documento.log
+
+      - name: Subir PDF resultante
+        uses: actions/upload-artifact@v2
+        with:
+          name: documento.pdf
+          path: /home/runner/work/plantilla-uc/plantilla-uc/out/documento.pdf

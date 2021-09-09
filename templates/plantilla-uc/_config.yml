@@ -1,0 +1,5 @@
+remote_theme: pmarsceill/just-the-docs
+search_enabled: false
+aux_links:
+  "La plantilla en Github":
+    - "//github.com/agucova/plantilla-uc"
