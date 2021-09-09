@@ -10,12 +10,12 @@
 </p>
       
 <p align="center">
-  <a href="#about">Descripción</a> •
-  <a href="#usage">Uso</a> •
-  <a href="#contributing">Contribuir</a> •
-  <a href="#credits">Creditos</a> •
-  <a href="#support">Soporte</a> •
-  <a href="#license">Licencía</a>
+  <a href="#Descripción">Descripción</a> •
+  <a href="#Uso">Uso</a> •
+  <a href="#Contribuir">Contribuir</a> •
+  <a href="#Creditos">Creditos</a> •
+  <a href="#Soporte">Soporte</a> •
+  <a href="#Licencía">Licencía</a>
 </p>
 
 ---
