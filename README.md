@@ -1,84 +1,47 @@
 <h1 align="center">
   <br>
-  <a href=#><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="200px" alt="banner"></a>
+  <a href=#><img src="https://osuc.dev/img/min-icon.svg" width="200px" alt="banner"></a>
 </h1>
 
-<h4 align="center"> Descripción del proyecto en una linea </h4>
+<h4 align="center"> Repositorio donde se recopilan los templates creados por la comunidad OSUC </h4>
 
 <p align="center">
      <!-- Badges Here -->
 </p>
       
 <p align="center">
-  <a href="#about">About</a> •
-  <a href="#installation">Installation</a> •  
-  <a href="#usage">Usage</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#support">Support</a> •
-  <a href="#license">License</a>
+  <a href="#about">Descripción</a> •
+  <a href="#usage">Uso</a> •
+  <a href="#contributing">Contribuir</a> •
+  <a href="#credits">Creditos</a> •
+  <a href="#support">Soporte</a> •
+  <a href="#license">Licencía</a>
 </p>
 
 ---
 
-## About
+## Descripción
 
-Descripción larga
+En este repositorio se recopilan las plantillas generadas con lenguajes de marcado compilados como podria ser `LaTeX`.
 
 <table>
 <tr>
 <td>
 
-![Imagen/gif de preview](#)
+![plantilla de ejemplo](https://github.com/open-source-uc/latex-templates/raw/master/templates/plantilla-uc/ejemplos/portada.png#)
 <p align="right">
-<sub>(Preview)</sub>
+<sub>(Preview de plantilla-uc)</sub>
 </p>
 
 </td>
 </tr>
 </table>
 
-### Features
+## Uso
 
-|                            |  theProject        | ◾ Other           |
-| -------------------------- | :----------------: | :---------------: |
-| Feature 1                  |         ✔️         |        ❌        |
-| Feature 2                  |         ✔️         |        ❌        |
+* Indexar nuevos templates bajo el directorio `templates/`
 
-
-## Installation
-Requirements:
-- [Req 1](#) version 1.0
-- [Req 2](#) (tested with 2.0)
-
-##### Downloading and installing steps (pre-build files):
-* **[Download, fork](#)** the latest release.
-* **Open...** the following path: `\etc\theproject`
-* **Execute, Launch** in the _console_ the following command: `install.sh`
-
-##### Downloading, building from source and installing steps:
-To build theProject, you need to have:
-- [Req 1](#) version 1.0
-- [Req 2](#) (tested with 2.0)
-
-Steps: 
-* **[Download, fork](#)** the latest version from `main` branch.
-* **Open...** the following path: `\etc\theproject`
-* **Execute, Launch** in the _console_ the following commands:
-```
-mkdir build
-cd build && make
-```
-
-## Usage
-
-* **Execute, Launch** in the _console_ the following command: `run theProject`
-
-
-### Updating
-
-
-## Contributing
+## Contribuir
 
 
 #### Bug Reports & Feature Requests
@@ -93,31 +56,23 @@ Please use the [issue tracker](#) to report any bugs or file feature requests.
 Detailed information on how to contribute can be found on [contributing.md](contributing.md) (in spanish).
 
 
-
-
-
-## Support
-
-### Wiki
-
-Do you **need some help**? Check the _articles_ from the [wiki](#).
+## Soporte
 
 ### FAQ
+### Resolución de problemas
 
-### Troubleshooting
-
-### Need more support?
+### Necesitas contactarnos
 Reach out to us at one of the following places:
 
 - Website at [osuc](https://osuc.dev)
 - Discord [OSUC](#)
 - E-Mail: **contacto@osuc.dev**
 
-## Credits
+## Creditos
 
-### Maintainers
+### Mantenedores
 
+- [FarDust](https://www.github.com/FarDust)
+## Licencía
 
-## License
-
-[![License: This licence](#)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./license.md)
