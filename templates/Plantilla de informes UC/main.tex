@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANTE: Cambiar el compilador a LuaTex en las opciones %
+%               Creditos Github: @diegocostares              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{style}
+
+\begin{document}
+%%%%%%%%%%%%%%%%% RENOMBRE %%%%%%%%%%%%%%%%%
+\graphicspath{ {./img/} }
+\renewcommand{\contentsname}{Índice de contenido}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de Tablas}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Imagen}
+\renewcommand*{\lstlistingname}{Código}
+
+
+%%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%
+% Si se quiere eliminar, se tiene que quitar tambien las configuraciones del style.cls
+\fancyhead[L]{ % Encabezado a la izquierda
+  \begin{picture}(0,0) \put(-40,16){\includegraphics[width=20mm]{img/logo-puc-COLOR.png}} \end{picture}
+  \put(8,40){\textcolor{gray}{\scriptsize{\begin{tabular}{l}
+    PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE\\
+    ESCUELA DE INGENIERÍA\\
+    DEPARTAMENTO DE CIENCIA DE LA COMPUTACIÓN
+  \end{tabular}}}}
+}
+% Si se quiere agregar a la derecha remplazar:
+\rhead{} % Opcion 1
+%\rhead{\begin{picture}(0,0) \put(-85,12){\includegraphics[width=30mm]{img/IMAGEN.png}} \end{picture}} % Opcion 2
+
+
+%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%
+% Opcion 1: Importar un pdf tamaño carta de EEUU
+%\includepdf[pages=-]{img/portadas/Portada.pdf} % cambiar portada por pdf
+% Opcion 2: Escribir una portada completa
+\input{content/portada}
+% Opcion 3: Sin portada - Se recomienda quitar indices
+
+
+%%%%%%%%%%%%%%%%% INDICES %%%%%%%%%%%%%%%%%
+\setstretch{1}
+\vspace*{\fill}
+    \tableofcontents % No pude quitarle la negrita :c
+    \listoftables
+    \listoffigures
+    %\lstlistoflistings % Para hacer indice de codigo
+\vspace*{\fill}
+
+%%%%%%%%%%%%%%%%% ESPACIADO %%%%%%%%%%%%%%%%%
+\setstretch{1.15} 
+
+
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+\newpage
+\input{content/tutorial} % Eliminar en caso de no requerir
+
+
+%%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+\input{content/bibliografia}
+
+\end{document}
