@@ -52,7 +52,7 @@ Utilice las [issues] (#) para informar cualquier bug o solicitud.
 > tl;dr:
 > El workflow es PR a development -> Revisar preview y checks -> Asignar reviewers -> Aprobación -> Merge a development
 
-La información detallada sobre cómo contribuir se puede encontrar en [contributing.md](#reglas-básicas).
+La información detallada sobre cómo contribuir se puede encontrar en [contributing.md](contributing.md).
 
 
 ## Soporte
@@ -77,14 +77,3 @@ Reach out to us at one of the following places:
 ## Licencía
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./license.md)
-
----
-# Reglas básicas
-
-1. Trata a todo el mundo con respeto. No se tolerará ningún tipo de acoso, caza de brujas, sexismo, racismo o discurso de odio.
-
-2. No se permite el spam ni la autopromoción (invitaciones al servidor, anuncios, etc.) sin permiso de un miembro del personal. Esto también incluye mandar MD a otros miembros.
-
-3. No se permite contenido NSFW ni obsceno. Esto incluye texto, imágenes o enlaces que presenten desnudos, sexo, violencia u otro tipo de contenido gráfico que pueda herir la sensibilidad del espectador.
-
-4. Si ves algo que va en contra de las normas o que no te haga sentir seguro, informa al personal. ¡Queremos que este proyecto sea un lugar acogedor!
