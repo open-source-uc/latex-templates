@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANTE: Cambiar el compilador a XeLaTeX en las opciones %
+%     Si se quiere hacer "doble enter" usar: \vspace{2ex}     %
+%               Creditos Github: @diegocostares               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{style}
+
+\begin{document}
+%%%%%%%%%%%%%%%%% RENOMBRE %%%%%%%%%%%%%%%%%
+\graphicspath{ {./img/} }
+\renewcommand{\contentsname}{Tabla de Contenido}
+\renewcommand{\listfigurename}{Índice de Ilustraciones}
+\renewcommand{\listtablename}{Índice de Tablas}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand*{\lstlistingname}{Código}
+
+%%%%%%%%%%%% Certificado de Entrega %%%%%%%%%%%%%%%
+% Se sube un pdf:
+%\includepdf{content/certificado.pdf}
+
+%%%%%% Registro de Autorización de la Práctica %%%%%%%%%
+%\includepdf{content/registro.pdf}
+
+%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%
+\ThisCenterWallPaper{1}{content/Portada_practica_1.pdf}
+\portada{Nombre completo} % Insertar nombre acá
+        {Correo electronico} % Insertar correo acá
+        {Nombre de la empresa} % Insertar empresa acá
+        {\today} % Insertar fecha
+
+%%%%% Formulario de Evaluación de la U %%%%%%%%
+%\includepdf{content/formulario.pdf}
+
+%%%%% Formulario de Evaluación de la U %%%%%%%%
+%\includepdf{content/formulario.pdf}
+
+%%%%%%%% Formulario de Evaluación de la Empresa %%%%%%%
+%\includepdf{content/formulario.pdf}
+
+%%%%%%%%%%%% Numeración paginas %%%%%%%%%%%  
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%% INDICES %%%%%%%%%%%%%%%%%
+\tableofcontents \newpage
+\listoftables \newpage
+\listoffigures \newpage
+%\lstlistoflistings \newpage % Para hacer indice de codigo
+%%%%%%%%%%%%%%%%% ESPACIADO %%%%%%%%%%%%%%%%%
+\setstretch{1.15} 
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+\input{content/minitutorial} % Eliminar archivo y linea
+% -----------
+
+\input{content/contenido} % <----- ACA SE ESCRIBE
+
+%%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+% Hay 2 formas de agregar bibliografia:
+% 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
+% \bibliographystyle{apacite}
+% \bibliography{mybib.bib} % Requiere crear un archivo .bib
+
+% 2. Agregar una bibliografia en un archivo .tex 
+% (Es manual, pero comodo para los que no conoce el bibtex)
+\input{content/bibliografia}
+
+%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%
+%\input{content/anexos}
+
+\end{document}
