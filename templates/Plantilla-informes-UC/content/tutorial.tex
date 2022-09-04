@@ -87,20 +87,26 @@ La segunda forma de incluir imágenes es la más sencilla, solo se tiene que usa
 % \fig{}{width = 0.2\textwidth}{img/cuadradoejemplo.png}
 
 \subsection{Imágenes alineadas}
-Sin embargo, si se desea incluir una imagen a la izquierda o derecha de un párrafo, se puede hacer lo siguiente (Poniendo \{r\} o \{l\} dependiendo del caso):
+Si se desea incluir una imagen a la izquierda o derecha de un párrafo, se puede consultar nuevamente el codigo comentado o usar el siguiente comando (Poniendo \{r\} o \{l\} dependiendo del caso):
+\begin{verbatim} 
+\figposition[label]{Titulo}{tamaño}{ruta_imagen}{posicion_r/l}
+\end{verbatim}
 
-\begin{wrapfigure}{r}{0.2\textwidth} % Margen del texto
-    \centering
-    \begin{measuredfigure}
-        \caption{Imagen referencia 2}
-        \includegraphics[height=3cm]{img/cuadradoejemplo.png} %[scale=0.1]
-        \label{img:referencia2}
-    \end{measuredfigure}
-\end{wrapfigure}
+\figposition[referencia2]{Imagen referencia }{height=3cm}{img/cuadradoejemplo.png}{r}
+
+% FORMA MANUAL:
+%\begin{wrapfigure}{r}{0.25\textwidth} % Margen del texto
+%    \centering
+%    \begin{measuredfigure}
+%        \caption{Imagen referencia 2}
+%        \includegraphics[height=3cm]{img/cuadradoejemplo.png} %[scale=0.1]
+%        \label{img:referencia2}
+%    \end{measuredfigure}
+%\end{wrapfigure}
 
 
 \textcolor{silver}{
-    Ahora generaremos algo de texto aleatorio:
+    Ahora generaremos algo de texto aleatorio...
     \lipsum[2]
 }
 
@@ -115,7 +121,7 @@ Este es un caso muy particular, en el que se quiera incluir una imagen decorativ
         yshift=0mm,
         opacity=1]
         at (current page.south east)  % west
-        {\includegraphics[height=3cm]{img/cuadradoejemplo.png}}; 
+        {\includegraphics[height=3cm]{img/cuadradoejemplo.png}};
         %(box) at (-2cm,0)(box){\includegraphics[scale=1]{img/circulos-amarillo3.png}};
     \end{tikzpicture}
     %\caption{Ilustración}
@@ -133,42 +139,56 @@ Hacer tablas en \LaTeX es muy engorroso, por lo que presentamos 3 alternativas. 
 Hay muchas páginas para generar tablas automáticamente, una alternativa es \href{https://www.tablesgenerator.com}{tablesgenerator}, sin embargo, este método genera muchas líneas innecesarias y cuando se incorporan párrafos muy grandes hay que ajustar las palabras.
 
 \subsection{Insertar una imagen como tabla}
-Se puede incorporar una imagen (De Excel, por ejemplo) como si fuera una tabla. El único inconveniente es que no va a permitir seleccionar el texto en el pdf generado.
-\begin{table}[H]
-    \centering
-    \caption{Tabla de referencia 1}
-    \includegraphics[height=3cm]{img/tablaejemplo.png} 
-    \\ \textit{\scriptsize{Texto opcional al el pie de Tabla.}}
-    \label{img:referencia3}
-\end{table}
+Se puede incorporar una imagen (De Excel, por ejemplo) como si fuera una tabla. El único inconveniente es que no va a permitir seleccionar el texto en el pdf generado. Al igual que con las imágenes, hay un comando personalizado y un código manual comentado.
+\begin{verbatim} 
+\tableimage[label]{Titulo}{tamaño}{ruta_imagen}{Texto_opcional}
+\end{verbatim}
+\textit{PD: Si no se quiere incluir el texto opcional, pueden dejar vacío la última celda (\{\})}
+
+\tableimage[referencia3]{Tabla de referencia 1}{height=3cm}{img/tablaejemplo.png}{Texto opcional al el pie de Tabla.}
+
+% Tabla manual:
+%\begin{table}[H]
+%    \centering
+%    \begin{measuredfigure}
+%        \caption{Tabla de referencia 1}
+%        \includegraphics[height=3cm]{img/tablaejemplo.png} 
+%        \label{img:referencia3}
+%    \end{measuredfigure}
+%    \\ \textit{\scriptsize{Texto opcional al el pie de Tabla.}}
+%\end{table}
 
 
 \subsection{Usar plantilas}
 \begin{minipage}[H]{0.49\textwidth}
     \begin{table}[H]
         \centering
-        \caption{Tabla de referencia 2}
-        \begin{tabular}{| l | c | r |} 
-        \hline
-            \textbf{Texto} & \textbf{Texto} & \textbf{Texto} \\ \hline
-            Textoblabla    & Textoblabla   & Textoblabla \\ \hline
-            Texto    & Texto   & Texto \\ \hline
-        \end{tabular}
+        \begin{measuredfigure}
+            \caption{Tabla de referencia 2}
+            \begin{tabular}{| l | c | r |} 
+            \hline
+                \textbf{Texto} & \textbf{Texto} & \textbf{Texto} \\ \hline
+                Textoblabla    & Textoblabla   & Textoblabla \\ \hline
+                Texto    & Texto   & Texto \\ \hline
+            \end{tabular}
+        \end{measuredfigure}
         \\ \textit{\scriptsize{Texto opcional al el pie de Tabla.}}
     \end{table}
 \end{minipage}
 \begin{minipage}[H]{0.49\textwidth}
     \begin{table}[H]
         \centering
-        \caption{Tabla de referencia 3}
-        \begin{tabular}{l l l}
-        \toprule
-            \textbf{Texto} & \textbf{Texto} & \textbf{Texto} \\
-            \midrule
-            Textoblabla    & Textoblabla   & Textoblabla \\
-            Texto    & Texto   & Texto \\
-            \bottomrule
-        \end{tabular}
+        \begin{measuredfigure}
+            \caption{Tabla de referencia 3}
+            \begin{tabular}{l l l}
+            \toprule
+                \textbf{Texto} & \textbf{Texto} & \textbf{Texto} \\
+                \midrule
+                Textoblabla    & Textoblabla   & Textoblabla \\
+                Texto    & Texto   & Texto \\
+                \bottomrule
+            \end{tabular}
+        \end{measuredfigure}
         \\ \textit{\scriptsize{Texto opcional al el pie de Tabla.}}
     \end{table}
 \end{minipage}

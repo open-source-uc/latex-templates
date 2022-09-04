@@ -126,7 +126,7 @@
 \definecolor{grey}{RGB}{128,128,128}
 \definecolor{silver}{RGB}{169,169,169}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92} % transparente
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{RoyalBlue}{RGB}{2,112,193}
 \definecolor{azul2}{RGB}{83, 131, 155}
 \definecolor{rojo2}{RGB}{243, 108, 108}
@@ -161,9 +161,29 @@
     \end{measuredfigure}
   \end{figure}%
 }
-
-% Para referencias completas
-\newcommand{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1}: \nameref*{#1}}}
+% Configuracion imagenes a la izquierda o derecha
+\newcommand{\figposition}[5][\relax]{
+    \begin{wrapfigure}{#5}{0.25\textwidth} % Margen texto 0.25
+        \centering
+        \begin{measuredfigure}
+            \ifx\relax#1\else\label{img:#1}\fi
+            \ifx\relax#2\else\caption{#2}\fi
+            \includegraphics[#3]{#4} %[scale=0.1]
+        \end{measuredfigure}
+    \end{wrapfigure}
+}
+% Configuracion de tablas con imagenes:
+\newcommand{\tableimage}[5][\relax]{
+    \begin{table}[H]
+        \centering
+        \begin{measuredfigure}
+            \label{Tab:#1}
+            \caption{#2}
+            \includegraphics[#3]{#4} 
+        \end{measuredfigure}
+        \\ \textit{\scriptsize{#5}}
+    \end{table}
+}
 %%%%%%%%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\headrulewidth}{0pt} % eliminamos linea encabezado
 \renewcommand{\footrulewidth}{0pt} % eliminamos linea pie pagina
@@ -171,8 +191,6 @@
 \addtolength{\textheight}{-50.0pt} % Distancia entre encabezado y pie de pag
 
 % Encabezado personalizado https://latex.org/forum/viewtopic.php?t=33369
-
-
 %%%%%%%%%%%%%%%%%%%%%%% PYTHON %%%%%%%%%%%%%%%%%%%%%%%
 % Python style for highlighting
 \newcommand\pythonstyle{\lstset{

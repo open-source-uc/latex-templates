@@ -38,7 +38,7 @@ Los comandos personalizados son los siguientes:
     ```
 - La plantilla tiene encabezados a la izquerda y uno vacio a la derecha (que se puede remplazar por una imagen siguiendo el comentario que esta en main). Si se desea quitar, lamentablemente es algo complicado (Aunque pueden buscar "encabezado" para ir rapido). Los pasos serian:
     1. Quitar las lineas 18-32 de `main.tex`
-    2. Quitar las lineas 167-173 de `style.cls` (dice encabezado)
+    2. Quitar las lineas 187-191 de `style.cls` (dice encabezado)
     3. Quitar la linea 26 de `style.cls` que dice `\RequirePackage{fancyhdr}`
 
 ## Cosas por mejorar
