@@ -18,7 +18,7 @@
 %%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%
 % Si se quiere eliminar, se tiene que quitar tambien las configuraciones del style.cls
 \fancyhead[L]{ % Encabezado a la izquierda
-  \begin{picture}(0,0) \put(-40,16){\includegraphics[width=20mm]{img/logo-puc-COLOR.png}} \end{picture}
+  \begin{picture}(0,0) \put(-40,16){\includegraphics[width=15mm]{img/logo-uc-3.pdf}} \end{picture}
   \put(8,40){\textcolor{gray}{\scriptsize{\begin{tabular}{l}
     PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE\\
     ESCUELA DE INGENIERÍA\\
@@ -58,6 +58,13 @@
 
 %%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
 \newpage
+% Hay 2 formas de agregar bibliografia:
+% 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
+% \bibliographystyle{apacite}
+% \bibliography{mybib.bib} % Requiere crear un archivo .bib
+
+% 2. Agregar una bibliografia en un archivo .tex 
+% (Es manual, pero comodo para los que no conoce el bibtex)
 \input{content/bibliografia}
 
 \end{document}

@@ -30,7 +30,7 @@
 %-------------------------- ECUACIONES --------------------------
 \RequirePackage{amsmath,amsthm,mathtools, amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
 %--------------------------- IMÁGENES ---------------------------
-\usepackage{threeparttable}                 % Permite alinear imagenes con el caption
+\RequirePackage{threeparttable}             % Permite alinear imagenes con el caption
 \RequirePackage{float}                      % Posicionar figuras: H, h!, b...
 \RequirePackage{graphicx}                   % Agregar características a las imágenes 
 \RequirePackage{epsfig}                     % Paquete relacionado con graphicx (es una especie de envoltorio)

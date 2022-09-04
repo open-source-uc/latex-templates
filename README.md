@@ -25,7 +25,7 @@
 En este repositorio se recopilan las plantillas generadas con lenguajes de marcado compilados como podria ser `LaTeX`.
 
 <details>
-  <summary><b><samp>:computer: &nbsp;Algunos ejemplos</samp></b></summary>
+  <summary><b><samp> 💻 &nbsp;Algunos ejemplos</samp></b></summary>
   <br/></p>
 
 | Nombre | Imagen | Descripción |
@@ -72,6 +72,7 @@ Reach out to us at one of the following places:
 ### Mantenedores
 
 - [FarDust](https://www.github.com/FarDust)
+- [agucova](https://github.com/agucova)
 - [diegocostares](https://www.github.com/diegocostares)
 ## Licencía
 
