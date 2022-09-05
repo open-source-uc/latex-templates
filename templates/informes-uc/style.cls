@@ -134,6 +134,13 @@
 \definecolor{cian2}{RGB}{93, 196, 188}
 \definecolor{shadecolor}{RGB}{224,238,238}
 
+%%%%%%%%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\headrulewidth}{0pt} % eliminamos linea encabezado
+\renewcommand{\footrulewidth}{0pt} % eliminamos linea pie pagina
+\setlength\headheight{61.3pt}      % Distancia entre encabezado y contenido
+\addtolength{\textheight}{-50.0pt} % Distancia entre encabezado y pie de pag
+
+% Encabezado personalizado https://latex.org/forum/viewtopic.php?t=33369
 
 %%%%%%%%%%%%%%%%%%%%%%% OTROS %%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}[hang]
@@ -184,13 +191,6 @@
         \\ \textit{\scriptsize{#5}}
     \end{table}
 }
-%%%%%%%%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\headrulewidth}{0pt} % eliminamos linea encabezado
-\renewcommand{\footrulewidth}{0pt} % eliminamos linea pie pagina
-\setlength\headheight{61.3pt}      % Distancia entre encabezado y contenido
-\addtolength{\textheight}{-50.0pt} % Distancia entre encabezado y pie de pag
-
-% Encabezado personalizado https://latex.org/forum/viewtopic.php?t=33369
 %%%%%%%%%%%%%%%%%%%%%%% PYTHON %%%%%%%%%%%%%%%%%%%%%%%
 % Python style for highlighting
 \newcommand\pythonstyle{\lstset{

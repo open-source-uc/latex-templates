@@ -79,6 +79,8 @@ En esta plantilla hay 2 formas de incluir imágenes. La primera es la más compl
 La segunda forma de incluir imágenes es la más sencilla, solo se tiene que usar el comando personalizado:
 \begin{verbatim} 
 \fig[label]{Titulo}{tamaño}{ruta_imagen}
+Ejemplo:
+\fig[referencia1]{Titulo de la imagen 1}{width = 0.2\textwidth}{img/cuadradoejemplo.png}
 \end{verbatim}
 
 \fig[referencia1]{Titulo de la imagen 1}{width = 0.2\textwidth}{img/cuadradoejemplo.png}
@@ -90,6 +92,8 @@ La segunda forma de incluir imágenes es la más sencilla, solo se tiene que usa
 Si se desea incluir una imagen a la izquierda o derecha de un párrafo, se puede consultar nuevamente el codigo comentado o usar el siguiente comando (Poniendo \{r\} o \{l\} dependiendo del caso):
 \begin{verbatim} 
 \figposition[label]{Titulo}{tamaño}{ruta_imagen}{posicion_r/l}
+Ejemplo:
+\figposition[referencia2]{Imagen referencia }{height=3cm}{img/cuadradoejemplo.png}{r}
 \end{verbatim}
 
 \figposition[referencia2]{Imagen referencia }{height=3cm}{img/cuadradoejemplo.png}{r}
@@ -139,13 +143,16 @@ Hacer tablas en \LaTeX es muy engorroso, por lo que presentamos 3 alternativas. 
 Hay muchas páginas para generar tablas automáticamente, una alternativa es \href{https://www.tablesgenerator.com}{tablesgenerator}, sin embargo, este método genera muchas líneas innecesarias y cuando se incorporan párrafos muy grandes hay que ajustar las palabras.
 
 \subsection{Insertar una imagen como tabla}
-Se puede incorporar una imagen (De Excel, por ejemplo) como si fuera una tabla. El único inconveniente es que no va a permitir seleccionar el texto en el pdf generado. Al igual que con las imágenes, hay un comando personalizado y un código manual comentado.
+Se puede incorporar una imagen (De Excel, por ejemplo) como si fuera una tabla. El único inconveniente es que no va a permitir seleccionar el texto en el pdf generado. Al igual que con las imágenes, hay un comando personalizado y un código manual comentado.\footnote{\textit{Si no se quiere incluir el texto opcional, pueden dejar vacío la última celda (\{\})}}
 \begin{verbatim} 
-\tableimage[label]{Titulo}{tamaño}{ruta_imagen}{Texto_opcional}
+\tableimage[label]{Titulo}{tamaño}{ruta_imagen}{Texto_referencia}
+Ejemplo:
+\tableimage[referencia3]{Tabla de referencia 1}{height=3cm}{img/tablaejemplo.png}{Texto}
 \end{verbatim}
-\textit{PD: Si no se quiere incluir el texto opcional, pueden dejar vacío la última celda (\{\})}
 
-\tableimage[referencia3]{Tabla de referencia 1}{height=3cm}{img/tablaejemplo.png}{Texto opcional al el pie de Tabla.}
+
+
+\tableimage[referencia3]{Titulo de la tabla de referencia}{height=3cm}{img/tablaejemplo.png}{Texto opcional con fuente/explicación.}
 
 % Tabla manual:
 %\begin{table}[H]
