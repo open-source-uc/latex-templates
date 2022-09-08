@@ -8,9 +8,9 @@ Esta plantilla fue creada para facilitar el formato de entrega, añadiendo los "
 
 Se dejó en el apartado de main.txt el espacio para incluir todos los otros documentos que la práctica exige. Solo deben convertir los Word en PDF, subir en la carpeta de *content* y poner la ruta en los respectivos `\includepdf{}`.
 
-Se incluye un mini tutorial de como agregar imágenes y tablas en el informe usando unos comandos personalizados, para ver la guía completa (En una planilla que también sirve para los laboratorios), consultar en [las plantillas de Open Source UC](https://github.com/open-source-uc/latex-templates/tree/master/templates/informes-uc) 
+Se incluye un mini tutorial de como agregar imágenes y tablas en el informe usando unos comandos personalizados, para ver la guía completa (En una planilla que también sirve para los laboratorios), consultar en [las plantillas de Open Source UC](https://github.com/open-source-uc/latex-templates/tree/master/templates/informes-uc)
 
-Es IMPORTANTE cambiar el compilador a XeLaTeX (ideal) o LuaLaTeX(alternativa) para que funcione correctamente. Para agregar nuevas secciones tienen que crear `.tex` en la carpeta `content` y usar en el main `\input{content/tu_archivo_creado.tex}`
+Es muy importante usar [XeLaTeX](https://tug.org/xetex/) (ideal), [LuaLaTeX](https://luatex.org/) o [Tectonic](https://tectonic-typesetting.github.io/) como compiladores para que funcione correctamente. Para agregar nuevas secciones es necesario que crear un `.tex` en la carpeta `content` y usar en el main `\input{content/tu_archivo_creado.tex}`
 
 Este proyecto no tiene ninguna afiliación de carácter oficial con la Universidad Católica.
 
@@ -32,7 +32,7 @@ Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `con
 │   ├── bibliografia.tex    // Para poner referencias
 │   ├── contenido.tex       // SEGUNDO documento principal
 │   └── mimitutorial.tex    // Borrar
-│   └── Portada_practica_1.pdf // Portada entregada 
+│   └── portada.pdf // Portada entregada
 ```
 
 ## Comandos personalizados
