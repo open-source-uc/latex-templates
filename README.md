@@ -28,10 +28,10 @@ En este repositorio se recopilan las plantillas generadas con lenguajes de marca
   <summary><b><samp> 💻 &nbsp;Algunos ejemplos</samp></b></summary>
   <br/></p>
 
-| Nombre | Imagen | Descripción |
-|:---:|:---:|:---:|
-|Plantilla-informes-UC| <img src="https://user-images.githubusercontent.com/62116423/188288409-3e889871-2c12-489a-8be7-f2910122ae50.png" alt="Plantilla de informes-UC" width="250">|Creada de forma minimalista y documentada para informes de laboratorios y demas. Respetando la norma APA en su estructura|
-|Plantilla-uc|<img src="https://github.com/open-source-uc/latex-templates/raw/master/templates/plantilla-uc/ejemplos/portada.png#" alt="Plantilla uc" width="250"/> |Plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de la UC.|
+| Nombre | Imagen | Descripción | Descargar |
+|:---:|:---:|:---:|:---:|
+|Plantilla-informes-UC| <img src="https://user-images.githubusercontent.com/62116423/188288409-3e889871-2c12-489a-8be7-f2910122ae50.png" alt="Plantilla de informes-UC" width="250">|Creada de forma minimalista y documentada para informes de laboratorios y demas. Respetando la norma APA en su estructura| [link](https://downgit.github.io/#/home?url=https://github.com/open-source-uc/latex-templates/tree/master/templates/informes-uc)
+|Plantilla-uc|<img src="https://github.com/open-source-uc/latex-templates/raw/master/templates/plantilla-uc/ejemplos/portada.png#" alt="Plantilla uc" width="250"/> |Plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de la UC.| [link](https://downgit.github.io/#/home?url=https://github.com/open-source-uc/latex-templates/tree/master/templates/plantilla-uc)
 <!-- FALTA COMPLETAR CON EL RESTO DE PLANTILLAS -->
 
 </details>
