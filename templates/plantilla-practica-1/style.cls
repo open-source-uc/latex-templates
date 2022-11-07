@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e} % Impide usar pdflatex (es malo)
 \ProvidesClass{style}%[2022/05/01 style class]
-\LoadClass[11pt]{article}
+\LoadClass[12pt]{article}
 \RequirePackage{fullpage}
 \RequirePackage[spanish, es-noshorthands]{babel}
 \RequirePackage[letterpaper, left=3cm, right=3cm,top=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
@@ -8,12 +8,13 @@
 
 %----------------------------- TEXTO ---------------------------
 \RequirePackage{fontspec}                   % Agregar fuentes
-%\setmainfont{Montserrat}                    % alternativa a Avenir
+\setmainfont{Times New Roman}                      % Tipografia
 \RequirePackage{parskip}                    % Permite separar los párrafos y configura la sangria
 %\setlength{\parindent}{4em}     % sangria especifica
 %\setlength{\parskip}{1em}      % Distancia parrados
 \RequirePackage{setspace}                   % interlineado
-\setstretch{1.15}                           % Config de interlineado
+\setstretch{1.5}                           % Config de interlineado
+\setlength{\parindent}{1.25cm}                % Config sangria
 \RequirePackage{xspace}                     % Agregar espacios automáticamente después de las palabras comandos
 \RequirePackage{lscape}
 \RequirePackage{dirtytalk}                  % Poner cosas entre comillas fácilmente: \say{algo que va entre comillas}
@@ -23,14 +24,14 @@
 \RequirePackage{inputenc}                   % carácteres acentuados.
 \RequirePackage{mfirstuc}                   % Agrega comandos para mayúsculas
 \RequirePackage{microtype}                  % Permite un estilo mas agradable
-\RequirePackage{fancyhdr}                   % Para configurar encabezado
-\pagestyle{fancy}
+%\RequirePackage{fancyhdr}                   % Para configurar encabezado
+%\pagestyle{fancy}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{soul}                       % Resaltar texto y otras cosas
 %-------------------------- ECUACIONES --------------------------
 \RequirePackage{amsmath,amsthm,mathtools, amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
 %--------------------------- IMÁGENES ---------------------------
-\RequirePackage{threeparttable}             % Permite alinear imagenes con el caption
+\RequirePackage{threeparttable}                 % Permite alinear imagenes con el caption
 \RequirePackage{float}                      % Posicionar figuras: H, h!, b...
 \RequirePackage{graphicx}                   % Agregar características a las imágenes 
 \RequirePackage{epsfig}                     % Paquete relacionado con graphicx (es una especie de envoltorio)
@@ -49,6 +50,7 @@
 \RequirePackage{color}                      % Crear y agregar colores
 \RequirePackage{xcolor}                     % Colores avanzados
 %----------------------------- OTROS ----------------------------
+\RequirePackage{wallpaper} 
 \RequirePackage[most]{tcolorbox}            % Genera cajas de colores
 \RequirePackage{ifthen}                     % Hacer if dentro de latex
 \RequirePackage[shortlabels]{enumitem}      % Permite personalizar enumerate, itemize y description
@@ -134,28 +136,36 @@
 \definecolor{cian2}{RGB}{93, 196, 188}
 \definecolor{shadecolor}{RGB}{224,238,238}
 
-%%%%%%%%%%%%%%%%%%%%%%% ENCABEZADO %%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\headrulewidth}{0pt} % eliminamos linea encabezado
-\renewcommand{\footrulewidth}{0pt} % eliminamos linea pie pagina
-\setlength\headheight{61.3pt}      % Distancia entre encabezado y contenido
-\addtolength{\textheight}{-50.0pt} % Distancia entre encabezado y pie de pag
-
-% Encabezado personalizado https://latex.org/forum/viewtopic.php?t=33369
 
 %%%%%%%%%%%%%%%%%%%%%%% OTROS %%%%%%%%%%%%%%%%%%%%%%%
+% Configuramos el "doble espacio" con "2ex"
 \titleformat{\section}[hang]
-    {}
-    {\color{RoyalBlue}\LARGE\bfseries \thesection . \ }{0pt}
-    {\color{RoyalBlue}\LARGE\bfseries}
+    {\bfseries}
+    {\normalsize \thesection . \ }{0pt} 
+    {\normalsize}[\vspace{2ex}]
 \titleformat{\subsection}[hang]
-    {}
-    {\color{grey}\Large\bfseries \thesubsection. \ }{0pt}
-    {\color{grey}\Large\bfseries}
+    {\bfseries}
+    {\normalsize \thesubsection. \ }{0pt}
+    {\normalsize}[\vspace{2ex}]
 \titleformat{\subsubsection}[hang]
-    {}
-    {\color{silver}\large\bfseries \thesubsubsection. \ }{0pt}
-    {\color{silver}\large\bfseries}
-%\setcitestyle{square,super}
+    {\bfseries}
+    {\normalsize \thesubsubsection. \ }{0pt}
+    {\normalsize}[\vspace{2ex}]
+\titleformat{\subsubsubsection}[hang]
+    {\bfseries}
+    {\normalsize \thesubsubsection. \ }{0pt}
+    {\normalsize}[\vspace{2ex}]
+    
+% \portada{Insertar nombre aca}{Insertar correo acá}{Insertar empresa acá}{Insertar fecha acá}
+\newcommand{\portada}[4]{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[text=black, right] at (4.15,-18.85) {#1};
+        \node[text=black, right] at (4.15,-20.08) {#2};
+        \node[text=black, right] at (4.15,-21.3) {#3};
+        \node[text=black, right] at (4.15,-22.54) {#4};
+    \end{tikzpicture}
+    \newpage
+}
 
 % Configuracion imagenes
 \newcommand{\fig}[4][\relax]{
@@ -168,7 +178,6 @@
     \end{measuredfigure}
   \end{figure}%
 }
-% Configuracion imagenes a la izquierda o derecha
 \newcommand{\figposition}[5][\relax]{
     \begin{wrapfigure}{#5}{0.25\textwidth} % Margen texto 0.25
         \centering
@@ -191,135 +200,28 @@
         \\ \textit{\scriptsize{#5}}
     \end{table}
 }
-%%%%%%%%%%%%%%%%%%%%%%% PYTHON %%%%%%%%%%%%%%%%%%%%%%%
-% Python style for highlighting
-\newcommand\pythonstyle{\lstset{
-language=Python,
-basicstyle=\ttb,
-otherkeywords={self},  % Add keywords here
-keywordstyle=\ttb\color{deepblue},
-emph={MyClass,__init__},          % Custom highlighting
-emphstyle=\ttb\color{deepred},    % Custom highlighting style
-stringstyle=\color{deepgreen},
-frame=tb,                         % Any extra options here
-showstringspaces=false,
- % 
-}}
-% Python environment
-\lstnewenvironment{python}[1][]{
-\pythonstyle
-\lstset{#1}
-}{}
-% Python for external files
-\newcommand\pythonexternal[2][]{{
-\pythonstyle
-\lstinputlisting[#1]{#2}}}
+% Quitamos negrita indice de contenido
+% https://tex.stackexchange.com/questions/196598/remove-bold-from-table-of-contents
+\let\LaTeXStandardTableOfContents\tableofcontents
+\renewcommand{\tableofcontents}{%
+\begingroup%
+\renewcommand{\bfseries}{\relax}%
+\LaTeXStandardTableOfContents%
+\endgroup%
+}%
 
-% Python for inline
-\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{grey},
-    rulecolor =\color{black},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    frame = single, %L
-    %keeppaces = true,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2,
-}
-\lstdefinestyle{stylepython}{
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  %frame=L,
-  xleftmargin=\parindent,
-  showstringspaces=false,
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{grey},,
-  identifierstyle=\color{blue},
-  stringstyle=\color{orange},
-  captionpos=b,
-  numbers=left,   
-  numberstyle=\color{grey},
-  numbersep=-5pt,
-  tabsize=2, 
-}
-\lstdefinestyle{blancoynegro}{% REQUIERE POENR UN TAB
-  belowcaptionskip=1\baselineskip,
-  xleftmargin=\parindent,
-  showstringspaces=false,
-  basicstyle=\ttfamily\footnotesize,
-  %captionpos=b,
-  numbers=left,   
-  identifierstyle=\color{black},
-  numberstyle=\color{grey},
-  numbersep=-5pt,
-  tabsize=2, 
-}
-
-\lstdefinestyle{customasm}{
-  belowcaptionskip=1\baselineskip,
-  frame=L,
-  xleftmargin=\parindent,
-  language=[x86masm]Assembler,
-  basicstyle=\footnotesize\ttfamily,
-  commentstyle=\itshape\color{purple!40!black},
-}
-
-%\lstset{escapechar=@,style=customc}
-
-%EJEMPLO: \lstinputlisting[language=Python, style=mystyle, caption=\textit{Modelo hecho con gurobi en python}, label=modelogurobi]{programa.py}
-
-% -----------------------------------------------------
-% Comandos
-% -----------------------------------------------------
-% Encabezado personalizado https://latex.org/forum/viewtopic.php?t=33369
-\newcommand{\heading}[2]{
-    \begin{tikzpicture}[remember picture, overlay]
-        \node [
-            fill=gray, 
-            anchor=north,
-            minimum width=\paperwidth, 
-            minimum height=3cmheading
-        ] (box) at (current page.north) [font=\Huge, text=white] {#1 #2};
-        \path 
-            (box.west) -- 
-                node {\includegraphics[scale=.2]{example-image-a}} 
-            (box.center)
-        ;
-    \end{tikzpicture}
-    \vskip 2cm
-} % \heading{Capitulo}{1:algo}
-
-
-%%%%%%%%%%%%%%%%%%%%%%% CONDITIONS %%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{conditions*}
-  {\par\vspace{\abovedisplayskip}\noindent
-   \tabularx{\columnwidth}{>{$}l<{$} @{\ : } >{\raggedright\arraybackslash}X}}
-  {\endtabularx\par\vspace{\belowdisplayskip}}
-% EJEMPLO: \begin{conditions*}
-%           E  &  TEXTO \end{conditions*}
-  
-  
-
+% configuramos numeros de pagina desactivados hasta que se quiera
+\pagenumbering{gobble}
 %%%%%%%%%%%%%%%%%%%%%%% CAPTION %%%%%%%%%%%%%%%%%%%%%%%
-\captionsetup[table]{format=plain, textfont=it, font=small, justification=raggedright, labelfont=bf,labelsep=newline, skip=1pt, singlelinecheck=false}
+\captionsetup[table]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
 
-\captionsetup[figure]{format=plain, textfont=it, font=small, justification=raggedright, labelfont=bf,labelsep=newline, skip=1pt, singlelinecheck=false}
+\captionsetup[figure]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
 
-
+% https://tex.stackexchange.com/questions/28333/continuous-v-per-chapter-section-numbering-of-figures-tables-and-other-docume
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
 %%%%%%%%%%%%%%%%%%%%%%% EXTRA %%%%%%%%%%%%%%%%%%%%%%%
 % Desactiva errores de overfull y underfull.
 \hfuzz=\maxdimen
