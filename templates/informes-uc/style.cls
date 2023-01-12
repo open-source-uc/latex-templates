@@ -5,13 +5,12 @@
 \RequirePackage[spanish, es-noshorthands]{babel}
 \RequirePackage[letterpaper, left=3cm, right=3cm,top=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
 \selectlanguage{spanish}
-
 %----------------------------- TEXTO ---------------------------
-\RequirePackage{fontspec}                   % Agregar fuentes
-%\setmainfont{Montserrat}                    % alternativa a Avenir
+\usepackage{mathptmx}                        % Tipografia Times New Roman
+\usepackage[LY1]{fontenc}
 \RequirePackage{parskip}                    % Permite separar los párrafos y configura la sangria
-%\setlength{\parindent}{4em}     % sangria especifica
-%\setlength{\parskip}{1em}      % Distancia parrados
+%\setlength{\parindent}{4em}                % sangria especifica
+%\setlength{\parskip}{1em}                  % Distancia parrados
 \RequirePackage{setspace}                   % interlineado
 \setstretch{1.15}                           % Config de interlineado
 \RequirePackage{xspace}                     % Agregar espacios automáticamente después de las palabras comandos
@@ -43,7 +42,6 @@
 \RequirePackage{tabularx}                   % Permite juntar celdas en las tablas
 \RequirePackage{booktabs}                   % Tablas bonitas: toprule, midrule, bottomrule
 %---------------------------- CÓDIGO ----------------------------
-\RequirePackage{minted}                     % Código monoespaciado de color
 \RequirePackage{listings}                   % ingresar codigos e.g. MATLAB, Python
 %----------------------------- COLOR ----------------------------
 \RequirePackage{color}                      % Crear y agregar colores

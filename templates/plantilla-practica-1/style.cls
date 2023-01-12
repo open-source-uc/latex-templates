@@ -7,8 +7,8 @@
 \selectlanguage{spanish}
 
 %----------------------------- TEXTO ---------------------------
-\RequirePackage{fontspec}                   % Agregar fuentes
-\setmainfont{Times New Roman}                      % Tipografia
+\usepackage{mathptmx}                        % Tipografia Times New Roman
+\usepackage[LY1]{fontenc}
 \RequirePackage{parskip}                    % Permite separar los párrafos y configura la sangria
 %\setlength{\parindent}{4em}     % sangria especifica
 %\setlength{\parskip}{1em}      % Distancia parrados
@@ -44,7 +44,6 @@
 \RequirePackage{tabularx}                   % Permite juntar celdas en las tablas
 \RequirePackage{booktabs}                   % Tablas bonitas: toprule, midrule, bottomrule
 %---------------------------- CÓDIGO ----------------------------
-\RequirePackage{minted}                     % Código monoespaciado de color
 \RequirePackage{listings}                   % ingresar codigos e.g. MATLAB, Python
 %----------------------------- COLOR ----------------------------
 \RequirePackage{color}                      % Crear y agregar colores
