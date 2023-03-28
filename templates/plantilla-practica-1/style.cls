@@ -34,7 +34,7 @@
 %--------------------------- IMÁGENES ---------------------------
 \RequirePackage{threeparttable}                 % Permite alinear imagenes con el caption
 \RequirePackage{float}                      % Posicionar figuras: H, h!, b...
-\RequirePackage{graphicx}                   % Agregar características a las imágenes 
+\RequirePackage{graphicx}                   % Agregar características a las imágenes
 \RequirePackage{epsfig}                     % Paquete relacionado con graphicx (es una especie de envoltorio)
 \RequirePackage{caption}                    % Agregar caption a las figuras
 \RequirePackage{subcaption}                 % Agregar caption a las subfiguras
@@ -50,16 +50,16 @@
 \RequirePackage{color}                      % Crear y agregar colores
 \RequirePackage{xcolor}                     % Colores avanzados
 %----------------------------- OTROS ----------------------------
-\RequirePackage{wallpaper} 
+\RequirePackage{wallpaper}
 \RequirePackage[most]{tcolorbox}            % Genera cajas de colores
 \RequirePackage{ifthen}                     % Hacer if dentro de latex
 \RequirePackage[shortlabels]{enumitem}      % Permite personalizar enumerate, itemize y description
 \RequirePackage{dirtree}                    % Generar el árbol de directorios
 \RequirePackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}        % Permite remover el color y borde de los links
-% \RequirePackage[colorlinks = true,allcolors = black,urlcolor=blue]{hyperref}  % Vínculos 
+% \RequirePackage[colorlinks = true,allcolors = black,urlcolor=blue]{hyperref}  % Vínculos
 %https://tex.stackexchange.com/questions/26071/how-can-i-have-colored-and-underlined-links-with-hyperref
 \RequirePackage{multicol}                   % Permite utilizar multi-columnas
-% \RequirePackage{scrextend}                % Para hacer hacer referencia a un footnote en varias partes del texto. 
+% \RequirePackage{scrextend}                % Para hacer hacer referencia a un footnote en varias partes del texto.
                                             % IMPORTAR SOLO SI ES NECESARIO
 \RequirePackage[per-mode = symbol]{siunitx}	% Unidades del S.I.U
 \RequirePackage{commath}                    % Configura el espacio tipográfico por estética
@@ -141,7 +141,7 @@
 % Configuramos el "doble espacio" con "2ex"
 \titleformat{\section}[hang]
     {\bfseries}
-    {\normalsize \thesection . \ }{0pt} 
+    {\normalsize \thesection . \ }{0pt}
     {\normalsize}[\vspace{2ex}\setcounter{figure}{0}\setcounter{table}{0}]
 \titleformat{\subsection}[hang]
     {\bfseries}
@@ -155,7 +155,7 @@
     {\bfseries}
     {\normalsize \thesubsubsection. \ }{0pt}
     {\normalsize}[\vspace{2ex}]
-    
+
 % \portada{Insertar nombre aca}{Insertar correo acá}{Insertar empresa acá}{Insertar fecha acá}
 \newcommand{\portada}[4]{
     \begin{tikzpicture}[remember picture, overlay]
@@ -195,7 +195,7 @@
         \begin{measuredfigure}
             \label{Tab:#1}
             \caption{#2}
-            \includegraphics[#3]{#4} 
+            \includegraphics[#3]{#4}
         \end{measuredfigure}
         \\ \textit{\scriptsize{#5}}
     \end{table}
@@ -203,7 +203,7 @@
 
 % Insertar citación extensa (+40 palabras) en formato APA. Adaptación del siguiente código:
 % https://linuxgx.blogspot.com/2015/02/citas-textuales-largas-en-latex.html
-\newcommand{\quote}[1]{
+\newcommand{\quotex}[1]{
     \begin{flushright}
         \begin{minipage}{0.96\linewidth}
             \vspace{5pt}
