@@ -3,12 +3,13 @@
 \LoadClass[12pt]{article}
 \RequirePackage{fullpage}
 \RequirePackage[spanish, es-noshorthands]{babel}
-\RequirePackage[letterpaper, left=3cm, right=3cm,top=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
+\RequirePackage[letterpaper, left=3cm, top=3cm,right=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
 \selectlanguage{spanish}
 
 %----------------------------- TEXTO ---------------------------
 \usepackage{mathptmx}                        % Tipografia Times New Roman
 \usepackage[LY1]{fontenc}
+\RequirePackage{tocloft}                    % Para indices
 \RequirePackage{parskip}                    % Permite separar los párrafos y configura la sangria
 %\setlength{\parindent}{4em}     % sangria especifica
 %\setlength{\parskip}{1em}      % Distancia parrados
@@ -86,7 +87,7 @@
 %--- tikz library
 \usetikzlibrary{automata}
 \usetikzlibrary{positioning}
-\usetikzlibrary{arrows} 
+\usetikzlibrary{arrows}
 \usetikzlibrary{calc}
 
 
@@ -199,15 +200,6 @@
         \\ \textit{\scriptsize{#5}}
     \end{table}
 }
-% Quitamos negrita indice de contenido
-% https://tex.stackexchange.com/questions/196598/remove-bold-from-table-of-contents
-\let\LaTeXStandardTableOfContents\tableofcontents
-\renewcommand{\tableofcontents}{%
-\begingroup%
-\renewcommand{\bfseries}{\relax}%
-\LaTeXStandardTableOfContents%
-\endgroup%
-}%
 
 % configuramos numeros de pagina desactivados hasta que se quiera
 \pagenumbering{gobble}
