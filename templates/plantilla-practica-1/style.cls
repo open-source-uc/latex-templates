@@ -142,7 +142,7 @@
 \titleformat{\section}[hang]
     {\bfseries}
     {\normalsize \thesection . \ }{0pt} 
-    {\normalsize}[\vspace{2ex}]
+    {\normalsize}[\vspace{2ex}\setcounter{figure}{0}\setcounter{table}{0}]
 \titleformat{\subsection}[hang]
     {\bfseries}
     {\normalsize \thesubsection. \ }{0pt}
@@ -173,7 +173,7 @@
     \centering
     \begin{measuredfigure}
         \ifx\relax#1\else\label{img:#1}\fi
-        \ifx\relax#2\else\caption{#2}\fi
+        \ifx\relax#2\else\caption{#2\vspace{2ex}}\fi
         \includegraphics[#3]{#4}%
     \end{measuredfigure}
   \end{figure}%
@@ -200,6 +200,30 @@
         \\ \textit{\scriptsize{#5}}
     \end{table}
 }
+
+% Insertar citación extensa (+40 palabras) en formato APA. Adaptación del siguiente código:
+% https://linuxgx.blogspot.com/2015/02/citas-textuales-largas-en-latex.html
+\newcommand{\quote}[1]{
+    \begin{flushright}
+        \begin{minipage}{0.96\linewidth}
+            \vspace{5pt}
+            {\small
+                #1
+            }
+            \vspace{5pt}
+        \end{minipage}
+    \end{flushright}
+}
+
+% Quitamos negrita indice de contenido
+% https://tex.stackexchange.com/questions/196598/remove-bold-from-table-of-contents
+\let\LaTeXStandardTableOfContents\tableofcontents
+\renewcommand{\tableofcontents}{%
+\begingroup%
+\renewcommand{\bfseries}{\relax}%
+\LaTeXStandardTableOfContents%
+\endgroup%
+}%
 
 % configuramos numeros de pagina desactivados hasta que se quiera
 \pagenumbering{gobble}
