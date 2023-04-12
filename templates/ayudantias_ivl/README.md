@@ -33,9 +33,9 @@ La estructura del documento es la siguiente:
 Finalmente, el resultado de la compilación del documento es el siguiente:
 
 <div style="text-align:center;">
-  <img src="ayudantias_ivl_01.jpg" alt="Image 1" style="display:inline-block; width:30%;">
-  <img src="ayudantias_ivl_02.jpg" alt="Image 2" style="display:inline-block; width:30%;">
-  <img src="ayudantias_ivl_03.jpg" alt="Image 3" style="display:inline-block; width:30%;">
+  <img src="ayudantias_ivl_01.jpg" alt="Image 1" style="display:inline-block; width:33%;">
+  <img src="ayudantias_ivl_02.jpg" alt="Image 2" style="display:inline-block; width:33%;">
+  <img src="ayudantias_ivl_03.jpg" alt="Image 3" style="display:inline-block; width:33%;">
 </div>
 
 Hecho con :heart: por [Iván Vergara Lam](https://github.com/ivanvlam)
