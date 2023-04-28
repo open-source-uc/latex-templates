@@ -1,16 +1,18 @@
 % Definiciones de comandos, para reutilizar secuencias frecuentes o ahorrar código
+\newcommand{\mytitle}{Ayudantía 00}
+\newcommand{\tema}{Tema de la Ayudantía}
+\newcommand{\fecha}{00-00-0000}
 
-\newcommand{\mytitle}{Ayudantía 17}
-\newcommand{\tema}{Capacitancia y Materiales Dieléctricos}
-\newcommand{\fechaentrega}{11-10-2022}
-\newcommand{\ayudante}{Iván Vergara Lam}
-\newcommand{\mailuc}{ivl@uc.cl}
+\newcommand{\ayudante}{Nombre Ayudante}
+\newcommand{\mailuc}{mail@uc.cl}
 
-\newcommand{\siglacurso}{FIS1533}
-\newcommand{\nombrecurso}{Electricidad y Magnetismo}
-\newcommand{\profesor}{Edgardo Stockmeyer}
-\newcommand{\numseccion}{3}
-\newcommand{\semestre}{Segundo Semestre del 2022}
+\newcommand{\facultad}{Nombre Facultad}
+\newcommand{\semestre}{Primer Semestre del 0000}
+
+\newcommand{\siglacurso}{AAA0000}
+\newcommand{\nombrecurso}{Nombre Curso}
+\newcommand{\numseccion}{0}
+\newcommand{\profesor}{Nombre del Profesor}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -23,8 +25,10 @@
 % Definir color de hipervínculos
 \hypersetup{
   colorlinks=false,
-  linkbordercolor=0.96 0.60 0.14,
-  urlbordercolor=0.96 0.60 0.14
+  linkbordercolor=0.96 0.60 0.14,   % Código RGB
+  urlbordercolor=0.96 0.60 0.14,    % Código RGB
+% hidelinks                         % Descomentar esta línea borra los bordes alrededor de hipervínculos
 }
 
-\lfoot{\fechaentrega \hfill \siglacurso \ -- \mytitle \hfill Página \thepage{} de \pageref{LastPage}}
+% Creación del pie de página
+\lfoot{\fecha \hfill \siglacurso \ -- \mytitle \hfill Página \thepage{} de \pageref{LastPage}}

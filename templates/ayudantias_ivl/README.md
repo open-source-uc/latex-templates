@@ -18,24 +18,20 @@ La estructura del documento es la siguiente:
     │   ├── usepackages.tex
     │   └── variables.tex
     ├── figuras
-    │   ├── fig_1.png
-    │   ├── fig_2.png
-    │   ├── fig_3.png
-    │   ├── logo uc.tex
+    │   ├── imagen_ejemplo.png
+    │   ├── logo uc.pdf
     │   └── qr.png
     ├── problemas
-    │    ├── 01_problema.tex
-    │    ├── 02_problema.tex
-    │    └── 03_problema.tex
+    │   ├── 01_problema.tex
+    │   ├── 02_problema.tex
+    │   └── 03_problema.tex
     ├── main.tex
     └── evaluacion.tex
 
 Finalmente, el resultado de la compilación del documento es el siguiente:
 
 <div style="text-align:center;">
-  <img src="ayudantias_ivl_01.jpg" alt="Image 1" style="display:inline-block; width:33%;">
-  <img src="ayudantias_ivl_02.jpg" alt="Image 2" style="display:inline-block; width:33%;">
-  <img src="ayudantias_ivl_03.jpg" alt="Image 3" style="display:inline-block; width:33%;">
+  <img src="ayudantias_ivl.jpg" alt="Image 1" style="display:inline-block; width:50%;">
 </div>
 
 Hecho con :heart: por [Iván Vergara Lam](https://github.com/ivanvlam)
