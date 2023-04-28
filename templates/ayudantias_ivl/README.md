@@ -31,7 +31,7 @@ La estructura del documento es la siguiente:
 Finalmente, el resultado de la compilación del documento es el siguiente:
 
 <div style="text-align:center;">
-  <img src="ayudantias_ivl.jpg" alt="Image 1" style="display:inline-block; width:50%;">
+  <img src="ayudantias_ivl.jpg" alt="ayudantias_ivl" style="display:inline-block; width:50%;">
 </div>
 
 Hecho con :heart: por [Iván Vergara Lam](https://github.com/ivanvlam)
