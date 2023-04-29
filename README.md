@@ -67,8 +67,6 @@ Reach out to us at one of the following places:
 
 ### Mantenedores
 
-- [FarDust](https://www.github.com/FarDust)
-- [agucova](https://github.com/agucova)
 - [diegocostares](https://www.github.com/diegocostares)
 
 ## Licencía

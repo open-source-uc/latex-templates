@@ -11,7 +11,7 @@ En esta plantilla hay 2 formas de incluir imágenes. La primera es la más compl
 %\end{figure}
 
 La segunda forma de incluir imágenes es la más sencilla, solo se tiene que usar el comando personalizado:
-\begin{verbatim} 
+\begin{verbatim}
 \fig[label]{Titulo}{tamaño}{ruta_imagen}
 Ejemplo:
 \fig[referencia1]{Titulo de la imagen 1}{width = 0.2\textwidth}{img/cuadradoejemplo.png}
@@ -24,7 +24,7 @@ Ejemplo:
 
 \subsection{Imágenes alineadas}
 Si se desea incluir una imagen a la izquierda o derecha de un párrafo, se puede consultar nuevamente el codigo comentado o usar el siguiente comando (Poniendo \{r\} o \{l\} dependiendo del caso):
-\begin{verbatim} 
+\begin{verbatim}
 \figposition[label]{Titulo}{tamaño}{ruta_imagen}{posicion_r/l}
 Ejemplo:
 \figposition[referencia2]{Imagen referencia }{height=3cm}{img/cuadradoejemplo.png}{r}
@@ -59,7 +59,7 @@ Hay muchas páginas para generar tablas automáticamente, una alternativa es \hr
 
 \subsection{Insertar una imagen como tabla}
 Se puede incorporar una imagen (De Excel, por ejemplo) como si fuera una tabla. El único inconveniente es que no va a permitir seleccionar el texto en el pdf generado. Al igual que con las imágenes, hay un comando personalizado y un código manual comentado.\footnote{\textit{Si no se quiere incluir el texto opcional, pueden dejar vacío la última celda (\{\})}}
-\begin{verbatim} 
+\begin{verbatim}
 \tableimage[label]{Titulo}{tamaño}{ruta_imagen}{Texto_referencia}
 Ejemplo:
 \tableimage[referencia3]{Tabla de referencia 1}{height=3cm}{img/tablaejemplo.png}{Texto}
@@ -74,7 +74,7 @@ Ejemplo:
 %    \centering
 %    \begin{measuredfigure}
 %        \caption{Tabla de referencia 1}
-%        \includegraphics[height=3cm]{img/tablaejemplo.png} 
+%        \includegraphics[height=3cm]{img/tablaejemplo.png}
 %        \label{img:referencia3}
 %    \end{measuredfigure}
 %    \\ \textit{\scriptsize{Texto opcional al el pie de Tabla.}}
@@ -89,7 +89,7 @@ Pueden copiar y modificar el codigo siguiente:
         \centering
         \begin{measuredfigure}
             \caption{Tabla de referencia 2}
-            \begin{tabular}{| l | c | r |} 
+            \begin{tabular}{| l | c | r |}
             \hline
                 \textbf{Texto} & \textbf{Texto} & \textbf{Texto} \\ \hline
                 Textoblabla    & Textoblabla   & Textoblabla \\ \hline
@@ -123,13 +123,13 @@ Pueden copiar y modificar el codigo siguiente:
 
 Para citación extensa en formato APA, citas con más de 40 palabras, se sugiere el uso del siguiente comando personalizado:
 
-\begin{verbatim} 
-    \quote{cita}
+\begin{verbatim}
+    \quotex{cita}
     Ejemplo:
-    \quote{\lipsum (Autor, Año)}
+    \quotex{\lipsum (Autor, Año)}
 \end{verbatim}
 
-\quote{\lipsum (Autor, Año)}
+\quotex{\lipsum (Autor, Año)}
 
 Puedes realizarlo de forma manual modificando el código comentado
 
