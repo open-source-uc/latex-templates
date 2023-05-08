@@ -3,7 +3,7 @@
 \LoadClass[12pt]{article}
 \RequirePackage{fullpage}
 \RequirePackage[spanish, es-noshorthands]{babel}
-\RequirePackage[letterpaper, left=3cm, top=3cm,right=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
+\RequirePackage[letterpaper, left=3cm, top=3cm,right=2.5cm,bottom=2.5cm]{geometry}
 \selectlanguage{spanish}
 
 %----------------------------- TEXTO ---------------------------
