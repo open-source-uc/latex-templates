@@ -159,10 +159,10 @@
 % \portada{Insertar nombre aca}{Insertar correo acá}{Insertar empresa acá}{Insertar fecha acá}
 \newcommand{\portada}[4]{
     \begin{tikzpicture}[remember picture, overlay]
-        \node[text=black, right] at (4.15,-18.85) {#1};
-        \node[text=black, right] at (4.15,-20.08) {#2};
-        \node[text=black, right] at (4.15,-21.3) {#3};
-        \node[text=black, right] at (4.15,-22.54) {#4};
+        \node[text=black, right] at (3.15,-17.86) {#1};
+        \node[text=black, right] at (3.15,-19.12) {#2};
+        \node[text=black, right] at (3.15,-20.35) {#3};
+        \node[text=black, right] at (3.15,-21.58) {#4};
     \end{tikzpicture}
     \newpage
 }
