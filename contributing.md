@@ -22,7 +22,7 @@ En general, este es el proceso estándar para contribuir código:
 - Crear un Pull Request (PR) a `development`, manteniéndolo como "borrador" (draft) hasta que esté listo para ser incorporado.
 - Explicar brevemente los cambios, siguiendo el formato de Pull Requests, especificando posibles problemas o puntos de discusión.
 - Solicitar una revisión de pares (*review*) a los integrantes del equipo del proyecto (los encuentras en la seccion de Maintainers del readme).
-- Una vez aprobada la PR, un maintainer miembro (por ahora [@diegocostares](https://github.com/diegocostares)) del proyecto hará merge del código a `development`, una vez hecho el merge puedes eliminar tu branch.
+- Una vez aprobada la PR, un maintainer miembro del proyecto (por ahora [@diegocostares](https://github.com/diegocostares)) hará merge del código a `development`, una vez hecho el merge puedes eliminar tu branch.
 
 Puedes encontrar mas detalles sobre este proceso [aquí](https://docs.github.com/es/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests).
 
