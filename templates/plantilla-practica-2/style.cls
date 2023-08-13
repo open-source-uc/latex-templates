@@ -5,7 +5,7 @@
 \setlength{\parindent}{0.49cm}              % Establece la sangría de los párrafos
 \RequirePackage{fullpage}                   % Utiliza la página completa
 \RequirePackage[spanish, es-noshorthands]{babel} % Configuración de idioma español
-\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm,margin=2cm]{geometry} % Configuración de márgenes
+\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm]{geometry} % Configuración de márgenes
 \selectlanguage{spanish}                    % Selecciona el idioma español
 \title{Informe de práctica II}              % Título del documento
 
