@@ -1,94 +1,80 @@
-\NeedsTeXFormat{LaTeX2e} % Impide usar pdflatex (es malo)
-\ProvidesClass{style}
-\LoadClass[12pt]{article}
-\RequirePackage{fullpage}
-\RequirePackage[spanish, es-noshorthands]{babel}
-\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm,margin=2cm]{geometry}
-\selectlanguage{spanish}
-\title{Informe de práctica II}
+% ====== Configuración del Documento ======
+\NeedsTeXFormat{LaTeX2e}                    % Requiere formato LaTeX2e
+\ProvidesClass{style}                       % Define la clase del documento
+\LoadClass[12pt]{article}                   % Carga la clase de artículo con tamaño de fuente de 12pt
+\setlength{\parindent}{0.49cm}              % Establece la sangría de los párrafos
+\RequirePackage{fullpage}                   % Utiliza la página completa
+\RequirePackage[spanish, es-noshorthands]{babel} % Configuración de idioma español
+\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm,margin=2cm]{geometry} % Configuración de márgenes
+\selectlanguage{spanish}                    % Selecciona el idioma español
+\title{Informe de práctica II}              % Título del documento
 
-%----------------------------- TEXTO ---------------------------
-\usepackage{mathptmx}                        % Tipografia Times New Roman
-\usepackage[LY1]{fontenc}
+% ====== Estilo de Texto ======
+\RequirePackage{mathptmx}                       % Utiliza la fuente Times New Roman
+\RequirePackage[LY1]{fontenc}                   % Codificación de fuente
 \RequirePackage{tocloft}                    % Para indices
-\RequirePackage{parskip}                    % Permite separar los párrafos y configura la sangria
-%\setlength{\parskip}{1em}                  % Distancia parrados
-\RequirePackage{setspace}                   % interlineado
-\setstretch{1.5}                            % Config de interlineado
-\setlength{\parindent}{0.49cm}               % Config sangria
-\RequirePackage{xspace}                     % Agregar espacios automáticamente después de las palabras comandos
-\RequirePackage{lscape}
-\RequirePackage{dirtytalk}                  % Poner cosas entre comillas fácilmente: \say{algo que va entre comillas}
-\RequirePackage{ulem}                       % Tachar texto
-\RequirePackage{bold-extra}                 % Monoespaciado con negrilla
-\RequirePackage{textcomp}                   % Símbolos: $, copyright, ...
-\RequirePackage{inputenc}                   % carácteres acentuados.
-\RequirePackage{mfirstuc}                   % Agrega comandos para mayúsculas
-\RequirePackage{microtype}                  % Permite un estilo mas agradable
-%\RequirePackage{fancyhdr}                   % Para configurar encabezado
-%\pagestyle{fancy}
-\RequirePackage[absolute,overlay]{textpos}
-\RequirePackage{soul}                       % Resaltar texto y otras cosas
-%-------------------------- ECUACIONES --------------------------
-\RequirePackage{amsmath,amsthm,mathtools, amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
-%--------------------------- IMÁGENES ---------------------------
-\RequirePackage{threeparttable}                 % Permite alinear imagenes con el caption
-\RequirePackage{float}                      % Posicionar figuras: H, h!, b...
-\RequirePackage{graphicx}                   % Agregar características a las imágenes 
-\RequirePackage{epsfig}                     % Paquete relacionado con graphicx (es una especie de envoltorio)
-\RequirePackage{caption}                    % Agregar caption a las figuras
-\RequirePackage{subcaption}                 % Agregar caption a las subfiguras
-%\RequirePackage{epstopdf}                   % Permite agregar .eps al enunciado - WARNING->LuaLaTeX
-\RequirePackage{tikz}                       % tikzpicture para imagen fondo
-\RequirePackage{wrapfig}                    % Imagenes con texto al rededor
-%---------------------------- TABLAS ----------------------------
-\RequirePackage{tabularx}                   % Permite juntar celdas en las tablas
-\RequirePackage{booktabs}                   % Tablas bonitas: toprule, midrule, bottomrule
-%---------------------------- CÓDIGO ----------------------------
-\RequirePackage{listings}                   % ingresar codigos e.g. MATLAB, Python
-%----------------------------- COLOR ----------------------------
-\RequirePackage{color}                      % Crear y agregar colores
-\RequirePackage{xcolor}                     % Colores avanzados
-%----------------------------- OTROS ----------------------------
-\RequirePackage{wallpaper} 
-\RequirePackage[most]{tcolorbox}            % Genera cajas de colores
-\RequirePackage{ifthen}                     % Hacer if dentro de latex
-\RequirePackage[shortlabels]{enumitem}      % Permite personalizar enumerate, itemize y description
-\RequirePackage{dirtree}                    % Generar el árbol de directorios
-\RequirePackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}        % Permite remover el color y borde de los links
-% \RequirePackage[colorlinks = true,allcolors = black,urlcolor=blue]{hyperref}  % Vínculos 
-%https://tex.stackexchange.com/questions/26071/how-can-i-have-colored-and-underlined-links-with-hyperref
-\RequirePackage{multicol}                   % Permite utilizar multi-columnas
-% \RequirePackage{scrextend}                % Para hacer hacer referencia a un footnote en varias partes del texto. 
-                                            % IMPORTAR SOLO SI ES NECESARIO
-\RequirePackage[per-mode = symbol]{siunitx}	% Unidades del S.I.U
-\RequirePackage{commath}                    % Configura el espacio tipográfico por estética
-\urlstyle{same} % rm sf o tt
-%\RequirePackage{subfigure}                 % Entorno de multiples figuras
-\RequirePackage{bm}                         % Mejora espaciado y acentuacion mate
+\RequirePackage{parskip}                    % Configura los espacios entre párrafos y sangrías
+\RequirePackage{xspace}                     % Agrega espacios automáticamente después de comandos
+\RequirePackage{microtype}                  % Mejora el espaciado entre letras para una apariencia más agradable
+\RequirePackage{setspace}                   % Permite controlar el interlineado
+\setstretch{1.5}                            % Establece el interlineado
+\RequirePackage{ulem}                       % Permite tachar el texto
+\RequirePackage{textcomp}                   % Añade símbolos especiales como el símbolo de copyright
+\RequirePackage{mfirstuc}                   % Agrega comandos para capitalizar
+\RequirePackage{dirtytalk}                  % Facilita la adición de comillas
+\RequirePackage{soul}                       % Permite resaltar y decorar texto
+\RequirePackage{bold-extra}                 % Permite utilizar negritas en texto monoespaciado
+\RequirePackage{lscape}                     % Permite orientación horizontal de las páginas
+\RequirePackage{titlesec}                   % Permite personalizar los estilos de sección
 
-\RequirePackage{pdfpages}                   % insertar pdfs ya creados
-\RequirePackage{titlesec}                   % Define formatos para \section y +
-%\RequirePackage[backend=biber,style=apa]{biblatex}
-\RequirePackage{natbib}                     % Referencias bibliograficas mas comodas
+% ====== Ecuaciones ======
+\RequirePackage{amsmath,amsthm,mathtools,amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
 
-% \RequirePackage[none]{hyphenat}           %  Evita que las palabras se corten(Puede verse mal)
-\usetikzlibrary{mindmap}                    %,trees,intersections,arrows,automata
-\RequirePackage{longtable}
-\RequirePackage{nccmath}
-\RequirePackage{lipsum}                     % Lorem (texto random)
-\RequirePackage{array}                      % organizar por filas y columnas
-%\RequirePackage{pgfplots} warning
-\RequirePackage{tikz-cd}
-\RequirePackage{etoolbox}
-\RequirePackage{framed}
-\RequirePackage{placeins}
+% ====== Imágenes ======
+\RequirePackage{threeparttable}             % Alinea imágenes con las leyendas
+\RequirePackage{float}                      % Mejora la ubicación de las figuras
+\RequirePackage{graphicx}                   % Mejora la inclusión de imágenes
+\RequirePackage{epsfig}                     % Soporte para imágenes EPS
+\RequirePackage{caption}                    % Personalización de leyendas de figuras
+\RequirePackage{subcaption}                 % Leyendas en subfiguras
+\RequirePackage{tikz}                       % Herramienta para crear gráficos
+\RequirePackage{wrapfig}                    % Permite envolver texto alrededor de figuras
 
-%--- tikz library
-\usetikzlibrary{automata}
-\usetikzlibrary{positioning}
-\usetikzlibrary{arrows}
-\usetikzlibrary{calc}
+% ====== Tablas ======
+\RequirePackage{tabularx}                   % Mejora la creación de tablas
+\RequirePackage{booktabs}                   % Mejora la estética de las tablas
+
+% ====== Código ======
+\RequirePackage{listings}                   % Para insertar bloques de código en el documento
+
+% ====== Color ======
+\RequirePackage{color}                      % Soporte para color en el texto
+\RequirePackage{xcolor}                     % Paquete extendido para el manejo de colores
+
+% ====== Otros ======
+\RequirePackage{wallpaper}                  % Permite utilizar fondos de pantalla en el documento
+\RequirePackage{ifthen}                     % Soporte para condicionales en el documento
+\RequirePackage[shortlabels]{enumitem}      % Personalización de listas enumeradas y con viñetas
+\RequirePackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref} % Enlaces clicables
+\RequirePackage{multicol}                   % Soporte para multicolumnas
+\RequirePackage[per-mode = symbol]{siunitx} % Para manejar unidades SI
+\RequirePackage{commath}                    % Mejora la estética en matemáticas
+\RequirePackage{pdfpages}                   % Inserta páginas PDF en el documento
+\RequirePackage{longtable}                  % Soporte para tablas largas que se extienden a varias páginas
+\RequirePackage{nccmath}                    % Soporte adicional para matemáticas
+\RequirePackage{array}                      % Mejora la organización de tablas en filas y columnas
+\RequirePackage{etoolbox}                   % Herramientas adicionales para LaTeX
+\RequirePackage{framed}                     % Creación de marcos en el texto
+\RequirePackage{placeins}                   % Controla la ubicación de las figuras
+\RequirePackage[most]{tcolorbox}            % Creación de cajas de colores
+\RequirePackage{bm}                         % Mejora el manejo de símbolos en negritas en matemáticas
+
+% ====== Opcionales ======
+%\RequirePackage{dirtree}                    % Para generar árboles de directorios
+%\RequirePackage{lipsum}                     % Genera texto de relleno (Lorem Ipsum)
+%\RequirePackage{tikz-cd}                    % Para diagramas conmutativos
+%\usetikzlibrary{mindmap}                    % Biblioteca para crear mapas mentales en TikZ
+%\usetikzlibrary{automata, positioning, arrows, calc} % Bibliotecas adicionales para TikZ
 
 
 %%%%%%%%%%%%%%%%%%%%%%% MATEMATICAS %%%%%%%%%%%%%%%%%%%%%%%
@@ -112,7 +98,6 @@
 \renewcommand{\exists}{\;\exists\; }
 \newcommand{\contr}{\rightarrow\leftarrow}
 \renewcommand{\phi}{\varphi}
-%\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
 
 
 %%%%%%%%%%%%%%%%%%%%%%% COLORES %%%%%%%%%%%%%%%%%%%%%%%
@@ -141,7 +126,7 @@
 % Configuramos el "doble espacio" con "2ex"
 \titleformat{\section}[hang]
     {\bfseries}
-    {\normalsize \thesection . \ }{0pt} 
+    {\normalsize \thesection . \ }{0pt}
     {\normalsize}[\vspace{2ex}\setcounter{figure}{0}\setcounter{table}{0}]
 \titleformat{\subsection}[hang]
     {\bfseries}
@@ -155,7 +140,7 @@
     {\bfseries}
     {\normalsize \thesubsubsection. \ }{0pt}
     {\normalsize}[\vspace{2ex}]
-    
+
 % \portada{Insertar nombre aca}{Insertar correo acá}{Insertar empresa acá}{Insertar fecha acá}
 \newcommand{\portada}[5]{
     \begin{tikzpicture}[remember picture, overlay]
@@ -196,7 +181,7 @@
         \begin{measuredfigure}
             \label{Tab:#1}
             \caption{#2}
-            \includegraphics[#3]{#4} 
+            \includegraphics[#3]{#4}
         \end{measuredfigure}
         \\ \textit{\scriptsize{#5}}
     \end{table}
@@ -246,6 +231,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%% PANDOC %%%%%%%%%%%%%%%%%%%%%%%
+% Ignorar o quitar este apartado si no se usa
 % MARKDOWN -> LaTeX: https://pandoc.org
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

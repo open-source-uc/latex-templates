@@ -1,12 +1,12 @@
 # Plantilla de práctica 2
-![licencia](https://img.shields.io/github/license/diegocostares/latex-templates)
-![usa](https://img.shields.io/badge/Utiliza-XeLaTeX-brightgreen)
+
+Esta plantilla se basa en la plantilla de informes de la UC, pero con algunos cambios para facilitar la entrega de la práctica 2. Se recomienda usar **XeLaTeX** para compilar (Solo basta con cambiar las configuraciones).
 
 ## Explicación de la plantilla
 
 Esta plantilla fue creada para facilitar el formato de entrega, añadiendo los "doble enter" automáticamente al poner los títulos y subtítulos.
 
-Se incluye un mini tutorial de como agregar imágenes y tablas en el informe usando unos comandos personalizados, para ver el tutorial completo, consultar en [las plantillas de Open Source UC](https://github.com/open-source-uc/latex-templates/tree/master/templates/Plantilla-informes-UC) 
+La plantilla tiene varios comandos personalizados para facilitar la inclusion de imágenes, tablas y demás. Se recomienda revisar el mini tutorial de la plantilla de la practica 1 o el tutorial completo que se encuentra en [la plantilla de informes](https://github.com/open-source-uc/latex-templates/tree/master/templates/Plantilla-informes-UC)
 
 _PD1: Recuerden usar ctrl+i o \textit{} para palabras en inglés._
 
@@ -14,7 +14,7 @@ _PD1: Recuerden usar ctrl+i o \textit{} para palabras en inglés._
 
 Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `content.tex`.
 
-```js
+```text
 ├── README.md // Este documento
 ├── main.tex  // PRIMER documento principal
 ├── style.cls // Documento de estilos (complejo)
@@ -27,5 +27,13 @@ Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `con
 │   ├── bibliografia.tex    // Para poner referencias
 │   ├── contenido.tex       // SEGUNDO documento principal
 │   └── mimitutorial.tex    // Borrar
-│   └── Portada_practica_1.pdf // Portada entregada 
+│   └── Portada_practica_1.pdf // Portada entregada
+```
+
+## Build
+
+Para compilar el informe en local se puede usar [overleaf](https://www.overleaf.com/) instalar xelatex y correr:
+
+```shell
+xetex main.tex
 ```
