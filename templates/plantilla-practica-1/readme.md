@@ -21,7 +21,7 @@ _PD2: Recuerden usar ctrl+i o \textit{} para palabras en inglés._
 
 Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `content.tex`.
 
-```js
+```text
 ├── README.md // Este documento
 ├── main.tex  // PRIMER documento principal
 ├── style.cls // Documento de estilos (complejo)
@@ -42,3 +42,11 @@ Los comandos personalizados son los siguientes:
     ```LaTeX
     \fig[referencia1]{Titulo de la imagen 1}{width = 0.2\textwidth}{img/cuadradoejemplo.png}
     ```
+
+## Build
+
+Para compilar el informe en local se puede usar [overleaf](https://www.overleaf.com/) oinstalar xelatex y correr:
+
+```shell
+xetex main.tex
+```

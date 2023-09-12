@@ -14,7 +14,7 @@ Este proyecto no tiene ninguna afiliación de carácter oficial con la Universid
 
 Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `content.tex`.
 
-```js
+```text
 ├── README.md // Este documento
 ├── main.tex  // PRIMER documento principal
 ├── style.cls // Documento de estilos (complejo)
@@ -27,6 +27,14 @@ Para usar la plantilla, debes modificar los dos archivos base, `main.tex` y `con
 │   ├── bibliografia.tex    // Para poner referencias
 │   └── tutorial.tex    // Borrar
 │   └── portada.tex // Portada
+```
+
+## Build
+
+Para compilar el informe en local se puede usar [overleaf](https://www.overleaf.com/) oinstalar xelatex y correr:
+
+```shell
+xetex main.tex
 ```
 
 ## Comandos personalizados

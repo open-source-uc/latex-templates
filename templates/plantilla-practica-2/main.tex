@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANTE: Cambiar el compilador a XeLaTeX en las opciones %
+%     Si se quiere hacer "doble enter" usar: \vspace{2ex}     %
+%               Creditos Github: @diegocostares               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{style}
+
+\begin{document}
+%%%%%%%%%%%%%%%%% RENOMBRE %%%%%%%%%%%%%%%%%
+\graphicspath{ {./img/} }
+\renewcommand\cftsecfont{\normalsize}
+\renewcommand\cftsecpagefont{\normalsize}
+\renewcommand{\contentsname}{\normalsize Tabla de Contenido}
+\renewcommand{\listfigurename}{\normalsize Índice de Ilustraciones}
+\renewcommand{\listtablename}{\normalsize Índice de Tablas}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand*{\lstlistingname}{Código}
+
+%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%
+\ThisCenterWallPaper{1}{content/portada.pdf}
+\portada{Nombre completo} % Insertar nombre acá
+        {Correo electronico} % Insertar correo acá
+        {Empresa}
+        {Diploma} % Insertar empresa acá
+        {\today} % Insertar fecha
+
+%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%
+\input{content/abstract}
+
+%%%%%%%%%%%% Numeración paginas %%%%%%%%%%%
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%% INDICES %%%%%%%%%%%%%%%%%
+\tableofcontents \newpage
+\listoftables \newpage
+\listoffigures \newpage
+%%%%%%%%%%%%%%%%% ESPACIADO %%%%%%%%%%%%%%%%%
+\setstretch{1.15}
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+
+\input{content/contenido}
+
+%%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+% Hay 2 formas de agregar bibliografia:
+% 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
+% \bibliographystyle{apacite}
+% \bibliography{mybib.bib} % Requiere crear un archivo .bib
+
+% 2. Agregar una bibliografia en un archivo .tex
+% (Es manual, pero comodo para los que no conoce el bibtex)
+\input{content/bibliografia}
+
+%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%
+\input{content/anexos}
+
+\end{document}
