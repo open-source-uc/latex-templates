@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANTE: Cambiar el compilador a XeLaTeX en las opciones %
+%                  Creditos: @diegocostares                   %
+%                Disponible en: @open-source-uc               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{style}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%% RENOMBRE %%%%%%%%%%%%%%%%%
+\graphicspath{ {./img/} }
+\renewcommand\cftsecfont{\normalsize}
+\renewcommand\cftsecpagefont{\normalsize}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+%%%%%%%%%%%%%%%%% INTERLINEADO %%%%%%%%%%%%%%%%%
+\setstretch{1.15}
+
+%%%%%%%%%%%%%%%%% INSTRUCCIONES Y TUTORIAL %%%%%%%%%%%%%%%%%
+ % Recuerde borrar antes de entregar
+\input{content/instrucciones} % BORRAR!
+\input{content/minitutorial}  % BORRAR!
+
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+% Seleccionar uno de los siguientes apartados:
+\input{content/investigacion_experimental}
+\input{content/informe_bibliografico}
+
+
+%%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+% Máximo de 20!!!
+% Hay 2 formas de agregar bibliografia:
+% 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
+% \bibliographystyle{apacite}
+% \bibliography{mybib.bib} % Requiere crear un archivo .bib
+
+% 2. Agregar una bibliografia en un archivo .tex
+% (Es manual, pero comodo para los que no conoce el bibtex)
+\input{content/bibliografia}
+
+%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%
+% Si se desea, pueden crear un archivo llamado anexos para influir información extra.
+%\input{content/anexos}
+
+
+
+%%%%%%%%%% FICHA DE INFORMACION %%%%%%%%%%%%%%%%
+% Este apartado se tiene que completar e imprimir para que sea firmado y entregar una copia digitalizada.
+\fichaparteuno{Nombre completo}{Nombre mentor}
+        {ejemplo@uc.cl}{ejemplo@uc.cl}
+        {XXXXXX}{Seccion}
+        {Año}{Semestre}
+        {Titulo investigación}
+
+\fichapartedos{Titulo del proyecto}
+        {Fecha inicio}{\today}
+        {}{X} % Marca una X en una de las dos opciones
+        {X}{} % Marca una X en una de las dos opciones
+        {NOMBRE MENTOR PRINCIPAL}{\today}
+
+
+\end{document}
