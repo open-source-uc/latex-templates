@@ -2,43 +2,53 @@
 \NeedsTeXFormat{LaTeX2e}                    % Requiere formato LaTeX2e
 \ProvidesClass{style}                       % Define la clase del documento
 \LoadClass[12pt]{article}                   % Carga la clase de artículo con tamaño de fuente de 12pt
-\setlength{\parindent}{0.49cm}              % Establece la sangría de los párrafos
 \RequirePackage{fullpage}                   % Utiliza la página completa
 \RequirePackage[spanish, es-noshorthands]{babel} % Configuración de idioma español
-\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm]{geometry} % Configuración de márgenes
 \selectlanguage{spanish}                    % Selecciona el idioma español
+\addto\captionsspanish{                     % Renombramos los indices
+  \renewcommand{\contentsname}{Tabla de Contenido}
+  \renewcommand{\listfigurename}{Índice de Ilustraciones}
+  \renewcommand{\listtablename}{Índice de Tablas}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\figurename}{Figura}
+  \renewcommand*{\lstlistingname}{Código}
+}
+\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm]{geometry} % Configuración de márgenes
 \title{Informe de práctica II}              % Título del documento
 
 % ====== Estilo de Texto ======
-\RequirePackage{mathptmx}                       % Utiliza la fuente Times New Roman
-\RequirePackage[LY1]{fontenc}                   % Codificación de fuente
+\RequirePackage{mathptmx}                   % Utiliza la fuente Times New Roman
+\RequirePackage[LY1]{fontenc}               % Codificación de fuente
 \RequirePackage{tocloft}                    % Para indices
 \RequirePackage{parskip}                    % Configura los espacios entre párrafos y sangrías
 \RequirePackage{xspace}                     % Agrega espacios automáticamente después de comandos
 \RequirePackage{microtype}                  % Mejora el espaciado entre letras para una apariencia más agradable
 \RequirePackage{setspace}                   % Permite controlar el interlineado
 \setstretch{1.5}                            % Establece el interlineado
+\setlength{\parindent}{0.49cm}              % Establece la sangría de los párrafos
 \RequirePackage{ulem}                       % Permite tachar el texto
 \RequirePackage{textcomp}                   % Añade símbolos especiales como el símbolo de copyright
-\RequirePackage{mfirstuc}                   % Agrega comandos para capitalizar
+\RequirePackage{mfirstuc}                    % Agrega comandos para capitalizar
 \RequirePackage{dirtytalk}                  % Facilita la adición de comillas
 \RequirePackage{soul}                       % Permite resaltar y decorar texto
 \RequirePackage{bold-extra}                 % Permite utilizar negritas en texto monoespaciado
 \RequirePackage{lscape}                     % Permite orientación horizontal de las páginas
 \RequirePackage{titlesec}                   % Permite personalizar los estilos de sección
+\renewcommand\cftsecfont{\normalsize}       % Estilo indice
+\renewcommand\cftsecpagefont{\normalsize}   % Estilo indice
 
 % ====== Ecuaciones ======
 \RequirePackage{amsmath,amsthm,mathtools,amssymb,amsfonts,mathrsfs,latexsym,stmaryrd}
 
 % ====== Imágenes ======
 \RequirePackage{threeparttable}             % Alinea imágenes con las leyendas
-\RequirePackage{float}                      % Mejora la ubicación de las figuras
+\RequirePackage{float}                       % Mejora la ubicación de las figuras
 \RequirePackage{graphicx}                   % Mejora la inclusión de imágenes
-\RequirePackage{epsfig}                     % Soporte para imágenes EPS
+\RequirePackage{epsfig}                      % Soporte para imágenes EPS
 \RequirePackage{caption}                    % Personalización de leyendas de figuras
 \RequirePackage{subcaption}                 % Leyendas en subfiguras
 \RequirePackage{tikz}                       % Herramienta para crear gráficos
-\RequirePackage{wrapfig}                    % Permite envolver texto alrededor de figuras
+\RequirePackage{wrapfig}                     % Permite envolver texto alrededor de figuras
 
 % ====== Tablas ======
 \RequirePackage{tabularx}                   % Mejora la creación de tablas
@@ -68,6 +78,7 @@
 \RequirePackage{placeins}                   % Controla la ubicación de las figuras
 \RequirePackage[most]{tcolorbox}            % Creación de cajas de colores
 \RequirePackage{bm}                         % Mejora el manejo de símbolos en negritas en matemáticas
+\RequirePackage[natbibapa]{apacite}
 
 % ====== Opcionales ======
 %\RequirePackage{dirtree}                    % Para generar árboles de directorios
