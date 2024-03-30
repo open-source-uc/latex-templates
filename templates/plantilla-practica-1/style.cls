@@ -70,7 +70,8 @@
 \RequirePackage{pdfpages}                   % insertar pdfs ya creados
 \RequirePackage{titlesec}                   % Define formatos para \section y +
 %\RequirePackage[backend=biber,style=apa]{biblatex}
-\RequirePackage{natbib}                     % Referencias bibliograficas mas comodas
+% \RequirePackage{natbib}                     % Referencias bibliograficas mas comodas
+\RequirePackage[natbibapa]{apacite}         % Referencias bibliograficas APA
 
 % \RequirePackage[none]{hyphenat}           %  Evita que las palabras se corten(Puede verse mal)
 \usetikzlibrary{mindmap}                    %,trees,intersections,arrows,automata
