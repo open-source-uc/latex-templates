@@ -13,7 +13,7 @@
   \renewcommand{\figurename}{Figura}
   \renewcommand*{\lstlistingname}{Código}
 }
-\RequirePackage[letterpaper, left=4cm, top=4cm,right=2.5cm,bottom=2.5cm]{geometry} % Configuración de márgenes
+\RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry} % Configuración de márgenes
 \title{Informe de práctica II}              % Título del documento
 
 % ====== Estilo de Texto ======
@@ -25,7 +25,7 @@
 \RequirePackage{microtype}                  % Mejora el espaciado entre letras para una apariencia más agradable
 \RequirePackage{setspace}                   % Permite controlar el interlineado
 \setstretch{1.5}                            % Establece el interlineado
-\setlength{\parindent}{0.49cm}              % Establece la sangría de los párrafos
+\setlength{\parindent}{1.27cm}              % Establece la sangría de los párrafos
 \RequirePackage{ulem}                       % Permite tachar el texto
 \RequirePackage{textcomp}                   % Añade símbolos especiales como el símbolo de copyright
 \RequirePackage{mfirstuc}                    % Agrega comandos para capitalizar
