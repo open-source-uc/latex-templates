@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        Template informe de trabajo de título ING PUC        %
+%                  Creditos Github: @imant1                   %
+%                                                             %
+%          Creado a partir del template de práctica 2         %
+%                 de Github: @diegocostares                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANTE: Cambiar el compilador a XeLaTeX en las opciones %
+%     Si se quiere hacer "doble enter" usar: \vspace{2ex}     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{style}
+\usepackage{tocloft}
+\usepackage{adjustbox}
+
+\renewcommand{\cfttoctitlefont}{\hfill\Large}
+\renewcommand{\cftaftertoctitle}{\hfill\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Large}
+\renewcommand{\cftafterlottitle}{\hfill\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Large}
+\renewcommand{\cftafterloftitle}{\hfill\hfill}
+
+\begin{document}
+\graphicspath{ {./img/} }
+
+%%%%%%%%%%%% Numeración paginas %%%%%%%%%%%
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%% PORTADAS %%%%%%%%%%%%%%%%%
+\input{content/portada-1}
+\input{content/portada-2}
+
+%%%%%%%%%%%%%%%%% DEDICATORIA %%%%%%%%%%%%%%%%%
+\input{content/dedicatoria}
+
+%%%%%%%%%%%%%%%%% AGRADECIMIENTOS %%%%%%%%%%%%%%%%%
+\input{content/agradecimientos}
+
+%%%%%%%%%%%%%%%%% INDICES %%%%%%%%%%%%%%%%%
+\renewcommand{\contentsname}{INDICE GENERAL} % Center the title
+\addcontentsline{toc}{section}{INDICE GENERAL}
+\tableofcontents \newpage
+
+\renewcommand{\listtablename}{INDICE DE TABLAS} % Center the title
+\addcontentsline{toc}{section}{INDICE DE TABLAS}
+\listoftables \newpage
+
+\renewcommand{\listfigurename}{INDICE DE FIGURAS} % Center the title
+\addcontentsline{toc}{section}{INDICE DE FIGURAS}
+\listoffigures \newpage
+
+%%%%%%%%%%%%%%%%% RESUMEN %%%%%%%%%%%%%%%%%
+\input{content/resumen}
+
+%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%
+\input{content/abstract}
+
+
+
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+
+\input{content/contenido}
+
+%%%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+% Hay 2 formas de agregar bibliografia:
+% 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
+% \bibliographystyle{apacite}
+% \bibliography{mybib.bib} % Requiere crear un archivo .bib
+
+% 2. Agregar una bibliografia en un archivo .tex
+% (Es manual, pero comodo para los que no conoce el bibtex)
+\input{content/bibliografia} \newpage
+
+%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%
+\input{content/anexos}
+
+\end{document}
