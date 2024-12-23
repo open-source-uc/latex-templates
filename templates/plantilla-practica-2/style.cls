@@ -16,6 +16,20 @@
 \RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry} % Configuración de márgenes
 \title{Informe de práctica II}              % Título del documento
 
+% Configuración de numeración de páginas
+\pagenumbering{arabic}
+\usepackage{fancyhdr}                       
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand\headrulewidth{0pt}
+
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyhead[R]{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}%
+}
+
 % ====== Estilo de Texto ======
 \RequirePackage{mathptmx}                   % Utiliza la fuente Times New Roman
 \RequirePackage[LY1]{fontenc}               % Codificación de fuente
@@ -222,8 +236,6 @@
 \endgroup%
 }%
 
-% configuramos numeros de pagina desactivados hasta que se quiera
-\pagenumbering{gobble}
 %%%%%%%%%%%%%%%%%%%%%%% CAPTION %%%%%%%%%%%%%%%%%%%%%%%
 \captionsetup[table]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
 
