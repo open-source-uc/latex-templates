@@ -16,6 +16,20 @@
 \RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry} % Configuración de márgenes
 \title{Informe de práctica II}              % Título del documento
 
+% Configuración de numeración de páginas
+\pagenumbering{arabic}
+\usepackage{fancyhdr}                       
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand\headrulewidth{0pt}
+
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyhead[R]{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}%
+}
+
 % ====== Estilo de Texto ======
 \RequirePackage{mathptmx}                   % Utiliza la fuente Times New Roman
 \RequirePackage[LY1]{fontenc}               % Codificación de fuente
@@ -155,11 +169,11 @@
 % \portada{Insertar nombre aca}{Insertar correo acá}{Insertar empresa acá}{Insertar fecha acá}
 \newcommand{\portada}[5]{
     \begin{tikzpicture}[remember picture, overlay]
-        \node[text=black, right] at (5,-13.7) {#1};
-        \node[text=black, right] at (5,-14.8) {#2};
-        \node[text=black, right] at (5,-15.9) {#3};
-        \node[text=black, right] at (5,-17.1) {#4};
-        \node[text=black, right] at (5,-18.2) {#5};
+        \node[text=black, right] at (3.5,-15.15) {#1};
+        \node[text=black, right] at (3.5,-16.3) {#2};
+        \node[text=black, right] at (3.5,-17.45) {#3};
+        \node[text=black, right] at (3.5,-18.6) {#4};
+        \node[text=black, right] at (3.5,-19.7) {#5};
     \end{tikzpicture}
     \newpage
 }
@@ -222,8 +236,6 @@
 \endgroup%
 }%
 
-% configuramos numeros de pagina desactivados hasta que se quiera
-\pagenumbering{gobble}
 %%%%%%%%%%%%%%%%%%%%%%% CAPTION %%%%%%%%%%%%%%%%%%%%%%%
 \captionsetup[table]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
 
