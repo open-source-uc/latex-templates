@@ -1,48 +1,49 @@
-% Logo and Header
-\begin{flushleft}
-    \begin{minipage}{0.2\textwidth}
-        \centering
-        \includegraphics[width=3cm]{content/logo.png}
-    \end{minipage}%
-    \begin{minipage}{0.7\textwidth}
-        \vspace*{0.5cm} % Adjust spacing if needed
-        \centering
-        \textbf{PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE}\\
-        \textbf{ESCUELA DE INGENIERÍA}
-    \end{minipage}
-\end{flushleft}
 
-\vspace{1cm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw[thin] ([xshift=6.85cm, yshift=-2.5cm]current page.north west)|-([xshift=6.85cm, yshift=2.5cm]current page.south west);
+\end{tikzpicture}
+\begin{minipage}{0.2\textwidth}
+    \includegraphics[width=2.3cm]{content/logo.png}
+\end{minipage}%
+\hspace{0cm} % Adjust horizontal spacing
+\begin{minipage}{0.75\textwidth}
+    \raggedright % Ensures text aligns to the left
+    PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE\\
+    ESCUELA DE INGENIERÍA\\
+    Departamento de [COMPLETAR]
+\end{minipage}
+
+\vspace{0.2cm}
 \hrule
-
 \vspace{4cm}
 
 % Title
+\hspace{3.8cm}
+\begin{minipage}{\textwidth - 7.5cm}
+    % Title
 \begin{center}
-    {\LARGE\textbf{(TITULO DEL TRABAJO DE TÍTULO)}}
+    {\LARGE\textbf{(TITULO TRABAJO}}
 
     \vspace{2cm}
-    {\large\textbf{(NOMBRE COMPLETO DEL ESTUDIANTE)}}
+    {\large\textbf{(NOMBRE COMPLETO)}}
 \end{center}
 
-\vspace{2cm}
+\vspace{1cm}
 
 Trabajo de Título presentado a la Comisión integrada por los profesores:
 
-\textbf{(PROFESOR GUÍA)}\\
+\textbf{(PROFESOR 1)}\\
 
-\textbf{(PROFESOR REPRESENTANTE DE PREGRADO)}\\
+\textbf{(PROFESOR 2)}\\
 
-\textbf{(PROFESOR INVITADO)}\\
-
-\textbf{(PROFESOR INVITADO)}
 \vspace{1cm}
 
 Para completar las exigencias del título de
-Ingeniero Civil …, Diploma en Ingeniería …
+Ingeniero Civil en [COMPLETAR]
 
 
 
-\vfill
-Santiago de Chile, (año)
+\vspace{1.7cm}
+Santiago de Chile, [MES], [AÑO]
+\end{minipage}
 \newpage
