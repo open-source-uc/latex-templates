@@ -24,7 +24,7 @@
 \RequirePackage{xspace}                     % Agrega espacios automáticamente después de comandos
 \RequirePackage{microtype}                  % Mejora el espaciado entre letras para una apariencia más agradable
 \RequirePackage{setspace}                   % Permite controlar el interlineado
-\setstretch{1}                            % Establece el interlineado
+\setstretch{1.2}                            % Establece el interlineado
 \setlength{\parindent}{1.27cm}              % Establece la sangría de los párrafos
 \RequirePackage{ulem}                       % Permite tachar el texto
 \RequirePackage{textcomp}                   % Añade símbolos especiales como el símbolo de copyright
@@ -48,6 +48,7 @@
 \RequirePackage{caption}                    % Personalización de leyendas de figuras
 \RequirePackage{subcaption}                 % Leyendas en subfiguras
 \RequirePackage{tikz}                       % Herramienta para crear gráficos
+\usepackage{tikz}
 \RequirePackage{wrapfig}                     % Permite envolver texto alrededor de figuras
 
 % ====== Tablas ======
@@ -217,9 +218,9 @@
 % configuramos numeros de pagina desactivados hasta que se quiera
 \pagenumbering{gobble}
 %%%%%%%%%%%%%%%%%%%%%%% CAPTION %%%%%%%%%%%%%%%%%%%%%%%
-\captionsetup[table]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
+\captionsetup[table]{format=plain, font=small, justification=centering, skip=1pt, singlelinecheck=false}
 
-\captionsetup[figure]{format=plain, font=small, justification=raggedright, skip=1pt, singlelinecheck=false}
+\captionsetup[figure]{format=plain, font=small, justification=centering, skip=1pt, singlelinecheck=false}
 
 % https://tex.stackexchange.com/questions/28333/continuous-v-per-chapter-section-numbering-of-figures-tables-and-other-docume
 \setcounter{figure}{0}
@@ -238,3 +239,14 @@
 % MARKDOWN -> LaTeX: https://pandoc.org
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+\newcommand{\startannex}[2]{%
+    \section*{Anexo #1: #2} % Print the annex title without numbering
+    \addcontentsline{toc}{section}{Anexo #1. #2} % Add to the table of contents
+    \setcounter{subsection}{0} % Reset subsection counter
+    \setcounter{figure}{0} % Reset figure counter for the annex
+    \renewcommand{\thesubsection}{#1.\arabic{subsection}} % Set subsection numbering as A.1, A.2, etc.
+    \renewcommand{\thefigure}{#1.\arabic{figure}} % Set figure numbering as A.1, A.2, etc..
+}
