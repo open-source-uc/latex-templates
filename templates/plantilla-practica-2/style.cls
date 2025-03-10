@@ -13,7 +13,7 @@
   \renewcommand{\figurename}{Figura}
   \renewcommand*{\lstlistingname}{Código}
 }
-\RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry} % Configuración de márgenes
+\RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, headheight=14.5pt]{geometry} % Configuración de márgenes
 \title{Informe de práctica II}              % Título del documento
 
 % Configuración de numeración de páginas
