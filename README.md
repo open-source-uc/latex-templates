@@ -46,7 +46,7 @@ Hay dos alternativas para agregar una nueva plantilla al repositorio:
 
 #### Bug Reports & Feature Requests
 
-Utilice las [issues] (#) para informar cualquier bug o solicitud.
+Utilice las [issues](https://github.com/open-source-uc/latex-templates/issues) (#) para informar cualquier bug o solicitud.
 
 #### Workflow
 
