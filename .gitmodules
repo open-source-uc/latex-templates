@@ -1,3 +1,6 @@
 [submodule "templates/plantillas-thesis"]
 	path = templates/plantillas-thesis
 	url = https://github.com/open-source-uc/latex-template-msc
+[submodule "templates/informes-ast-fiz-uc"]
+	path = templates/informes-ast-fiz-uc
+	url = https://github.com/jj-sm/TeX-AST.git
