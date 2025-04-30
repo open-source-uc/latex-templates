@@ -22,17 +22,18 @@
 
 ## Descripción
 
-En este repositorio se recopilan las plantillas generadas en `LaTeX`.
+En este repositorio se recopilan las plantillas generadas en `LaTeX`$.
 
 | Nombre | Imagen | Descripción | Descargar |
 | :-----: | :----: | :----: | :----: |
-| Plantilla-informes-UC | <img src="https://user-images.githubusercontent.com/62116423/188288409-3e889871-2c12-489a-8be7-f2910122ae50.png" alt="Plantilla de informes-UC" width="250"> | Creada de forma minimalista y documentada para informes de laboratorios y demas. Respetando la norma APA en su estructura |     [link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Finformes-uc)      |
-| Plantilla-practica-1  |   <img src="https://user-images.githubusercontent.com/62116423/188323505-b0a697e9-01f9-4197-8952-d1c54f011a65.png" alt="Plantilla practica 1" width="300">   |                                                 Creada para la practica 1                                                 | [link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-practica-1) |
-|     Plantilla practica 2 |<img src="https://github.com/open-source-uc/ing2001/assets/62116423/57fae933-c649-4866-8ac1-65ace8cfee2e"> | Plantilla creada para la practica 2 |[link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-practica-2) |
-|     Plantilla-uc      |    <img src="https://github.com/open-source-uc/latex-templates/raw/master/templates/plantilla-uc/ejemplos/portada.png#" alt="Plantilla uc" width="250"/>     |              Plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de la UC.              |     [link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-uc)     |
-|     Plantilla ayudantías      |    <img src="templates/ayudantias_ivl/ayudantias_ivl.jpg" alt="ayudantias_ivl" width="250"/>     |              Plantilla versátil y fácil de utilizar para ayudantías de distintos cursos de la UC.              |     [link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fayudantias_ivl)     |
-|   Plantilla programa cursos| <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517864-39d5eb90-e5af-4fe6-bb14-6e6269d5d4ed.png"/> | Plantilla para programas de cursos de la UC. | [link] |
-|   Plantilla thesis | <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517992-fc4386d7-30e3-46b9-9a47-ea122496e472.png"/> | Plantillas para tesis de la UC. | [link] |
+| Plantilla-informes-UC | <img src="https://user-images.githubusercontent.com/62116423/188288409-3e889871-2c12-489a-8be7-f2910122ae50.png" alt="Plantilla de informes-UC" width="300"> | Creada de forma minimalista y documentada para informes de laboratorios y demas. Respetando la norma APA en su estructura. |     [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Finformes-uc)      |
+| Plantilla-practica-1  |   <img src="https://user-images.githubusercontent.com/62116423/188323505-b0a697e9-01f9-4197-8952-d1c54f011a65.png" alt="Plantilla practica 1" width="300">   |                                                 Creada para la practica 1.                                                 | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-practica-1) |
+|     Plantilla practica 2 |<img src="https://github.com/open-source-uc/ing2001/assets/62116423/57fae933-c649-4866-8ac1-65ace8cfee2e" width="300"/> | Plantilla creada para la practica 2. |[Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-practica-2) |
+|     Plantilla-uc      |    <img src="https://github.com/open-source-uc/latex-templates/raw/master/templates/plantilla-uc/ejemplos/portada.png#" alt="Plantilla uc" width="300"/>     |              Plantilla atractiva, moderna y dinámica para distintas clases de evaluaciones y guías de la UC.              |     [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-uc)     |
+|     Plantilla ayudantías      |    <img src="templates/ayudantias_ivl/ayudantias_ivl.jpg" alt="ayudantias_ivl" width="300"/>     |              Plantilla versátil y fácil de utilizar para ayudantías de distintos cursos de la UC.              |     [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fayudantias_ivl)     |
+|   Plantilla programa cursos| <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517864-39d5eb90-e5af-4fe6-bb14-6e6269d5d4ed.png" width="300"/> | Plantilla para programas de cursos de la UC. | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantillas-programas-cursos) |
+|   Plantilla thesis | <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517992-fc4386d7-30e3-46b9-9a47-ea122496e472.png" width="300"/> | Plantillas para tesis de la UC. | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-template-msc%2Ftree%2Fa492fe1f74109aa3b67e3195988da15eaf3445e5) |
+|   Plantilla Informes 2 | <img src="https://github.com/user-attachments/assets/82174953-86af-4bd3-8e68-2defa4f6d134" width="300"/> | Plantilla para informes, basada en [AASTeXv7](https://github.com/AASJournals/AASTeX7$0). | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjj-sm%2FTeX-AST%2Ftree%2F90adf57f3b2bb9463daed60341077b8199a4b00c) |
 
 
 ## Uso
@@ -74,6 +75,7 @@ La información detallada sobre cómo contribuir se puede encontrar en [contribu
 - [ngbravo](https://github.com/ngbravo)
 - [sebacastroh](https://github.com/sebacastroh)
 - [weibac](https://github.com/weibac)
+- [jj-sm](https://github.com/jj-sm)
 
 ## Licencia
 
