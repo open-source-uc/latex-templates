@@ -106,7 +106,6 @@
 \renewcommand{\]}{\right]}
 \newcommand{\foral}{\;\forall\;}
 \newcommand{\exist}{\;\exists\;}
-\renewcommand{\exists}{\;\exists\; }
 \newcommand{\contr}{\rightarrow\leftarrow}
 \renewcommand{\phi}{\varphi}
 %\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
