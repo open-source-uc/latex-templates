@@ -34,6 +34,7 @@ En este repositorio se recopilan las plantillas generadas en `LaTeX`$.
 |   Plantilla programa cursos| <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517864-39d5eb90-e5af-4fe6-bb14-6e6269d5d4ed.png" width="300"/> | Plantilla para programas de cursos de la UC. | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantillas-programas-cursos) |
 |   Plantilla thesis | <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62116423/248517992-fc4386d7-30e3-46b9-9a47-ea122496e472.png" width="300"/> | Plantillas para tesis de la UC. | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-template-msc%2Ftree%2Fa492fe1f74109aa3b67e3195988da15eaf3445e5) |
 |   Plantilla Informes 2 | <img src="https://github.com/user-attachments/assets/82174953-86af-4bd3-8e68-2defa4f6d134" width="300"/> | Plantilla para informes, basada en [AASTeXv7](https://github.com/AASJournals/AASTeX7$0). | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjj-sm%2FTeX-AST%2Ftree%2F90adf57f3b2bb9463daed60341077b8199a4b00c) |
+|   Plantilla Trabajo de titulo | <img src="https://github.com/user-attachments/assets/e86ca59e-572f-4877-8aaa-b32858ec8eaf" width="300"/> | Plantilla para trabajo de titulo. | [Link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fopen-source-uc%2Flatex-templates%2Ftree%2Fmaster%2Ftemplates%2Fplantilla-trabajo-de-titulo) |
 
 
 ## Uso
