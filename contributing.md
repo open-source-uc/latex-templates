@@ -1,28 +1,49 @@
-# Introducción
 
-Primero que nada, gracias por tu interés en contribuir al proyecto. Este es el espíritu de Open Source UC <3. 
+<h1 align="center">
+  <br>
+  <a href="#">Guía de Contribución</a>
+</h1>
 
-Estos lineamientos buscan facilitar el esfuerzo de contribuir a este proyecto, por lo que te pedimos leerlos antes de ponerte a trabajar.
+<h4 align="center">¡Gracias por tu interés en mejorar este proyecto! Sigue estos pasos para contribuir fácilmente.</h4>
 
-## Workflow
+<p align="center">
+  <a href="#proceso">Proceso</a> •
+  <a href="#buenas-prácticas">Buenas Prácticas</a> •
+  <a href="#contacto">Contacto</a>
+</p>
 
-Para contribuir a este repositorio, esperamos que aportes estén en el formato de Pull Requests (PRs) hacia el branch `development` del proyecto. Esto nos permite revisar tu código, darte feedback y evitar que se publiquen errores.
+---
 
-En general, este es el proceso estándar para contribuir código:
+## Proceso
 
-- (Opcional) Discutir tu propuesta previamente creando una issue.
-- Hacer _fork_ del repositorio para hacer tus cambios, o si tienes los permisos, crear una nueva branch bajo el mismo repositorio.
-   Si ya tienes un fork, debes sincronizar tu repositorio con upstream:
-   - Hacer un pull request y merge desde la branch `development` de este repositorio hacia `development` de tu fork
-   
-   O
-   
-   - Desde github, usar "fetch upstream" y "fetch and merge" para hacer lo mismo pero con menos pasos
-- Crear una branch basada en la branch `development`, en lo posible dale un nombre significativo a tu nueva branch, ej `add-project-images`. 
-- Crear un Pull Request (PR) a `development`, manteniéndolo como "borrador" (draft) hasta que esté listo para ser incorporado.
-- Explicar brevemente los cambios, siguiendo el formato de Pull Requests, especificando posibles problemas o puntos de discusión.
-- Solicitar una revisión de pares (*review*) a los integrantes del equipo del proyecto (los encuentras en la seccion de Maintainers del readme).
-- Una vez aprobada la PR, un maintainer miembro del proyecto (por ahora [@diegocostares](https://github.com/diegocostares)) hará merge del código a `development`, una vez hecho el merge puedes eliminar tu branch.
+Todas las contribuciones se gestionan mediante Pull Requests (PR) hacia la rama `develop`.
 
-Puedes encontrar mas detalles sobre este proceso [aquí](https://docs.github.com/es/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests).
+### Pasos para contribuir
+
+1. (Opcional) Abre una [issue](https://github.com/open-source-uc/latex-templates/issues) para discutir tu propuesta antes de trabajar.
+2. Haz **fork** del repositorio y crea una rama descriptiva basada en `develop` (ejemplo: `fix/errores-portada`).
+3. Realiza tus cambios y verifica que la plantilla compila correctamente.
+4. Abre un **Pull Request** hacia `develop`, explicando claramente tu aporte y posibles puntos de discusión.
+5. Solicita revisión a los mantenedores (ver sección de créditos en el README).
+6. Una vez aprobado, un mantenedor hará el merge a `develop`. Puedes eliminar tu rama después del merge.
+
+Más detalles sobre el proceso en la [documentación oficial de GitHub](https://docs.github.com/es/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests).
+
+---
+
+## Buenas Prácticas
+
+- Usa nombres descriptivos para tus ramas y PRs.
+- Explica claramente los cambios realizados.
+- Mantén tu rama actualizada con `develop` antes de solicitar el merge.
+- Si tienes dudas, pregunta en una issue antes de trabajar.
+
+---
+
+## Contacto
+
+¿Dudas o sugerencias?
+
+- Abre una [issue](https://github.com/open-source-uc/latex-templates/issues)
+- O escribe a **contacto@osuc.dev**
 
