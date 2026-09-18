@@ -16,20 +16,32 @@
 \usepackage{tocloft}
 \usepackage{adjustbox}
 
-\usepackage{scrlayer-scrpage} % Modern version of scrpage2
-
-
 % Set page number at the top right corner
 \clearpairofpagestyles
 \ohead*{\thepage}
 
 
-\renewcommand{\cfttoctitlefont}{\hfill\Large}
-\renewcommand{\cftaftertoctitle}{\hfill\hfill}
-\renewcommand{\cftlottitlefont}{\hfill\Large}
-\renewcommand{\cftafterlottitle}{\hfill\hfill}
-\renewcommand{\cftloftitlefont}{\hfill\Large}
-\renewcommand{\cftafterloftitle}{\hfill\hfill}
+% La plantilla oficial centra los títulos de los índices con formato de título de capítulo (negrita, 12 pt)
+\renewcommand{\cfttoctitlefont}{\hfill\normalsize\bfseries}
+\renewcommand{\cftlottitlefont}{\hfill\normalsize\bfseries}
+\renewcommand{\cftloftitlefont}{\hfill\normalsize\bfseries}
+
+% La guía rotula la columna de páginas de cada índice con "Pág.", alineado a la derecha
+\newcommand{\indexpagelabel}{\hfill\hfill\par\normalfont\normalsize\vspace{1ex}\hfill Pág.\par}
+\renewcommand{\cftaftertoctitle}{\indexpagelabel}
+\renewcommand{\cftafterlottitle}{\indexpagelabel}
+\renewcommand{\cftafterloftitle}{\indexpagelabel}
+
+% La guía lista las entradas como "I. TÍTULO" en el índice general y "Tabla 1.1: ..." / "Figura 1.1: ..." en los demás
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cfttabpresnum}{Tabla~}
+\renewcommand{\cfttabaftersnum}{:}
+\renewcommand{\cftfigpresnum}{Figura~}
+\renewcommand{\cftfigaftersnum}{:}
+% Ancho reservado al número: debe caber la etiqueta más ancha, la de los anexos ("Tabla A.1:" / "Figura A.1:")
+\cftsetindents{section}{0em}{2.6em}
+\cftsetindents{table}{0em}{6em}
+\cftsetindents{figure}{0em}{6.8em}
 
 
 \begin{document}
@@ -48,16 +60,17 @@
 \input{content/agradecimientos}
 
 %%%%%%%%%%%%%%%%% INDICES %%%%%%%%%%%%%%%%%
-\renewcommand{\contentsname}{INDICE GENERAL} % Center the title
-\addcontentsline{toc}{section}{INDICE GENERAL}
+% En la guía el índice general no se lista a sí mismo: parte en DEDICATORIA y sigue en ÍNDICE DE TABLAS
+\renewcommand{\contentsname}{ÍNDICE GENERAL} % Center the title
 \tableofcontents \newpage
 
-%\renewcommand{\listtablename}{INDICE DE TABLAS} % Center the title
-%\addcontentsline{toc}{section}{INDICE DE TABLAS}
-%\listoftables \newpage
+% La guía exige el índice de tablas, igual que el de figuras
+\renewcommand{\listtablename}{ÍNDICE DE TABLAS}
+\tocsection{ÍNDICE DE TABLAS}
+\listoftables \newpage
 
-\renewcommand{\listfigurename}{\begin{center}INDICE DE FIGURAS\end{center}} % Center the title
-\addcontentsline{toc}{section}{INDICE DE FIGURAS}
+\renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+\tocsection{ÍNDICE DE FIGURAS}
 \listoffigures \newpage
 
 
@@ -77,7 +90,8 @@
 % Hay 2 formas de agregar bibliografia:
 % 1. Agregar una bibliografia en un archivo .bib (Es super automatico)
 %    En el preambulo: \usepackage[style=apa]{biblatex} y \addbibresource{mybib.bib}
-% \printbibliography[title={REFERENCIAS BIBLIOGRÁFICAS}] % Requiere compilar con biber
+%    La guia titula esta seccion "BIBLIOGRAFIA", sin numeral de capitulo.
+% \printbibliography[title={BIBLIOGRAFIA}] % Requiere compilar con biber
 
 % 2. Agregar una bibliografia en un archivo .tex
 % (Es manual, pero comodo para los que no conoce el bibtex)

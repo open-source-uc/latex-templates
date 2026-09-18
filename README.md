@@ -90,6 +90,7 @@ Consulta [contributing.md](contributing.md) para más detalles sobre el proceso.
 - [diegocostares](https://github.com/diegocostares)
 - [EnzoMorata](https://github.com/EnzoMorata)
 - [FarDust](https://github.com/FarDust)
+- [fguinez](https://github.com/fguinez)
 - [Ivanvlam](https://github.com/Ivanvlam)
 - [lnatero](https://github.com/lnatero)
 - [lopezjurip](https://github.com/lopezjurip)

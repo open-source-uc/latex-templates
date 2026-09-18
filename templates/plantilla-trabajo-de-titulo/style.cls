@@ -12,7 +12,8 @@
   \renewcommand{\figurename}{Figura}
   \renewcommand*{\lstlistingname}{Código}
 }
-\RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry} % Configuración de márgenes
+% head=14.5pt reserva la cabecera y mantiene el margen superior de 2,5 cm que exige la guía
+\RequirePackage[letterpaper, left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, head=14.5pt]{geometry} % Configuración de márgenes
 \title{Informe trabajo de título}              % Título del documento
 
 % ====== Estilo de Texto ======
@@ -30,8 +31,10 @@
 \RequirePackage{mfirstuc}                    % Agrega comandos para capitalizar
 \RequirePackage{dirtytalk}                  % Facilita la adición de comillas
 \RequirePackage{soul}                       % Permite resaltar y decorar texto
+\sodef\spacedletters{}{0.4em}{0.5em}{0.5em}  % Espacia las letras de una palabra: la guía titula los anexos "A N E X O S"
 \RequirePackage{bold-extra}                 % Permite utilizar negritas en texto monoespaciado
 \RequirePackage{lscape}                     % Permite orientación horizontal de las páginas
+\RequirePackage{scrlayer-scrpage}           % Cabeceras y pies de página (va antes de titlesec: ambos definen \newpagestyle)
 \RequirePackage{titlesec}                   % Permite personalizar los estilos de sección
 \renewcommand\cftsecfont{\normalsize}       % Estilo indice
 \renewcommand\cftsecpagefont{\normalsize}   % Estilo indice
@@ -65,7 +68,9 @@
 \RequirePackage{wallpaper}                  % Permite utilizar fondos de pantalla en el documento
 \RequirePackage{ifthen}                     % Soporte para condicionales en el documento
 \RequirePackage[shortlabels]{enumitem}      % Personalización de listas enumeradas y con viñetas
-\RequirePackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref} % Enlaces clicables
+% La guía no admite texto de color en el cuerpo; solo las URLs de las referencias quedan en azul, como pide APA 7
+\RequirePackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref} % Enlaces clicables
+\newcommand{\tocsection}[1]{\phantomsection\addcontentsline{toc}{section}{#1}} % Agrega al índice un título sin numerar
 \RequirePackage{multicol}                   % Soporte para multicolumnas
 \RequirePackage[per-mode = symbol]{siunitx} % Para manejar unidades SI
 \RequirePackage{commath}                    % Mejora la estética en matemáticas
@@ -136,6 +141,11 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%% OTROS %%%%%%%%%%%%%%%%%%%%%%%
+% La guía numera los capítulos con romanos (I., II.) y los subniveles con árabigos referidos al capítulo (1.1, 1.1.1)
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
 % Configuramos el "doble espacio" con "2ex"
 \titleformat{\section}[hang]
     {\bfseries}
@@ -155,13 +165,57 @@
     {\normalsize}[\vspace{2ex}]
 
 
+% ====== Portadas ======
+% La plantilla oficial (Word) pone el logo en una banda a la izquierda y el texto
+% a la derecha de la línea vertical, hasta el margen derecho.
+\newlength{\coverbandwidth}   % ancho de la banda del logo (margen izq. -> línea)
+\setlength{\coverbandwidth}{4.35cm}
+\newlength{\covergutter}      % separación entre la línea vertical y el texto
+\setlength{\covergutter}{0.4cm}
+\newlength{\coverruleoffset}  % del borde izquierdo de la página a la línea vertical
+\newlength{\covertextwidth}   % ancho del bloque de texto (línea -> margen derecho)
+
+% Encabezado de portada. #1: universidad, escuela y, si corresponde, departamento.
+\newcommand{\coverheader}[1]{%
+  \setlength{\coverruleoffset}{\dimexpr 1in+\oddsidemargin+\coverbandwidth\relax}%
+  \setlength{\covertextwidth}{\dimexpr\textwidth-\coverbandwidth-\covergutter\relax}%
+  \noindent
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[thin] ([xshift=\the\coverruleoffset, yshift=-2.5cm]current page.north west)
+    -- ([xshift=\the\coverruleoffset, yshift=2.5cm]current page.south west);
+  \end{tikzpicture}%
+  \begin{minipage}{\coverbandwidth}
+    \raggedleft % el logo se apega a la línea vertical, como en la plantilla oficial
+    \includegraphics[width=2.3cm]{content/logo.png}\hspace*{0.2cm}%
+  \end{minipage}%
+  \hspace{\covergutter}%
+  \begin{minipage}{\covertextwidth}
+    \raggedright
+    #1
+  \end{minipage}
+
+  \vspace{0.2cm}
+  \hrule
+}
+
+% Cuerpo de portada. Usa las medidas que fija \coverheader, que siempre lo precede.
+\newenvironment{coverbody}{%
+  \par\noindent
+  \hspace*{\dimexpr\coverbandwidth+\covergutter\relax}%
+  \begin{minipage}{\covertextwidth}%
+    \setlength{\parindent}{0pt}%
+    \raggedright
+}{%
+  \end{minipage}\par
+}
+
 % Configuracion imagenes
 \newcommand{\fig}[4][\relax]{
   \begin{figure}[H]
     \centering
     \begin{measuredfigure}
-        \ifx\relax#1\else\label{img:#1}\fi
         \ifx\relax#2\else\caption{#2\vspace{2ex}}\fi
+        \ifx\relax#1\else\label{img:#1}\fi
         \includegraphics[#3]{#4}%
     \end{measuredfigure}
   \end{figure}%
@@ -170,8 +224,8 @@
     \begin{wrapfigure}{#5}{0.25\textwidth} % Margen texto 0.25
         \centering
         \begin{measuredfigure}
-            \ifx\relax#1\else\label{img:#1}\fi
             \ifx\relax#2\else\caption{#2}\fi
+            \ifx\relax#1\else\label{img:#1}\fi
             \includegraphics[#3]{#4} %[scale=0.1]
         \end{measuredfigure}
     \end{wrapfigure}
@@ -181,8 +235,8 @@
     \begin{table}[H]
         \centering
         \begin{measuredfigure}
-            \label{Tab:#1}
             \caption{#2}
+            \label{Tab:#1}
             \includegraphics[#3]{#4}
         \end{measuredfigure}
         \\ \textit{\scriptsize{#5}}
@@ -223,8 +277,9 @@
 % https://tex.stackexchange.com/questions/28333/continuous-v-per-chapter-section-numbering-of-figures-tables-and-other-docume
 \setcounter{figure}{0}
 \setcounter{table}{0}
-\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
-\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+% La guía rotula figuras y tablas como "Figura 1.1" / "Tabla 1.1": capítulo y correlativo separados por punto
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
 %%%%%%%%%%%%%%%%%%%%%%% EXTRA %%%%%%%%%%%%%%%%%%%%%%%
 % Desactiva errores de overfull y underfull.
 \hfuzz=\maxdimen
@@ -242,9 +297,11 @@
 
 \newcommand{\startannex}[2]{%
     \section*{Anexo #1: #2} % Print the annex title without numbering
-    \addcontentsline{toc}{section}{Anexo #1. #2} % Add to the table of contents
+    \tocsection{Anexo #1. #2} % Add to the table of contents
     \setcounter{subsection}{0} % Reset subsection counter
     \setcounter{figure}{0} % Reset figure counter for the annex
+    \setcounter{table}{0} % Reset table counter for the annex
     \renewcommand{\thesubsection}{#1.\arabic{subsection}} % Set subsection numbering as A.1, A.2, etc.
     \renewcommand{\thefigure}{#1.\arabic{figure}} % Set figure numbering as A.1, A.2, etc..
+    \renewcommand{\thetable}{#1.\arabic{table}} % Set table numbering as A.1, A.2, etc..
 }

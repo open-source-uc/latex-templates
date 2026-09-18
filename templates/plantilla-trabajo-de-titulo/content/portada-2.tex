@@ -1,51 +1,44 @@
 
 % The counter keeps advancing even though the number is not printed here
 \thispagestyle{empty}
-\begin{tikzpicture}[remember picture, overlay]
-\draw[thin] ([xshift=6.85cm, yshift=-2.5cm]current page.north west)|-([xshift=6.85cm, yshift=2.5cm]current page.south west);
-\end{tikzpicture}
-\begin{minipage}{0.2\textwidth}
-    \includegraphics[width=2.3cm]{content/logo.png}
-\end{minipage}%
-\hspace{0cm} % Adjust horizontal spacing
-\begin{minipage}{0.75\textwidth}
-    \raggedright % Ensures text aligns to the left
-    PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE\\
-    ESCUELA DE INGENIERÍA\\
-    Departamento de [COMPLETAR]
-\end{minipage}
+\coverheader{%
+  PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE\\
+  ESCUELA DE INGENIERÍA\\
+  Departamento de [COMPLETAR]
+}
 
-\vspace{0.2cm}
-\hrule
-\vspace{4cm}
+\vfill
 
-% Title
-\hspace{3.8cm}
-\begin{minipage}{\textwidth - 7.5cm}
-    % Title
-\begin{center}
-    {\LARGE\textbf{(TITULO TRABAJO}}
+\begin{coverbody}
+  \begin{center}
+    {\LARGE\textbf{(TITULO TRABAJO)}\par}
 
     \vspace{2cm}
-    {\large\textbf{(NOMBRE COMPLETO)}}
-\end{center}
+    {\large\textbf{(NOMBRE COMPLETO)}\par}
+  \end{center}
+\end{coverbody}
 
-\vspace{1cm}
+\vfill
 
-Trabajo de Título presentado a la Comisión integrada por los profesores:
+\begin{coverbody}
+  Trabajo de Título presentado a la Comisión integrada por los profesores:
 
-\textbf{(PROFESOR 1)}\\
+  \textbf{(PROFESOR GUÍA)}\\
+  \textbf{(PROFESOR REPRESENTANTE DE PREGRADO)}\\
+  \textbf{(PROFESOR INVITADO)}\\
+  \textbf{(PROFESOR INVITADO)}
 
-\textbf{(PROFESOR 2)}\\
+  \vspace{1cm}
 
-\vspace{1cm}
+  Para completar las exigencias del título de
+  Ingeniero Civil en [COMPLETAR]
+\end{coverbody}
 
-Para completar las exigencias del título de
-Ingeniero Civil en [COMPLETAR]
+\vfill
 
-
-
-\vspace{1.7cm}
-Santiago de Chile, [MES], [AÑO]
-\end{minipage}
+% La guía pide solo el año: "Santiago de Chile, (año)"
+\begin{coverbody}
+  Santiago de Chile, [AÑO]
+\end{coverbody}
+\vspace{0.5cm}
 \newpage
